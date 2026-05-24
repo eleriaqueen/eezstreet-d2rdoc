@@ -1,10 +1,10 @@
-// To let users open the HTML files directly without a local server, we need to eliminate any CORS requests like "fetch".
+﻿// To let users open the HTML files directly without a local server, we need to eliminate any CORS requests like "fetch".
 // Workaround is to place json into .js files and then load them via html script tags.
 // https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS/Errors/CORSRequestNotHttp
 files["skilldesc"] = {
     "title": "skilldesc.txt",
     "referenceFiles": [
-        "elemtypes"
+        "ElemTypes"
     ],
     "overview": "This file controls a skill's tooltip description and how it is displayed on the Skill Tree.<br>Any column field name starting with \"*\" is considered a comment field and is not used by the game.",
     "fields": [
@@ -383,11 +383,11 @@ files["skilldesc"] = {
                 "type": "reference",
                 "dataLength": 4,
                 "memSize": 8,
-                "file": "elemtypes",
+                "file": "ElemTypes",
                 "field": "Code"
             },
             "appendField": {
-                "file": "elemtypes",
+                "file": "ElemTypes",
                 "field": "Code"
             }
         },

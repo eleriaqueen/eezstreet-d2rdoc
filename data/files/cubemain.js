@@ -1,10 +1,10 @@
-// To let users open the HTML files directly without a local server, we need to eliminate any CORS requests like "fetch".
+﻿// To let users open the HTML files directly without a local server, we need to eliminate any CORS requests like "fetch".
 // Workaround is to place json into .js files and then load them via html script tags.
 // https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS/Errors/CORSRequestNotHttp
 files["cubemain"] = {
     "title": "cubemain.txt",
     "referenceFiles": [
-        "playerclass"
+        "PlayerClass"
     ],
     "overview": "This file controls the recipes for the Horadric Cubetems structure.<br>Any column field name starting with \"*\" is considered a comment field and is not used by the game.",
     "fields": [
@@ -248,11 +248,11 @@ files["cubemain"] = {
                 "type": "reference",
                 "dataLength": 4,
                 "memSize": 8,
-                "file": "playerclass",
+                "file": "PlayerClass",
                 "field": "Code"
             },
             "appendField": {
-                "file": "playerclass",
+                "file": "PlayerClass",
                 "field": "Code"
             }
         },
@@ -426,7 +426,7 @@ files["cubemain"] = {
                 ],
                 [
                     "suf=#",
-                    "Force the output item to have an item suffix, where # equals the ID of the suffix (see the row count on $!magicsuffix!$)"
+                    "Force the output item to have an item suffix, where # equals the ID of the suffix (see the row count on $!MagicSuffix!$)"
                 ],
                 [
                     "low",
@@ -573,7 +573,7 @@ files["cubemain"] = {
                 "type": "parse",
                 "dataLength": 255,
                 "memSize": 0,
-                "description": "Reference of $!properties#code!$ or $!propertygroups#code!$"
+                "description": "Reference of $!properties#code!$ or $!PropertyGroups#code!$"
             }
         },
         {

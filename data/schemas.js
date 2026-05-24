@@ -2,6 +2,7 @@
 // Workaround is to place json into .js files and then load them via html script tags.
 // https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS/Errors/CORSRequestNotHttp
 const schemas = [
-    { "name": "Latest (3.1)", "directory": "data/files", "isDefault": true },
+    { "name": "Latest (3.2)", "directory": "data/files", "isDefault": true },
+    { "name": "3.1", "directory": "data/old/3.1" },
     { "name": "2.4", "directory": "data/old/2.4" }
 ];

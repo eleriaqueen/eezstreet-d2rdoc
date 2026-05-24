@@ -1,7 +1,7 @@
-// To let users open the HTML files directly without a local server, we need to eliminate any CORS requests like "fetch".
+﻿// To let users open the HTML files directly without a local server, we need to eliminate any CORS requests like "fetch".
 // Workaround is to place json into .js files and then load them via html script tags.
 // https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS/Errors/CORSRequestNotHttp
-files["monpet"] = {
+files["MonPet"] = {
     "title": "MonPet.txt",
     "overview": "Controls data associated with specific monsters when they become a player's pet.<br>Any column field name starting with \"*\" is considered a comment field and is not used by the game.",
     "fields": [
@@ -22,6 +22,23 @@ files["monpet"] = {
                 "type": "boolean",
                 "dataLength": 0,
                 "memSize": 0
+            }
+        },
+        {
+            "name": "calc#",
+            "altNames": [
+                "calc1",
+                "calc2",
+                "calc3",
+                "calc4",
+                "calc5"
+            ],
+            "description": "Miscellaneous calc fields that can be used as input for other calc fields.",
+            "type": {
+                "type": "parse",
+                "dataLength": 255,
+                "memSize": 0,
+                "description": "Monster scope BBE. See <a href=\"../docs/bbe-calc.html\" target=\"_blank\" class=\"reference-link\">BBE/Calc Fields</a>"
             }
         },
         {
@@ -89,6 +106,41 @@ files["monpet"] = {
         {
             "name": "bindchancecalc",
             "description": "The calculated chance a monster can be successfully bound when using $!skills#WarDoBindDemon!$.",
+            "type": {
+                "type": "parse",
+                "dataLength": 255,
+                "memSize": 0,
+                "description": "Monster scope BBE. See <a href=\"../docs/bbe-calc.html\" target=\"_blank\" class=\"reference-link\">BBE/Calc Fields</a>"
+            }
+        },
+        {
+            "name": "BoundStat#",
+            "altNames": [
+                "BoundStat1",
+                "BoundStat2",
+                "BoundStat3",
+                "BoundStat4",
+                "BoundStat5"
+            ],
+            "description": "Stat to add when this monster is bound using $!skills#WarDoBindDemon!$. The value defined in $!#BoundCalc#!$ is an override, not a delta.",
+            "type": {
+                "type": "reference",
+                "dataLength": 47,
+                "memSize": 16,
+                "file": "itemstatcost",
+                "field": "Stat"
+            }
+        },
+        {
+            "name": "BoundCalc#",
+            "altNames": [
+                "BoundCalc1",
+                "BoundCalc2",
+                "BoundCalc3",
+                "BoundCalc4",
+                "BoundCalc5"
+            ],
+            "description": "The value for the associated $!#BoundStat#!$. This is an override, not a delta.",
             "type": {
                 "type": "parse",
                 "dataLength": 255,

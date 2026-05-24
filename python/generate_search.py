@@ -10,7 +10,7 @@ files = dict()
 search = []
 
 def importJs(jsPath):
-    with io.open(jsPath, 'r') as jsFile:
+    with io.open(jsPath, 'r', encoding='utf-8-sig') as jsFile:
         # Strip out the js specific stuff to turn it into json
         inText = jsFile.read()
         jsonText = re.sub(r"(files(.*?)= )|(^[\/\/].*)", "", inText, flags=re.MULTILINE)

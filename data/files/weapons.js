@@ -1,4 +1,4 @@
-// To let users open the HTML files directly without a local server, we need to eliminate any CORS requests like "fetch".
+﻿// To let users open the HTML files directly without a local server, we need to eliminate any CORS requests like "fetch".
 // Workaround is to place json into .js files and then load them via html script tags.
 // https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS/Errors/CORSRequestNotHttp
 files["weapons"] = {
@@ -6,7 +6,7 @@ files["weapons"] = {
     "referenceFiles": [
         "shareditems",
         "enums",
-        "hitclass"
+        "HitClass"
     ],
     "appendFiles": [
         "shareditems"
@@ -69,11 +69,11 @@ files["weapons"] = {
                 "type": "reference",
                 "dataLength": 4,
                 "memSize": 8,
-                "file": "hitclass",
+                "file": "HitClass",
                 "field": "Code"
             },
             "appendField": {
-                "file": "hitclass",
+                "file": "HitClass",
                 "field": "Code"
             }
         },

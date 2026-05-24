@@ -1,4 +1,4 @@
-// To let users open the HTML files directly without a local server, we need to eliminate any CORS requests like "fetch".
+﻿// To let users open the HTML files directly without a local server, we need to eliminate any CORS requests like "fetch".
 // Workaround is to place json into .js files and then load them via html script tags.
 // https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS/Errors/CORSRequestNotHttp
 files["lvlprest"] = {
@@ -99,7 +99,7 @@ files["lvlprest"] = {
             }
         },
         {
-            "name": "AutoMap",
+            "name": "automap",
             "description": "Boolean Field. If equals 1, then this Level Preset will be automatically completely revealed on the Automap. If equals 0, then this Level Preset will be hidden on the Automap and will need to be explored.",
             "type": {
                 "type": "int",

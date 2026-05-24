@@ -89,7 +89,7 @@ def updateFile(jsPath, allFieldExports, processedFiles):
     if not jsPath.exists(): # I'll try making the filename lowercase. That's a neat trick!
         jsPath = jsPath.with_name(jsPath.name.lower())
 
-    with io.open(jsPath, 'r+') as jsFile:
+    with io.open(jsPath, 'r+', encoding='utf-8-sig') as jsFile:
         # Strip out the js specific stuff to turn it into json
         inText = jsFile.read()
         jsonText = re.sub(r"(files(.*?)= )|(^[\/\/].*)", "", inText, flags=re.MULTILINE)
@@ -112,7 +112,7 @@ def updateFile(jsPath, allFieldExports, processedFiles):
                 updateFile(jsAppendFilePath, allFieldExports, processedFiles)
 
                 # Read and store
-                with io.open(jsAppendFilePath, 'r') as jsAppendFile:
+                with io.open(jsAppendFilePath, 'r', encoding='utf-8-sig') as jsAppendFile:
                     # Strip out the js specific stuff to turn it into json
                     appendFileInText = jsAppendFile.read()
                     appendFileJsonText = re.sub(r"(files(.*?)= )|(^[\/\/].*)", "", appendFileInText, flags=re.MULTILINE)

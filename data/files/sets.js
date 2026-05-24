@@ -1,10 +1,10 @@
-// To let users open the HTML files directly without a local server, we need to eliminate any CORS requests like "fetch".
+﻿// To let users open the HTML files directly without a local server, we need to eliminate any CORS requests like "fetch".
 // Workaround is to place json into .js files and then load them via html script tags.
 // https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS/Errors/CORSRequestNotHttp
 files["sets"] = {
     "title": "Sets.txt",
     "referenceFiles": [
-        "playerclass"
+        "PlayerClass"
     ],
     "overview": "This file controls the item modifiers for Set bonus statistics when the player has equipped enough Set Items.<br>Any column field name starting with \"*\" is considered a comment field and is not used by the game.",
     "fields": [
@@ -52,7 +52,7 @@ files["sets"] = {
                 "type": "parse",
                 "dataLength": 255,
                 "memSize": 0,
-                "description": "Reference of $!properties#code!$ or $!propertygroups#code!$"
+                "description": "Reference of $!properties#code!$ or $!PropertyGroups#code!$"
             }
         },
         {
@@ -130,7 +130,7 @@ files["sets"] = {
                 "type": "parse",
                 "dataLength": 255,
                 "memSize": 0,
-                "description": "Reference of $!properties#code!$ or $!propertygroups#code!$"
+                "description": "Reference of $!properties#code!$ or $!PropertyGroups#code!$"
             }
         },
         {
@@ -198,11 +198,11 @@ files["sets"] = {
                 "type": "reference",
                 "dataLength": 4,
                 "memSize": 8,
-                "file": "playerclass",
+                "file": "PlayerClass",
                 "field": "Code"
             },
             "appendField": {
-                "file": "playerclass",
+                "file": "PlayerClass",
                 "field": "Code"
             }
         }

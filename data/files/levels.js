@@ -1,4 +1,4 @@
-// To let users open the HTML files directly without a local server, we need to eliminate any CORS requests like "fetch".
+﻿// To let users open the HTML files directly without a local server, we need to eliminate any CORS requests like "fetch".
 // Workaround is to place json into .js files and then load them via html script tags.
 // https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS/Errors/CORSRequestNotHttp
 files["levels"] = {
@@ -117,6 +117,15 @@ files["levels"] = {
         {
             "name": "OffsetY",
             "description": "Specifies the location offset Y coordinate (measured in tile size) for the origin point of the area level in the world.",
+            "type": {
+                "type": "int",
+                "dataLength": 0,
+                "memSize": 32
+            }
+        },
+        {
+            "name": "CompletionTotalRoomsOverride",
+            "description": "If > 0, use this value as the total number of rooms in the level for calculating its level completion percentage. Otherwise, use the total amount of populateable rooms.",
             "type": {
                 "type": "int",
                 "dataLength": 0,
@@ -488,7 +497,7 @@ files["levels"] = {
             }
         },
         {
-            "name": "MonLvl",
+            "name": "monlvl",
             "altNames": [
                 "MonLvl(N)",
                 "MonLvl(H)"

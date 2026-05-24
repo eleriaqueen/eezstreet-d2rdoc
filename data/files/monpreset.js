@@ -1,7 +1,7 @@
-// To let users open the HTML files directly without a local server, we need to eliminate any CORS requests like "fetch".
+﻿// To let users open the HTML files directly without a local server, we need to eliminate any CORS requests like "fetch".
 // Workaround is to place json into .js files and then load them via html script tags.
 // https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS/Errors/CORSRequestNotHttp
-files["monpreset"] = {
+files["MonPreset"] = {
     "title": "MonPreset.txt",
     "overview": "This file controls which monsters are preloaded in a preset, based on the Act number.<br>Any column field name starting with \"*\" is considered a comment field and is not used by the game.",
     "fields": [
@@ -21,7 +21,7 @@ files["monpreset"] = {
                 "type": "parse",
                 "dataLength": 255,
                 "memSize": 0,
-                "description": "Reference of a $!superuniques#Superunique!$, $!monstats#Id!$, or $!monplace#code!$"
+                "description": "Reference of a $!superuniques#Superunique!$, $!monstats#Id!$, or $!MonPlace#code!$"
             }
         }
     ]

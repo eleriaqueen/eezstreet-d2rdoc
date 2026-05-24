@@ -1,4 +1,4 @@
-// To let users open the HTML files directly without a local server, we need to eliminate any CORS requests like "fetch".
+﻿// To let users open the HTML files directly without a local server, we need to eliminate any CORS requests like "fetch".
 // Workaround is to place json into .js files and then load them via html script tags.
 // https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS/Errors/CORSRequestNotHttp
 files["shareditems"] = {
@@ -231,7 +231,7 @@ files["shareditems"] = {
         },
         {
             "name": "component",
-            "description": "Determines the layer of player animation when the item is equipped. This uses a code referenced from the $!composit!$ file.",
+            "description": "Determines the layer of player animation when the item is equipped. This uses a code referenced from the $!Composit!$ file.",
             "table": [
                 [
                     "Code",
@@ -1084,7 +1084,7 @@ files["shareditems"] = {
                 "type": "reference",
                 "dataLength": 47,
                 "memSize": 8,
-                "file": "itemuicategories",
+                "file": "ItemUICategories",
                 "field": "Name"
             }
         },

@@ -1,7 +1,7 @@
-// To let users open the HTML files directly without a local server, we need to eliminate any CORS requests like "fetch".
+﻿// To let users open the HTML files directly without a local server, we need to eliminate any CORS requests like "fetch".
 // Workaround is to place json into .js files and then load them via html script tags.
 // https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS/Errors/CORSRequestNotHttp
-files["itemuicategories"] = {
+files["ItemUICategories"] = {
     "title": "ItemUICategories.txt",
     "overview": "This file defines the item categories that are used in the loot filter and also the chronicle's unique page. ItemTypes.txt assigns its types to the corresponding categories, and item themselves in armor/weapon/misc files can also override their UI category",
     "fields": [
@@ -30,7 +30,7 @@ files["itemuicategories"] = {
                 "type": "reference",
                 "dataLength": 47,
                 "memSize": 8,
-                "file": "itemuicategories",
+                "file": "ItemUICategories",
                 "field": "Name"
             }
         },

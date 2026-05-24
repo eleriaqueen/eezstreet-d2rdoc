@@ -1,10 +1,10 @@
-// To let users open the HTML files directly without a local server, we need to eliminate any CORS requests like "fetch".
+﻿// To let users open the HTML files directly without a local server, we need to eliminate any CORS requests like "fetch".
 // Workaround is to place json into .js files and then load them via html script tags.
 // https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS/Errors/CORSRequestNotHttp
 files["monseq"] = {
     "title": "monseq.txt",
     "referenceFiles": [
-        "monmode"
+        "MonMode"
     ],
     "overview": "This file controls the sequence table used for specifying events during certain animation frames, such as when using skills. A sequence is divided into multiple lines in this file to define each frame in the animation and to determine which event to use during a specific frame.<br>Any column field name starting with \"*\" is considered a comment field and is not used by the game.",
     "fields": [
@@ -19,16 +19,16 @@ files["monseq"] = {
         },
         {
             "name": "mode",
-            "description": "Defines which monster mode animation to use for the sequence. (Corresponds to $!monmode#code!$)",
+            "description": "Defines which monster mode animation to use for the sequence. (Corresponds to $!MonMode#code!$)",
             "type": {
                 "type": "reference",
                 "dataLength": 4,
                 "memSize": 8,
-                "file": "monmode",
+                "file": "MonMode",
                 "field": "code"
             },
             "appendField": {
-                "file": "monmode",
+                "file": "MonMode",
                 "field": "name"
             }
         },

@@ -39,7 +39,7 @@ def buildStaticContent(data):
 def jsToHtml(jsPath, htmlDir, templatePath):
     htmlPath = Path(os.path.join(htmlDir, os.path.basename(jsPath.with_suffix('.html'))))
 
-    with io.open(jsPath, 'r') as jsFile:
+    with io.open(jsPath, 'r', encoding='utf-8-sig') as jsFile:
         # Strip out the js specific stuff to turn it into json
         inText = re.sub(r"(files(.*?)= )|(^[\/\/].*)", "", jsFile.read(), flags=re.MULTILINE)
         data = json.loads(inText)

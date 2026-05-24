@@ -1,4 +1,4 @@
-// To let users open the HTML files directly without a local server, we need to eliminate any CORS requests like "fetch".
+﻿// To let users open the HTML files directly without a local server, we need to eliminate any CORS requests like "fetch".
 // Workaround is to place json into .js files and then load them via html script tags.
 // https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS/Errors/CORSRequestNotHttp
 files["charstats"] = {
@@ -405,6 +405,26 @@ files["charstats"] = {
             "appendField": {
                 "file": "enums",
                 "field": "EITEMMODTYPE"
+            }
+        },
+        {
+            "name": "TwoHandedOffHandRestrictItemType",
+            "description": "Optional item type to restrict off-hand item to when a two-handed weapon is currently equipped.",
+            "type": {
+                "type": "reference",
+                "dataLength": 4,
+                "memSize": 16,
+                "file": "itemtypes",
+                "field": "Code"
+            }
+        },
+        {
+            "name": "TwoHandedDamageAsOneHanded",
+            "description": "If greater than 0, use one-handed damage values for two-handed equipped weapons.",
+            "type": {
+                "type": "int",
+                "dataLength": 0,
+                "memSize": 8
             }
         }
     ]
