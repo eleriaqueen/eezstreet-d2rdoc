@@ -51,5 +51,14 @@
         "note": "This can be used to control which items can be consumed to make an Iron Golem."
       }
     ]
+  },
+  {
+    "file": "treasureclassex",
+    "fields": [
+      {
+        "name": "item#",
+        "note": "'mul', 'ma' and 'mg' function identically. 'cu', 'cs', 'cr', 'cm', 'ce', and 'cg' are in 1024ths - a value of 512 will cause the quality to appear 50% of the time."
+      }
+    ]
   }
 ]
