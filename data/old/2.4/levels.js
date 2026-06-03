@@ -75,7 +75,11 @@ files["levels"] = {
                 "type": "int",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "SizeX(N)",
+                "SizeX(H)"
+            ]
         },
         {
             "name": "SizeY",
@@ -84,7 +88,11 @@ files["levels"] = {
                 "type": "int",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "SizeY(N)",
+                "SizeY(H)"
+            ]
         },
         {
             "name": "OffsetX & OffsetY",
@@ -337,22 +345,42 @@ files["levels"] = {
             }
         },
         {
-            "name": "Vis0",
+            "name": "Vis#",
             "description": "Defines the visibility of other area levels involved with this area level, allowing for travel functionalities between levels. This uses the ID field of another defined area level to link with this area level. If this equals 0, then no area level is specified",
             "type": {
                 "type": "int",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "Vis0",
+                "Vis1",
+                "Vis2",
+                "Vis3",
+                "Vis4",
+                "Vis5",
+                "Vis6",
+                "Vis7"
+            ]
         },
         {
-            "name": "Warp0",
+            "name": "Warp#",
             "description": "Uses the ID field from LvlWarp.txt, which defines which Level Warp to use when exiting the area level. This is connected with the definition of the related Vis0 field. If this equals -1, then no Level Warp is specified which should also mean that the related Vis0 field is not defined",
             "type": {
                 "type": "int",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "Warp0",
+                "Warp1",
+                "Warp2",
+                "Warp3",
+                "Warp4",
+                "Warp5",
+                "Warp6",
+                "Warp7"
+            ]
         },
         {
             "name": "Intensity",
@@ -436,13 +464,17 @@ files["levels"] = {
             }
         },
         {
-            "name": "MonLvl",
+            "name": "monlvl",
             "description": "Controls the overall monster level for the area level for Normal, Nightmare, and Hell Difficulty, respectively. This is for Classic mode only. This can affect the highest item level allowed to drop in this area level",
             "type": {
                 "type": "int",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "MonLvl(N)",
+                "MonLvl(H)"
+            ]
         },
         {
             "name": "MonLvlEx",
@@ -451,7 +483,11 @@ files["levels"] = {
                 "type": "int",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "MonLvlEx(N)",
+                "MonLvlEx(H)"
+            ]
         },
         {
             "name": "MonDen",
@@ -460,7 +496,11 @@ files["levels"] = {
                 "type": "int",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "MonDen(N)",
+                "MonDen(H)"
+            ]
         },
         {
             "name": "MonUMin",
@@ -469,7 +509,11 @@ files["levels"] = {
                 "type": "int",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "MonUMin(N)",
+                "MonUMin(H)"
+            ]
         },
         {
             "name": "MonUMax",
@@ -478,7 +522,11 @@ files["levels"] = {
                 "type": "int",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "MonUMax(N)",
+                "MonUMax(H)"
+            ]
         },
         {
             "name": "MonWndr",
@@ -508,13 +556,42 @@ files["levels"] = {
             }
         },
         {
-            "name": "mon1",
+            "name": "mon#",
             "description": "Defines which monsters can spawn on the area level for Normal Difficulty. Uses the monster ID field from MonStats.txt",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
-            }
+                "type": "reference",
+                "dataLength": 47,
+                "memSize": 16,
+                "file": "monstats",
+                "field": "Id"
+            },
+            "altNames": [
+                "mon1",
+                "mon2",
+                "mon3",
+                "mon4",
+                "mon5",
+                "mon6",
+                "mon7",
+                "mon8",
+                "mon9",
+                "mon10",
+                "mon11",
+                "mon12",
+                "mon13",
+                "mon14",
+                "mon15",
+                "mon16",
+                "mon17",
+                "mon18",
+                "mon19",
+                "mon20",
+                "mon21",
+                "mon22",
+                "mon23",
+                "mon24",
+                "mon25"
+            ]
         },
         {
             "name": "rangedspawn",
@@ -526,49 +603,127 @@ files["levels"] = {
             }
         },
         {
-            "name": "nmon1",
+            "name": "nmon#",
             "description": "Defines which monsters can spawn on the area level for Nightmare Difficulty and Hell Difficulty. Uses the monster ID field from MonStats.txt",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
-            }
+                "type": "reference",
+                "dataLength": 47,
+                "memSize": 16,
+                "file": "monstats",
+                "field": "Id"
+            },
+            "altNames": [
+                "nmon1",
+                "nmon2",
+                "nmon3",
+                "nmon4",
+                "nmon5",
+                "nmon6",
+                "nmon7",
+                "nmon8",
+                "nmon9",
+                "nmon10",
+                "nmon11",
+                "nmon12",
+                "nmon13",
+                "nmon14",
+                "nmon15",
+                "nmon16",
+                "nmon17",
+                "nmon18",
+                "nmon19",
+                "nmon20",
+                "nmon21",
+                "nmon22",
+                "nmon23",
+                "nmon24",
+                "nmon25"
+            ]
         },
         {
-            "name": "umon1",
+            "name": "umon#",
             "description": "Defines which monsters can spawn as Unique monsters on this area level for Normal Difficulty. Uses the monster ID field from MonStats.txt",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
-            }
+                "type": "reference",
+                "dataLength": 47,
+                "memSize": 16,
+                "file": "monstats",
+                "field": "Id"
+            },
+            "altNames": [
+                "umon1",
+                "umon2",
+                "umon3",
+                "umon4",
+                "umon5",
+                "umon6",
+                "umon7",
+                "umon8",
+                "umon9",
+                "umon10",
+                "umon11",
+                "umon12",
+                "umon13",
+                "umon14",
+                "umon15",
+                "umon16",
+                "umon17",
+                "umon18",
+                "umon19",
+                "umon20",
+                "umon21",
+                "umon22",
+                "umon23",
+                "umon24",
+                "umon25"
+            ]
         },
         {
-            "name": "cmon1",
+            "name": "cmon#",
             "description": "Defines which Critter monsters can spawn on the area level. Uses the monster ID field from MonStats.txtCritter monsters are determined by the critter field from MonStats2.txt",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
-            }
+                "type": "reference",
+                "dataLength": 47,
+                "memSize": 16,
+                "file": "monstats",
+                "field": "Id"
+            },
+            "altNames": [
+                "cmon1",
+                "cmon2",
+                "cmon3",
+                "cmon4"
+            ]
         },
         {
-            "name": "cpct1",
+            "name": "cpct#",
             "description": "Controls the percent chance (out of 100) to spawn a Critter monster on the area level",
             "type": {
                 "type": "int",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "cpct1",
+                "cpct2",
+                "cpct3",
+                "cpct4"
+            ]
         },
         {
-            "name": "camt1",
+            "name": "camt#",
             "description": "Controls the amount of Critter monsters to spawn on the area level after they succeeded their random spawn chance from the above cpct1 field",
             "type": {
                 "type": "int",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "camt1",
+                "camt2",
+                "camt3",
+                "camt4"
+            ]
         },
         {
             "name": "Themes",
@@ -625,30 +780,52 @@ files["levels"] = {
             }
         },
         {
-            "name": "ObjGrp0",
+            "name": "ObjGrp#",
             "description": "Uses a numeric *ID Index to define which possible Object Groups to spawn in this area level (ObjGroup.txt). The game will go through each of these fields, so there can be more than 1 Object Group used in an area level. If this value equals 0, then ignore this",
             "type": {
                 "type": "int",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "ObjGrp0",
+                "ObjGrp1",
+                "ObjGrp2",
+                "ObjGrp3",
+                "ObjGrp4",
+                "ObjGrp5",
+                "ObjGrp6",
+                "ObjGrp7"
+            ]
         },
         {
-            "name": "ObjPrb0",
+            "name": "ObjPrb#",
             "description": "Determines the random chance (out of 100) for each Object Group to spawn in the area level. This field depends on the related \"ObjGrp#\" field being defined",
             "type": {
                 "type": "int",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "ObjPrb0",
+                "ObjPrb1",
+                "ObjPrb2",
+                "ObjPrb3",
+                "ObjPrb4",
+                "ObjPrb5",
+                "ObjPrb6",
+                "ObjPrb7"
+            ]
         },
         {
             "name": "LevelGroup",
             "description": "Defines what group this level belongs to. Used for condensing level names in desecrated (terror) zones messaging. See LevelGroups.txt.",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
+                "type": "reference",
+                "dataLength": 47,
+                "memSize": 32,
+                "file": "levelgroups",
+                "field": "LevelGroupId"
             }
         }
     ]

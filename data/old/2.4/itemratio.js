@@ -42,148 +42,53 @@ files["itemratio"] = {
             }
         },
         {
-            "name": "Unique",
+            "name": "Rarity",
             "description": "Base value for calculating the Unique Quality chance. Higher value means rarer chance. (Calculated first)",
             "type": {
                 "type": "int",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "Unique",
+                "Set",
+                "Rare",
+                "Magic",
+                "HiQuality",
+                "Normal"
+            ]
         },
         {
-            "name": "UniqueDivisor",
+            "name": "Divisor",
             "description": "Modifier for changing the Unique Quality chance, based on the difference between the Monster Level and the Item's base level",
             "type": {
                 "type": "int",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "UniqueDivisor",
+                "SetDivisor",
+                "RareDivisor",
+                "MagicDivisor",
+                "HiQualityDivisor",
+                "NormalDivisor"
+            ]
         },
         {
-            "name": "UniqueMin",
+            "name": "Min",
             "description": "The minimum value of the probability denominator for Unique Quality. This is compared to the calculated Unique Quality value after Magic Find calculations and is chosen if it is greater than that value. (Calculated in 128ths)",
             "type": {
                 "type": "int",
                 "dataLength": 0,
                 "memSize": 0
-            }
-        },
-        {
-            "name": "Set",
-            "description": "Base value for calculating the Set Quality chance. Higher value means rarer chance. (Calculated after Unique)",
-            "type": {
-                "type": "int",
-                "dataLength": 0,
-                "memSize": 0
-            }
-        },
-        {
-            "name": "SetDivisor",
-            "description": "Modifier for changing the Set Quality chance, based on the difference between the Monster Level and the Item's base level",
-            "type": {
-                "type": "int",
-                "dataLength": 0,
-                "memSize": 0
-            }
-        },
-        {
-            "name": "SetMin",
-            "description": "The minimum value of the probability denominator for Set Quality. This is compared to the calculated Set Quality value after Magic Find calculations and is chosen if it is greater than that value. (Calculated in 128ths)",
-            "type": {
-                "type": "int",
-                "dataLength": 0,
-                "memSize": 0
-            }
-        },
-        {
-            "name": "Rare",
-            "description": "Base value for calculating the Rare Quality chance. Higher value means rarer chance. (Calculated after Set)",
-            "type": {
-                "type": "int",
-                "dataLength": 0,
-                "memSize": 0
-            }
-        },
-        {
-            "name": "RareDivisor",
-            "description": "Modifier for changing the Rare Quality chance, based on the difference between the Monster Level and the Item's base level",
-            "type": {
-                "type": "int",
-                "dataLength": 0,
-                "memSize": 0
-            }
-        },
-        {
-            "name": "RareMin",
-            "description": "The minimum value of the probability denominator for Rare Quality. This is compared to the calculated Rare Quality value after Magic Find calculations and is chosen if it is greater than that value. (Calculated in 128ths)",
-            "type": {
-                "type": "int",
-                "dataLength": 0,
-                "memSize": 0
-            }
-        },
-        {
-            "name": "Magic",
-            "description": "Base value for calculating the Magic Quality chance. Higher value means rarer chance. (Calculated after Rare)",
-            "type": {
-                "type": "int",
-                "dataLength": 0,
-                "memSize": 0
-            }
-        },
-        {
-            "name": "MagicDivisor",
-            "description": "Modifier for changing the Magic Quality chance, based on the difference between the Monster Level and the Item's base level",
-            "type": {
-                "type": "int",
-                "dataLength": 0,
-                "memSize": 0
-            }
-        },
-        {
-            "name": "MagicMin",
-            "description": "The minimum value of the probability denominator for Magic Quality. This is compared to the calculated Magic Quality value after Magic Find calculations and is chosen if it is greater than that value. (Calculated in 128ths)",
-            "type": {
-                "type": "int",
-                "dataLength": 0,
-                "memSize": 0
-            }
-        },
-        {
-            "name": "HiQuality",
-            "description": "Base value for calculating the High Quality (Superior) chance. Higher value means rarer chance. (Calculated after Magic)",
-            "type": {
-                "type": "int",
-                "dataLength": 0,
-                "memSize": 0
-            }
-        },
-        {
-            "name": "HiQualityDivisor",
-            "description": "Modifier for changing the High Quality (Superior) chance, based on the difference between the Monster Level and the Item's base level",
-            "type": {
-                "type": "int",
-                "dataLength": 0,
-                "memSize": 0
-            }
-        },
-        {
-            "name": "Normal",
-            "description": "Base value for calculating the Normal Quality chance. Higher value means rarer chance. (Calculated after Normal, and if this does not succeed in rolling, then the item is defaulted to Low Quality)",
-            "type": {
-                "type": "int",
-                "dataLength": 0,
-                "memSize": 0
-            }
-        },
-        {
-            "name": "NormalDivisor",
-            "description": "Modifier for changing the Normal Quality chance, based on the difference between the Monster Level and the Item's base level",
-            "type": {
-                "type": "int",
-                "dataLength": 0,
-                "memSize": 0
-            }
+            },
+            "altNames": [
+                "UniqueMin",
+                "SetMin",
+                "RareMin",
+                "MagicMin"
+            ]
         }
     ]
 }

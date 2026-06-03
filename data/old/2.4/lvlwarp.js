@@ -24,7 +24,10 @@ files["lvlwarp"] = {
             }
         },
         {
-            "name": "SelectX & SelectY",
+            "name": "SelectX",
+            "altNames": [
+                "SelectY"
+            ],
             "description": "These values define the horizontal and vertical offsets (respectively) of the starting left corner position of the Level Warp area. This is treated as the starting position to select the interactable Level Warp area in the area level. This value is measured in pixels",
             "type": {
                 "type": "int",
@@ -33,7 +36,10 @@ files["lvlwarp"] = {
             }
         },
         {
-            "name": "SelectDX & SelectDY",
+            "name": "SelectDX",
+            "altNames": [
+                "SelectDY"
+            ],
             "description": "These values define the horizontal and vertical offsets (respectively) of the offset from the starting position of the Level Warp area. This is added with the SelectX & SelectY fields (respectively) to determine the overall size and position of the Level Warp in the area level. This value is measured in pixels",
             "type": {
                 "type": "int",
@@ -42,7 +48,10 @@ files["lvlwarp"] = {
             }
         },
         {
-            "name": "ExitWalkX & ExitWalkY",
+            "name": "ExitWalkX",
+            "altNames": [
+                "ExitWalkY"
+            ],
             "description": "These values define the horizontal and vertical positions (respectively) of the destination location where the player will walk to after exiting to this Level Warp. This value is measured with a sub-tile offset from the base position of the Level Warp. One full tile on a level is composed of a grid of 5x5 sub-tiles",
             "type": {
                 "type": "int",
@@ -51,7 +60,10 @@ files["lvlwarp"] = {
             }
         },
         {
-            "name": "OffsetX & OffsetY",
+            "name": "OffsetX",
+            "altNames": [
+                "OffsetY"
+            ],
             "description": "These values define the horizontal and vertical positions (respectively) of the sub-tile for the Level Warp, where the player will appear when exiting to this area level. This value is measured with a sub-tile offset from the base position of the Level Warp. One full tile on a level is composed of a grid of 5x5 sub-tiles",
             "type": {
                 "type": "int",

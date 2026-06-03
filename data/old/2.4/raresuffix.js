@@ -24,22 +24,41 @@ files["raresuffix"] = {
             }
         },
         {
-            "name": "itype1",
+            "name": "itype#",
             "description": "Controls what item types are allowed for this Rare Prefix to spawn on (Uses the Code field from ItemTypes.txt)",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
-            }
+                "type": "reference",
+                "dataLength": 4,
+                "memSize": 16,
+                "file": "itemtypes",
+                "field": "Code"
+            },
+            "altNames": [
+                "itype1",
+                "itype2",
+                "itype3",
+                "itype4",
+                "itype5",
+                "itype6",
+                "itype7"
+            ]
         },
         {
-            "name": "etype1",
+            "name": "etype#",
             "description": "Controls what item types are excluded for this Rare Prefix to spawn on (Uses the Code field from ItemTypes.txt)",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
-            }
+                "type": "reference",
+                "dataLength": 4,
+                "memSize": 16,
+                "file": "itemtypes",
+                "field": "Code"
+            },
+            "altNames": [
+                "etype1",
+                "etype2",
+                "etype3",
+                "etype4"
+            ]
         }
     ]
 }

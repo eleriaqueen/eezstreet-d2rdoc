@@ -123,544 +123,130 @@ files["inventory"] = {
             }
         },
         {
-            "name": "rArmLeft",
+            "name": "Left",
             "description": "Starting X coordinate location of the Right Weapon Slot",
             "type": {
                 "type": "int",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "rArmLeft",
+                "lArmLeft",
+                "torsoLeft",
+                "headLeft",
+                "neckLeft",
+                "rHandLeft",
+                "lHandLeft",
+                "beltLeft",
+                "feetLeft",
+                "glovesLeft"
+            ]
         },
         {
-            "name": "rArmRight",
+            "name": "Right",
             "description": "Ending X coordinate location of the Right Weapon Slot (Includes the \"rArmLeft\" value with the \"rArmWidth\" value)",
             "type": {
                 "type": "int",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "rArmRight",
+                "lArmRight",
+                "torsoRight",
+                "headRight",
+                "neckRight",
+                "rHandRight",
+                "lHandRight",
+                "beltRight",
+                "feetRight",
+                "glovesRight"
+            ]
         },
         {
-            "name": "rArmTop",
+            "name": "Top",
             "description": "Starting Y coordinate location of the Right Weapon Slot",
             "type": {
                 "type": "int",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "rArmTop",
+                "lArmTop",
+                "torsoTop",
+                "headTop",
+                "neckTop",
+                "rHandTop",
+                "lHandTop",
+                "beltTop",
+                "feetTop",
+                "glovesTop"
+            ]
         },
         {
-            "name": "rArmBottom",
+            "name": "Bottom",
             "description": "Ending Y coordinate location of the Right Weapon Slot (Includes the \"rArmTop\" value with the \"rArmHeight\" value)",
             "type": {
                 "type": "int",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "rArmBottom",
+                "lArmBottom",
+                "torsoBottom",
+                "headBottom",
+                "neckBottom",
+                "rHandBottom",
+                "lHandBottom",
+                "beltBottom",
+                "feetBottom",
+                "glovesBottom"
+            ]
         },
         {
-            "name": "rArmWidth",
+            "name": "Width",
             "description": "The pixel width of the Right Weapon Slot",
             "type": {
                 "type": "int",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "rArmWidth",
+                "lArmWidth",
+                "torsoWidth",
+                "headWidth",
+                "neckWidth",
+                "rHandWidth",
+                "lHandWidth",
+                "beltWidth",
+                "feetWidth",
+                "glovesWidth"
+            ]
         },
         {
-            "name": "rArmHeight",
+            "name": "Height",
             "description": "The pixel Height of the Right Weapon Slot",
             "type": {
                 "type": "int",
                 "dataLength": 0,
                 "memSize": 0
-            }
-        },
-        {
-            "name": "torsoLeft",
-            "description": "Starting X coordinate location of the Body Armor Slot",
-            "type": {
-                "type": "int",
-                "dataLength": 0,
-                "memSize": 0
-            }
-        },
-        {
-            "name": "torsoRight",
-            "description": "Ending X coordinate location of the Body Armor Slot (Includes the \"torsoLeft\" value with the \"torsoWidth\" value)",
-            "type": {
-                "type": "int",
-                "dataLength": 0,
-                "memSize": 0
-            }
-        },
-        {
-            "name": "torsoTop",
-            "description": "Starting Y coordinate location of the Body Armor Slot",
-            "type": {
-                "type": "int",
-                "dataLength": 0,
-                "memSize": 0
-            }
-        },
-        {
-            "name": "torsoBottom",
-            "description": "Ending Y coordinate location of the Body Armor Slot (Includes the \"torsoTop\" value with the \"torsoHeight\" value)",
-            "type": {
-                "type": "int",
-                "dataLength": 0,
-                "memSize": 0
-            }
-        },
-        {
-            "name": "torsoWidth",
-            "description": "The pixel width of the Body Armor Slot",
-            "type": {
-                "type": "int",
-                "dataLength": 0,
-                "memSize": 0
-            }
-        },
-        {
-            "name": "torsoHeight",
-            "description": "The pixel Height of the Body Armor Slot",
-            "type": {
-                "type": "int",
-                "dataLength": 0,
-                "memSize": 0
-            }
-        },
-        {
-            "name": "lArmLeft",
-            "description": "Starting X coordinate location of the Left Weapon Slot",
-            "type": {
-                "type": "int",
-                "dataLength": 0,
-                "memSize": 0
-            }
-        },
-        {
-            "name": "lArmRight",
-            "description": "Ending X coordinate location of the Left Weapon Slot (Includes the \"lArmLeft\" value with the \"lArmWidth\" value)",
-            "type": {
-                "type": "int",
-                "dataLength": 0,
-                "memSize": 0
-            }
-        },
-        {
-            "name": "lArmTop",
-            "description": "Starting Y coordinate location of the Left Weapon Slot",
-            "type": {
-                "type": "int",
-                "dataLength": 0,
-                "memSize": 0
-            }
-        },
-        {
-            "name": "lArmBottom",
-            "description": "Ending Y coordinate location of the Left Weapon Slot (Includes the \"lArmTop\" value with the \"lArmHeight\" value)",
-            "type": {
-                "type": "int",
-                "dataLength": 0,
-                "memSize": 0
-            }
-        },
-        {
-            "name": "lArmWidth",
-            "description": "The pixel width of the Left Weapon Slot",
-            "type": {
-                "type": "int",
-                "dataLength": 0,
-                "memSize": 0
-            }
-        },
-        {
-            "name": "lArmHeight",
-            "description": "The pixel Height of the Left Weapon Slot",
-            "type": {
-                "type": "int",
-                "dataLength": 0,
-                "memSize": 0
-            }
-        },
-        {
-            "name": "headLeft",
-            "description": "Starting X coordinate location of the Helm Slot",
-            "type": {
-                "type": "int",
-                "dataLength": 0,
-                "memSize": 0
-            }
-        },
-        {
-            "name": "headRight",
-            "description": "Ending X coordinate location of the Helm Slot (Includes the \"headLeft\" value with the \"headWidth\" value)",
-            "type": {
-                "type": "int",
-                "dataLength": 0,
-                "memSize": 0
-            }
-        },
-        {
-            "name": "headTop",
-            "description": "Starting Y coordinate location of the Helm Slot",
-            "type": {
-                "type": "int",
-                "dataLength": 0,
-                "memSize": 0
-            }
-        },
-        {
-            "name": "headBottom",
-            "description": "Ending Y coordinate location of the Helm Slot (Includes the \"headTop\" value with the \"headHeight\" value)",
-            "type": {
-                "type": "int",
-                "dataLength": 0,
-                "memSize": 0
-            }
-        },
-        {
-            "name": "headWidth",
-            "description": "The pixel width of the Helm Slot",
-            "type": {
-                "type": "int",
-                "dataLength": 0,
-                "memSize": 0
-            }
-        },
-        {
-            "name": "headHeight",
-            "description": "The pixel Height of the Helm Slot",
-            "type": {
-                "type": "int",
-                "dataLength": 0,
-                "memSize": 0
-            }
-        },
-        {
-            "name": "neckLeft",
-            "description": "Starting X coordinate location of the Amulet Slot",
-            "type": {
-                "type": "int",
-                "dataLength": 0,
-                "memSize": 0
-            }
-        },
-        {
-            "name": "neckRight",
-            "description": "Ending X coordinate location of the Amulet Slot (Includes the \"neckLeft\" value with the \"neckWidth\" value)",
-            "type": {
-                "type": "int",
-                "dataLength": 0,
-                "memSize": 0
-            }
-        },
-        {
-            "name": "neckTop",
-            "description": "Starting Y coordinate location of the Amulet Slot",
-            "type": {
-                "type": "int",
-                "dataLength": 0,
-                "memSize": 0
-            }
-        },
-        {
-            "name": "neckBottom",
-            "description": "Ending Y coordinate location of the Amulet Slot (Includes the \"neckTop\" value with the \"neckHeight\" value)",
-            "type": {
-                "type": "int",
-                "dataLength": 0,
-                "memSize": 0
-            }
-        },
-        {
-            "name": "neckWidth",
-            "description": "The pixel width of the Amulet Slot",
-            "type": {
-                "type": "int",
-                "dataLength": 0,
-                "memSize": 0
-            }
-        },
-        {
-            "name": "neckHeight",
-            "description": "The pixel Height of the Amulet Slot",
-            "type": {
-                "type": "int",
-                "dataLength": 0,
-                "memSize": 0
-            }
-        },
-        {
-            "name": "rHandLeft",
-            "description": "Starting X coordinate location of the Right Ring Slot",
-            "type": {
-                "type": "int",
-                "dataLength": 0,
-                "memSize": 0
-            }
-        },
-        {
-            "name": "rHandLeft",
-            "description": "Ending X coordinate location of the Right Ring Slot (Includes the \"rHandLeft\" value with the \"rHandWidth\" value)",
-            "type": {
-                "type": "int",
-                "dataLength": 0,
-                "memSize": 0
-            }
-        },
-        {
-            "name": "rHandTop",
-            "description": "Starting Y coordinate location of the Right Ring Slot",
-            "type": {
-                "type": "int",
-                "dataLength": 0,
-                "memSize": 0
-            }
-        },
-        {
-            "name": "rHandBottom",
-            "description": "Ending Y coordinate location of the Right Ring Slot (Includes the \"rHandTop\" value with the \"rHandHeight\" value)",
-            "type": {
-                "type": "int",
-                "dataLength": 0,
-                "memSize": 0
-            }
-        },
-        {
-            "name": "rHandWidth",
-            "description": "The pixel width of the Right Ring Slot",
-            "type": {
-                "type": "int",
-                "dataLength": 0,
-                "memSize": 0
-            }
-        },
-        {
-            "name": "rHandHeight",
-            "description": "The pixel Height of the Right Ring Slot",
-            "type": {
-                "type": "int",
-                "dataLength": 0,
-                "memSize": 0
-            }
-        },
-        {
-            "name": "lHandLeft",
-            "description": "Starting X coordinate location of the Left Ring Slot",
-            "type": {
-                "type": "int",
-                "dataLength": 0,
-                "memSize": 0
-            }
-        },
-        {
-            "name": "lHandRight",
-            "description": "Ending X coordinate location of the Left Ring Slot (Includes the \"lHandLeft\" value with the \"lHandWidth\" value)",
-            "type": {
-                "type": "int",
-                "dataLength": 0,
-                "memSize": 0
-            }
-        },
-        {
-            "name": "lHandTop",
-            "description": "Starting Y coordinate location of the Left Ring Slot",
-            "type": {
-                "type": "int",
-                "dataLength": 0,
-                "memSize": 0
-            }
-        },
-        {
-            "name": "lHandBottom",
-            "description": "Ending Y coordinate location of the Left Ring Slot (Includes the \"lHandTop\" value with the \"lHandHeight\" value)",
-            "type": {
-                "type": "int",
-                "dataLength": 0,
-                "memSize": 0
-            }
-        },
-        {
-            "name": "lHandWidth",
-            "description": "The pixel width of the Left Ring Slot",
-            "type": {
-                "type": "int",
-                "dataLength": 0,
-                "memSize": 0
-            }
-        },
-        {
-            "name": "lHandHeight",
-            "description": "The pixel Height of the Left Ring Slot",
-            "type": {
-                "type": "int",
-                "dataLength": 0,
-                "memSize": 0
-            }
-        },
-        {
-            "name": "beltLeft",
-            "description": "Starting X coordinate location of the Belt Slot",
-            "type": {
-                "type": "int",
-                "dataLength": 0,
-                "memSize": 0
-            }
-        },
-        {
-            "name": "beltRight",
-            "description": "Ending X coordinate location of the Belt Slot (Includes the \"beltLeft\" value with the \"beltWidth\" value)",
-            "type": {
-                "type": "int",
-                "dataLength": 0,
-                "memSize": 0
-            }
-        },
-        {
-            "name": "beltTop",
-            "description": "Starting Y coordinate location of the Belt Slot",
-            "type": {
-                "type": "int",
-                "dataLength": 0,
-                "memSize": 0
-            }
-        },
-        {
-            "name": "beltBottom",
-            "description": "Ending Y coordinate location of the Belt Slot (Includes the \"beltTop\" value with the \"beltHeight\" value)",
-            "type": {
-                "type": "int",
-                "dataLength": 0,
-                "memSize": 0
-            }
-        },
-        {
-            "name": "beltWidth",
-            "description": "The pixel width of the Belt Slot",
-            "type": {
-                "type": "int",
-                "dataLength": 0,
-                "memSize": 0
-            }
-        },
-        {
-            "name": "beltHeight",
-            "description": "The pixel Height of the Belt Slot",
-            "type": {
-                "type": "int",
-                "dataLength": 0,
-                "memSize": 0
-            }
-        },
-        {
-            "name": "feetLeft",
-            "description": "Starting X coordinate location of the Boots Slot",
-            "type": {
-                "type": "int",
-                "dataLength": 0,
-                "memSize": 0
-            }
-        },
-        {
-            "name": "feetRight",
-            "description": "Ending X coordinate location of the Boots Slot (Includes the \"feetLeft\" value with the \"feetWidth\" value)",
-            "type": {
-                "type": "int",
-                "dataLength": 0,
-                "memSize": 0
-            }
-        },
-        {
-            "name": "feetTop",
-            "description": "Starting Y coordinate location of the Boots Slot",
-            "type": {
-                "type": "int",
-                "dataLength": 0,
-                "memSize": 0
-            }
-        },
-        {
-            "name": "feetBottom",
-            "description": "Ending Y coordinate location of the Boots Slot (Includes the \"feetTop\" value with the \"feetHeight\" value)",
-            "type": {
-                "type": "int",
-                "dataLength": 0,
-                "memSize": 0
-            }
-        },
-        {
-            "name": "feetWidth",
-            "description": "The pixel width of the Boots Slot",
-            "type": {
-                "type": "int",
-                "dataLength": 0,
-                "memSize": 0
-            }
-        },
-        {
-            "name": "feetHeight",
-            "description": "The pixel Height of the Boots Slot",
-            "type": {
-                "type": "int",
-                "dataLength": 0,
-                "memSize": 0
-            }
-        },
-        {
-            "name": "glovesLeft",
-            "description": "Starting X coordinate location of the Gloves Slot",
-            "type": {
-                "type": "int",
-                "dataLength": 0,
-                "memSize": 0
-            }
-        },
-        {
-            "name": "glovesRight",
-            "description": "Ending X coordinate location of the Gloves Slot (Includes the \"glovesLeft\" value with the \"glovesWidth\" value)",
-            "type": {
-                "type": "int",
-                "dataLength": 0,
-                "memSize": 0
-            }
-        },
-        {
-            "name": "glovesTop",
-            "description": "Starting Y coordinate location of the Gloves Slot",
-            "type": {
-                "type": "int",
-                "dataLength": 0,
-                "memSize": 0
-            }
-        },
-        {
-            "name": "glovesBottom",
-            "description": "Ending Y coordinate location of the Gloves Slot (Includes the \"glovesTop\" value with the \"glovesHeight\" value)",
-            "type": {
-                "type": "int",
-                "dataLength": 0,
-                "memSize": 0
-            }
-        },
-        {
-            "name": "glovesWidth",
-            "description": "The pixel width of the Gloves Slot",
-            "type": {
-                "type": "int",
-                "dataLength": 0,
-                "memSize": 0
-            }
-        },
-        {
-            "name": "glovesHeight",
-            "description": "The pixel Height of the Gloves Slot",
-            "type": {
-                "type": "int",
-                "dataLength": 0,
-                "memSize": 0
-            }
+            },
+            "altNames": [
+                "rArmHeight",
+                "lArmHeight",
+                "torsoHeight",
+                "headHeight",
+                "neckHeight",
+                "rHandHeight",
+                "lHandHeight",
+                "beltHeight",
+                "feetHeight",
+                "glovesHeight"
+            ]
         }
     ]
 }

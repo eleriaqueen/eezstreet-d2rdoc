@@ -9,9 +9,11 @@ files["wanderingmon"] = {
             "name": "class",
             "description": "Uses a monster \"ID\" defined from the monstats.txt file. Monsters defined here are added to a list which is used to randomly pick a monster to spawn in an area level.",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
+                "type": "reference",
+                "dataLength": 47,
+                "memSize": 16,
+                "file": "monstats",
+                "field": "Id"
             }
         }
     ]

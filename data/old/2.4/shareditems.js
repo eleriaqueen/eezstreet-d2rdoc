@@ -296,8 +296,17 @@ files["shareditems"] = {
             ]
         },
         {
-            "name": "invwidth & invheight",
-            "description": "Defines the width and height of grid cells that the item occupies in the player inventory",
+            "name": "invwidth",
+            "description": "Defines the width (in grid cells) that the item occupies in the player inventory",
+            "type": {
+                "type": "int",
+                "dataLength": 0,
+                "memSize": 0
+            }
+        },
+        {
+            "name": "invheight",
+            "description": "Defines the height (in grid cells) that the item occupies in the player inventory",
             "type": {
                 "type": "int",
                 "dataLength": 0,
@@ -470,27 +479,33 @@ files["shareditems"] = {
             "name": "type",
             "description": "Points to an Code defined in the ItemTypes.txt file, which controls how the item functions",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
+                "type": "reference",
+                "dataLength": 4,
+                "memSize": 16,
+                "file": "itemtypes",
+                "field": "Code"
             }
         },
         {
             "name": "type2",
             "description": "Points to a secondary Item Type defined in the ItemTypes.txt file, which controls how the item functions. This is optional but can add more functionalities and possibilities with the item",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
+                "type": "reference",
+                "dataLength": 4,
+                "memSize": 16,
+                "file": "itemtypes",
+                "field": "Code"
             }
         },
         {
             "name": "dropsound",
             "description": "Points to a sound defined in the Sounds.txt file. Used when the item is dropped on the ground",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
+                "type": "reference",
+                "dataLength": 47,
+                "memSize": 16,
+                "file": "sounds",
+                "field": "Sound"
             }
         },
         {
@@ -506,9 +521,11 @@ files["shareditems"] = {
             "name": "usesound",
             "description": "Points to sound defined in the Sounds.txt file. Used when the item is moved in the inventory or used",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
+                "type": "reference",
+                "dataLength": 47,
+                "memSize": 16,
+                "file": "sounds",
+                "field": "Sound"
             }
         },
         {
@@ -814,7 +831,26 @@ files["shareditems"] = {
             }
         },
         {
-            "name": "[NPC]Min",
+            "name": "NPCMin",
+            "altNames": [
+                "CharsiMin",
+                "GheedMin",
+                "AkaraMin",
+                "FaraMin",
+                "LysanderMin",
+                "DrognanMin",
+                "HratliMin",
+                "AlkorMin",
+                "OrmusMin",
+                "ElzixMin",
+                "AshearaMin",
+                "CainMin",
+                "HalbuMin",
+                "JamellaMin",
+                "LarzukMin",
+                "MalahMin",
+                "AnyaMin"
+            ],
             "description": "Minimum amount of this item type in Normal rarity that the NPC can sell at once",
             "type": {
                 "type": "int",
@@ -823,7 +859,26 @@ files["shareditems"] = {
             }
         },
         {
-            "name": "[NPC]Max",
+            "name": "NPCMax",
+            "altNames": [
+                "CharsiMax",
+                "GheedMax",
+                "AkaraMax",
+                "FaraMax",
+                "LysanderMax",
+                "DrognanMax",
+                "HratliMax",
+                "AlkorMax",
+                "OrmusMax",
+                "ElzixMax",
+                "AshearaMax",
+                "CainMax",
+                "HalbuMax",
+                "JamellaMax",
+                "LarzukMax",
+                "MalahMax",
+                "AnyaMax"
+            ],
             "description": "Maximum amount of this item type in Normal rarity that the NPC can sell at once. This must be equal to or greater than the minimum amount",
             "type": {
                 "type": "int",
@@ -832,7 +887,26 @@ files["shareditems"] = {
             }
         },
         {
-            "name": "[NPC]MagicMin",
+            "name": "NPCMagicMin",
+            "altNames": [
+                "CharsiMagicMin",
+                "GheedMagicMin",
+                "AkaraMagicMin",
+                "FaraMagicMin",
+                "LysanderMagicMin",
+                "DrognanMagicMin",
+                "HratliMagicMin",
+                "AlkorMagicMin",
+                "OrmusMagicMin",
+                "ElzixMagicMin",
+                "AshearaMagicMin",
+                "CainMagicMin",
+                "HalbuMagicMin",
+                "JamellaMagicMin",
+                "LarzukMagicMin",
+                "MalahMagicMin",
+                "AnyaMagicMin"
+            ],
             "description": "Minimum amount of this item type in Magical rarity that the NPC can sell at once",
             "type": {
                 "type": "int",
@@ -841,7 +915,26 @@ files["shareditems"] = {
             }
         },
         {
-            "name": "[NPC]MagicMax",
+            "name": "NPCMagicMax",
+            "altNames": [
+                "CharsiMagicMax",
+                "GheedMagicMax",
+                "AkaraMagicMax",
+                "FaraMagicMax",
+                "LysanderMagicMax",
+                "DrognanMagicMax",
+                "HratliMagicMax",
+                "AlkorMagicMax",
+                "OrmusMagicMax",
+                "ElzixMagicMax",
+                "AshearaMagicMax",
+                "CainMagicMax",
+                "HalbuMagicMax",
+                "JamellaMagicMax",
+                "LarzukMagicMax",
+                "MalahMagicMax",
+                "AnyaMagicMax"
+            ],
             "description": "Maximum amount of this item type in Magical rarity that the NPC can sell at once. This must be equal to or greater than the minimum amount",
             "type": {
                 "type": "int",
@@ -850,7 +943,26 @@ files["shareditems"] = {
             }
         },
         {
-            "name": "[NPC]MagicLvl",
+            "name": "NPCMagicLvl",
+            "altNames": [
+                "CharsiMagicLvl",
+                "GheedMagicLvl",
+                "AkaraMagicLvl",
+                "FaraMagicLvl",
+                "LysanderMagicLvl",
+                "DrognanMagicLvl",
+                "HratliMagicLvl",
+                "AlkorMagicLvl",
+                "OrmusMagicLvl",
+                "ElzixMagicLvl",
+                "AshearaMagicLvl",
+                "CainMagicLvl",
+                "HalbuMagicLvl",
+                "JamellaMagicLvl",
+                "LarzukMagicLvl",
+                "MalahMagicLvl",
+                "AnyaMagicLvl"
+            ],
             "description": "Maximum magic level allowed for this item type in Magical rarity; Where [NPC] is one of the following:",
             "type": {
                 "type": "int",

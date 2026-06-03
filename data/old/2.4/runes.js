@@ -33,67 +33,132 @@ files["runes"] = {
             }
         },
         {
-            "name": "itype1",
+            "name": "itype#",
             "description": "Controls what item types are allowed for this Rune Word (Uses the Code field from ItemTypes.txt)",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
-            }
+                "type": "reference",
+                "dataLength": 4,
+                "memSize": 16,
+                "file": "itemtypes",
+                "field": "Code"
+            },
+            "altNames": [
+                "itype1",
+                "itype2",
+                "itype3",
+                "itype4",
+                "itype5",
+                "itype6"
+            ]
         },
         {
-            "name": "etype1",
+            "name": "etype#",
             "description": "Controls what item types are excluded for this Rune Word (Uses the Code field from ItemTypes.txt)",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
-            }
+                "type": "reference",
+                "dataLength": 4,
+                "memSize": 16,
+                "file": "itemtypes",
+                "field": "Code"
+            },
+            "altNames": [
+                "etype1",
+                "etype2",
+                "etype3"
+            ]
         },
         {
-            "name": "Rune1",
+            "name": "Rune#",
             "description": "Controls what runes are required to make the Rune Word. The order of each of these fields matters. (Uses the Code field from Misc.txt)",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
-            }
+                "type": "reference",
+                "dataLength": 4,
+                "memSize": 32,
+                "file": "misc",
+                "field": "code"
+            },
+            "altNames": [
+                "Rune1",
+                "Rune2",
+                "Rune3",
+                "Rune4",
+                "Rune5",
+                "Rune6"
+            ]
         },
         {
-            "name": "T1Code1",
+            "name": "T1Code#",
             "description": "Controls the item properties that the Rune Word provides (Uses the Code field from Properties.txt)",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
-            }
+                "type": "parse",
+                "dataLength": 255,
+                "memSize": 0,
+                "description": "Reference of $!properties#code!$"
+            },
+            "altNames": [
+                "T1Code1",
+                "T1Code2",
+                "T1Code3",
+                "T1Code4",
+                "T1Code5",
+                "T1Code6",
+                "T1Code7"
+            ]
         },
         {
-            "name": "T1Param1",
+            "name": "T1Param#",
             "description": "The stat's \"parameter\" value associated with the related property (T1Code1). Usage depends on the (Function ID field from Properties.txt)",
             "type": {
-                "type": "int",
-                "dataLength": 0,
-                "memSize": 0
-            }
+                "type": "parse",
+                "dataLength": 255,
+                "memSize": 0,
+                "description": "A number or references $!skills#skill!$, $!montype#type!$, or $!states#state!$"
+            },
+            "altNames": [
+                "T1Param1",
+                "T1Param2",
+                "T1Param3",
+                "T1Param4",
+                "T1Param5",
+                "T1Param6",
+                "T1Param7"
+            ]
         },
         {
-            "name": "T1Min1",
+            "name": "T1Min#",
             "description": "The stat's \"min\" value to assign to the related property (T1Code1). Usage depends on the (Function ID field from Properties.txt)",
             "type": {
                 "type": "int",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "T1Min1",
+                "T1Min2",
+                "T1Min3",
+                "T1Min4",
+                "T1Min5",
+                "T1Min6",
+                "T1Min7"
+            ]
         },
         {
-            "name": "T1Max1",
+            "name": "T1Max#",
             "description": "The stat's \"max\" value to assign to the related property (T1Code1). Usage depends on the (Function ID field from Properties.txt)",
             "type": {
                 "type": "int",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "T1Max1",
+                "T1Max2",
+                "T1Max3",
+                "T1Max4",
+                "T1Max5",
+                "T1Max6",
+                "T1Max7"
+            ]
         }
     ]
 }

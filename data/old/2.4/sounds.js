@@ -18,9 +18,11 @@ files["sounds"] = {
             "name": "Redirect",
             "description": "Points the sound so the index of another sound in the data file. If this field is not empty, the game will use the redirected sound instead of this sound. This can be used when playing the game in the new graphics mode",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
+                "type": "reference",
+                "dataLength": 47,
+                "memSize": 32,
+                "file": "sounds",
+                "field": "Sound"
             }
         },
         {
@@ -311,13 +313,18 @@ files["sounds"] = {
             }
         },
         {
-            "name": "Block 1",
+            "name": "Block #",
             "description": "Defines an offset time value in the sound. If this sound is used in a Sound Environment then these fields control when to periodically update the current song sound to an offset. If this sound is not used in a Sound Environment and Block 1 is used and the Loop field is enabled, then use this block value as the time in the sound when to start looping. If this equals -1, then the field is ignored",
             "type": {
                 "type": "int",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "Block 1",
+                "Block 2",
+                "Block 3"
+            ]
         },
         {
             "name": "HDOptOut",

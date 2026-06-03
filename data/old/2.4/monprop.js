@@ -15,49 +15,150 @@ files["monprop"] = {
             }
         },
         {
-            "name": "prop1",
+            "name": "prop#",
             "description": "Defines with Property to apply to the monster (Uses the \"code field from Properties.txt)",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
-            }
+                "type": "parse",
+                "dataLength": 255,
+                "memSize": 0,
+                "description": "Reference of $!properties#code!$"
+            },
+            "altNames": [
+                "prop1",
+                "prop2",
+                "prop3",
+                "prop4",
+                "prop5",
+                "prop6",
+                "prop1 (N)",
+                "prop2 (N)",
+                "prop3 (N)",
+                "prop4 (N)",
+                "prop5 (N)",
+                "prop6 (N)",
+                "prop1 (H)",
+                "prop2 (H)",
+                "prop3 (H)",
+                "prop4 (H)",
+                "prop5 (H)",
+                "prop6 (H)"
+            ]
         },
         {
-            "name": "chance1",
+            "name": "chance#",
             "description": "The percent chance that the related property (prop#) will be assigned. If this value equals 0, then the Property will always be applied",
             "type": {
                 "type": "int",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "chance1",
+                "chance2",
+                "chance3",
+                "chance4",
+                "chance5",
+                "chance6",
+                "chance1 (N)",
+                "chance2 (N)",
+                "chance3 (N)",
+                "chance4 (N)",
+                "chance5 (N)",
+                "chance6 (N)",
+                "chance1 (H)",
+                "chance2 (H)",
+                "chance3 (H)",
+                "chance4 (H)",
+                "chance5 (H)",
+                "chance6 (H)"
+            ]
         },
         {
-            "name": "par1",
+            "name": "par#",
             "description": "The \"parameter\" value associated with the related property (prop#). Usage depends on the (Function ID field from Properties.txt)",
             "type": {
                 "type": "int",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "par1",
+                "par2",
+                "par3",
+                "par4",
+                "par5",
+                "par6",
+                "par1 (N)",
+                "par2 (N)",
+                "par3 (N)",
+                "par4 (N)",
+                "par5 (N)",
+                "par6 (N)",
+                "par1 (H)",
+                "par2 (H)",
+                "par3 (H)",
+                "par4 (H)",
+                "par5 (H)",
+                "par6 (H)"
+            ]
         },
         {
-            "name": "min1",
+            "name": "min#",
             "description": "The \"min\" value to assign to the related property (prop#). Usage depends on the (Function ID field from Properties.txt)",
             "type": {
                 "type": "int",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "min1",
+                "min2",
+                "min3",
+                "min4",
+                "min5",
+                "min6",
+                "min1 (N)",
+                "min2 (N)",
+                "min3 (N)",
+                "min4 (N)",
+                "min5 (N)",
+                "min6 (N)",
+                "min1 (H)",
+                "min2 (H)",
+                "min3 (H)",
+                "min4 (H)",
+                "min5 (H)",
+                "min6 (H)"
+            ]
         },
         {
-            "name": "max1",
+            "name": "max#",
             "description": "The \"max\" value to assign to the related property (prop#). Usage depends on the (Function ID field from Properties.txt)",
             "type": {
                 "type": "int",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "max1",
+                "max2",
+                "max3",
+                "max4",
+                "max5",
+                "max6",
+                "max1 (N)",
+                "max2 (N)",
+                "max3 (N)",
+                "max4 (N)",
+                "max5 (N)",
+                "max6 (N)",
+                "max1 (H)",
+                "max2 (H)",
+                "max3 (H)",
+                "max4 (H)",
+                "max5 (H)",
+                "max6 (H)"
+            ]
         }
     ]
 }

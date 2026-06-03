@@ -27,9 +27,11 @@ files["superuniques"] = {
             "name": "Class",
             "description": "Defines the baseline monster type for the Super Unique monster, which this monster will use for default values. This uses the ID field from MonStats.txt",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
+                "type": "reference",
+                "dataLength": 47,
+                "memSize": 32,
+                "file": "monstats",
+                "field": "Id"
             }
         },
         {
@@ -45,9 +47,11 @@ files["superuniques"] = {
             "name": "MonSound",
             "description": "Defines what set of sounds to use for the Super Unique monster. Uses the ID field from MonSounds.txt. If this field is empty, then the Super Unique monster will default to using the monster class sounds",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
+                "type": "reference",
+                "dataLength": 47,
+                "memSize": 32,
+                "file": "monsounds",
+                "field": "Id"
             }
         },
         {

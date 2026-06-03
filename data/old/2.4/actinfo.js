@@ -18,18 +18,22 @@ files["actinfo"] = {
             "name": "town",
             "description": "Uses an area level (Name field from Levels.txt) to define the Act's town area",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
+                "type": "reference",
+                "dataLength": 47,
+                "memSize": 32,
+                "file": "levels",
+                "field": "Name"
             }
         },
         {
             "name": "start",
             "description": "Uses an area level (Name field from Levels.txt) to define where the player starts in the Act",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
+                "type": "reference",
+                "dataLength": 47,
+                "memSize": 32,
+                "file": "levels",
+                "field": "Name"
             }
         },
         {
@@ -45,18 +49,22 @@ files["actinfo"] = {
             "name": "classlevelrangestart",
             "description": "Uses an area level (Name field from Levels.txt) with its MonLvl values as a global Act minimum monster level. For example, this is used to determine chest levels in an Act.",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
+                "type": "reference",
+                "dataLength": 47,
+                "memSize": 16,
+                "file": "levels",
+                "field": "Name"
             }
         },
         {
             "name": "classlevelrangeend",
             "description": "Uses an area level (Name field from Levels.txt) with its MonLvl values as a global Act maximum monster level. For example, this is used to determine chest levels in an Act.",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
+                "type": "reference",
+                "dataLength": 47,
+                "memSize": 16,
+                "file": "levels",
+                "field": "Name"
             }
         },
         {
@@ -87,13 +95,26 @@ files["actinfo"] = {
             }
         },
         {
-            "name": "waypoint1",
+            "name": "waypoint#",
             "description": "Uses an area level (Name field from Levels.txt) as the designated waypoint selection in the Waypoint UI",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
-            }
+                "type": "reference",
+                "dataLength": 47,
+                "memSize": 32,
+                "file": "levels",
+                "field": "Name"
+            },
+            "altNames": [
+                "waypoint1",
+                "waypoint2",
+                "waypoint3",
+                "waypoint4",
+                "waypoint5",
+                "waypoint6",
+                "waypoint7",
+                "waypoint8",
+                "waypoint9"
+            ]
         },
         {
             "name": "wanderingMonsterPopulateChance",

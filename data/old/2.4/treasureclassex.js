@@ -87,22 +87,46 @@ files["treasureclassex"] = {
             }
         },
         {
-            "name": "Item1",
+            "name": "Item#",
             "description": "Defines a potential ItemType or other Treasure Class that can drop from this Treasure Class. Linking another Treasure Class in this field means that there is a chance to use that Treasure Class group of items which the game will then calculate a selection from that Treasure Class, and so on",
             "type": {
                 "type": "string",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "Item1",
+                "Item2",
+                "Item3",
+                "Item4",
+                "Item5",
+                "Item6",
+                "Item7",
+                "Item8",
+                "Item9",
+                "Item10"
+            ]
         },
         {
-            "name": "Prob1",
+            "name": "Prob#",
             "description": "The individual probability for each related Item1 drop. The higher this value, then the more likely the Item1 field will be chosen. The chance a drop is picked is calculated by summing all Prob1 field values and the NoDrop value for a total denominator value, and then having each Prob1 value and the NoDrop value rolling their chance out of the total denominator value for a drop.",
             "type": {
                 "type": "int",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "Prob1",
+                "Prob2",
+                "Prob3",
+                "Prob4",
+                "Prob5",
+                "Prob6",
+                "Prob7",
+                "Prob8",
+                "Prob9",
+                "Prob10"
+            ]
         }
     ]
 }

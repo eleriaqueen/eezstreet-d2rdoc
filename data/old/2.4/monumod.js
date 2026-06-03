@@ -91,13 +91,19 @@ files["monumod"] = {
             ]
         },
         {
-            "name": "exclude1",
+            "name": "exclude#",
             "description": "This controls which Monster Types should not have this monster modifier (Uses the type field from MonType.txt)",
             "type": {
-                "type": "int",
-                "dataLength": 0,
-                "memSize": 0
-            }
+                "type": "reference",
+                "dataLength": 47,
+                "memSize": 16,
+                "file": "montype",
+                "field": "type"
+            },
+            "altNames": [
+                "exclude1",
+                "exclude2"
+            ]
         },
         {
             "name": "cpick & cpick (N) & cpick (H)",

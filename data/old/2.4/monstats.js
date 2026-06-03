@@ -18,18 +18,22 @@ files["monstats"] = {
             "name": "BaseID",
             "description": "Points to the ID of another monster to define the monster's base type. This is to create groups of monsters which are considered the same type",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
+                "type": "reference",
+                "dataLength": 47,
+                "memSize": 16,
+                "file": "monstats",
+                "field": "Id"
             }
         },
         {
             "name": "NextInClass",
             "description": "Points to the ID of another monster to signify the next monster in the group of this monster's type. This is to continue the groups of monsters which are considered the same type. The order should be contiguous",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
+                "type": "reference",
+                "dataLength": 47,
+                "memSize": 16,
+                "file": "monstats",
+                "field": "Id"
             }
         },
         {
@@ -54,36 +58,44 @@ files["monstats"] = {
             "name": "MonStatsEx",
             "description": "Controls a pointer to the ID from MonStats2.txt",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
+                "type": "reference",
+                "dataLength": 47,
+                "memSize": 16,
+                "file": "monstats2",
+                "field": "Id"
             }
         },
         {
             "name": "MonProp",
             "description": "Points to the ID field from MonProp.txt. Used to add special modifiers to the monster",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
+                "type": "reference",
+                "dataLength": 47,
+                "memSize": 16,
+                "file": "MonProp",
+                "field": "Id"
             }
         },
         {
             "name": "MonType",
             "description": "Points to the type field from MonType.txt. Used to handle the monster's classification",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
+                "type": "reference",
+                "dataLength": 47,
+                "memSize": 16,
+                "file": "montype",
+                "field": "type"
             }
         },
         {
             "name": "AI",
             "description": "Points to a type of AI script to use for the monster (MonAI.txt)",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
+                "type": "reference",
+                "dataLength": 47,
+                "memSize": 16,
+                "file": "monai",
+                "field": "AI"
             }
         },
         {
@@ -135,9 +147,11 @@ files["monstats"] = {
             "name": "spawn",
             "description": "Points to the ID of another monster to control what kind of monster is spawned from this monster. This is only used if the placespawn field is enabled",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
+                "type": "reference",
+                "dataLength": 47,
+                "memSize": 16,
+                "file": "monstats",
+                "field": "Id"
             }
         },
         {
@@ -153,19 +167,27 @@ files["monstats"] = {
             "name": "spawnmode",
             "description": "Defines the animation mode that the spawned monsters will be initiated with. Referenced from the Token column in MonMode.txt",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
+                "type": "reference",
+                "dataLength": 4,
+                "memSize": 8,
+                "file": "MonMode",
+                "field": "code"
             }
         },
         {
-            "name": "minion1",
+            "name": "minion#",
             "description": "Points to the ID of another monster to control what kind of monster is spawned with this monster when it is spawned, like a monster pack. The minion1 field is also used for spawning a monster when this monster is killed while it has the SplEndDeath field enabled",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
-            }
+                "type": "reference",
+                "dataLength": 47,
+                "memSize": 16,
+                "file": "monstats",
+                "field": "Id"
+            },
+            "altNames": [
+                "minion1",
+                "minion2"
+            ]
         },
         {
             "name": "SetBoss",
@@ -192,16 +214,10 @@ files["monstats"] = {
                 "type": "int",
                 "dataLength": 0,
                 "memSize": 0
-            }
-        },
-        {
-            "name": "PartyMax",
-            "description": "The maximum number of minions that can spawn with this monster. Uses the minion1 fields. The actual number is a random value chosen between the \"PartyMin\" and \"PartyMax\" field values",
-            "type": {
-                "type": "int",
-                "dataLength": 0,
-                "memSize": 0
-            }
+            },
+            "altNames": [
+                "PartyMax"
+            ]
         },
         {
             "name": "MinGrp",
@@ -210,16 +226,10 @@ files["monstats"] = {
                 "type": "int",
                 "dataLength": 0,
                 "memSize": 0
-            }
-        },
-        {
-            "name": "MaxGrp",
-            "description": "The maximum number of duplicates of this monster that can spawn together. The actual number is a random value chosen between the \"MinGrp\" and \"MaxGrp\" field values",
-            "type": {
-                "type": "int",
-                "dataLength": 0,
-                "memSize": 0
-            }
+            },
+            "altNames": [
+                "MaxGrp"
+            ]
         },
         {
             "name": "sparsePopulate",
@@ -264,24 +274,32 @@ files["monstats"] = {
                 "type": "int",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "Level(N)",
+                "Level(H)"
+            ]
         },
         {
             "name": "MonSound",
             "description": "Points to the ID field of a monster sound from MonSounds.txt. This is used to control the monsters assigned sounds, when the monster is spawned as a Normal monster",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
+                "type": "reference",
+                "dataLength": 47,
+                "memSize": 16,
+                "file": "monsounds",
+                "field": "Id"
             }
         },
         {
             "name": "UMonSound",
             "description": "Points to the ID field of a monster sound from MonSounds.txt. This is used to control the monsters assigned sounds, when the monster is spawned as a Unique or Champion monster",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
+                "type": "reference",
+                "dataLength": 47,
+                "memSize": 16,
+                "file": "monsounds",
+                "field": "Id"
             }
         },
         {
@@ -300,7 +318,11 @@ files["monstats"] = {
                 "type": "int",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "aidel(N)",
+                "aidel(H)"
+            ]
         },
         {
             "name": "aidist",
@@ -309,52 +331,67 @@ files["monstats"] = {
                 "type": "int",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "aidist(N)",
+                "aidist(H)"
+            ]
         },
         {
-            "name": "aip1",
+            "name": "aip#",
             "description": "Defines numeric parameters used to control various functions of the monster's AI. These fields depend on which AI script is being used (MonAI.txt, and the AI field in MonStats.txt)",
             "type": {
                 "type": "int",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "aip1",
+                "aip2",
+                "aip3",
+                "aip4",
+                "aip5",
+                "aip6",
+                "aip7",
+                "aip8",
+                "aip1(N)",
+                "aip2(N)",
+                "aip3(N)",
+                "aip4(N)",
+                "aip5(N)",
+                "aip6(N)",
+                "aip7(N)",
+                "aip8(N)",
+                "aip1(H)",
+                "aip2(H)",
+                "aip3(H)",
+                "aip4(H)",
+                "aip5(H)",
+                "aip6(H)",
+                "aip7(H)",
+                "aip8(H)"
+            ]
         },
         {
-            "name": "MissA1",
+            "name": "Miss",
             "description": "Points to the Missile field from Missiles.txt to determine which missile to use when the monster is in Attack 1 & Attack 2 mode",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
-            }
-        },
-        {
-            "name": "MissS1",
-            "description": "Points to the Missile field from Missiles.txt to determine which missile to use when the monster is in Skill 1 (to Skill 4) mode",
-            "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
-            }
-        },
-        {
-            "name": "MissC",
-            "description": "Points to the Missile field from Missiles.txt to determine which missile to use when the monster is in Cast mode",
-            "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
-            }
-        },
-        {
-            "name": "MissSQ",
-            "description": "Points to the Missile field from Missiles.txt to determine which missile to use when the monster is in Sequence mode",
-            "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
-            }
+                "type": "reference",
+                "dataLength": 47,
+                "memSize": 16,
+                "file": "missiles",
+                "field": "Missile"
+            },
+            "altNames": [
+                "MissA1",
+                "MissA2",
+                "MissS1",
+                "MissS2",
+                "MissS3",
+                "MissS4",
+                "MissC",
+                "MissSQ"
+            ]
         },
         {
             "name": "Align",
@@ -594,19 +631,15 @@ files["monstats"] = {
             "name": "rightArmItemType",
             "description": "Determines what type of items the monster is allowed to hold in its right arm (ItemTypes.txt). A blank value means it can hold any item",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
-            }
-        },
-        {
-            "name": "leftArmItemType",
-            "description": "Determines what type of items the monster is allowed to hold in its left arm (ItemTypes.txt). A blank value means it can hold any item",
-            "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
-            }
+                "type": "reference",
+                "dataLength": 4,
+                "memSize": 16,
+                "file": "itemtypes",
+                "field": "Code"
+            },
+            "altNames": [
+                "leftArmItemType"
+            ]
         },
         {
             "name": "canNotUseTwoHandedItems",
@@ -627,31 +660,64 @@ files["monstats"] = {
             }
         },
         {
-            "name": "Skill1",
+            "name": "Skill#",
             "description": "Points to the Skill field from Skills.txt file. This gives the monster the skill to use for Sk1Mode",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
-            }
+                "type": "reference",
+                "dataLength": 47,
+                "memSize": 16,
+                "file": "skills",
+                "field": "skill"
+            },
+            "altNames": [
+                "Skill1",
+                "Skill2",
+                "Skill3",
+                "Skill4",
+                "Skill5",
+                "Skill6",
+                "Skill7",
+                "Skill8"
+            ]
         },
         {
-            "name": "Sk1mode",
+            "name": "Sk#mode",
             "description": "Determines the monster's animation mode when using the related skill. Outside of the standard animation mode inputs, the field can also point to a sequence from MonSeq.txt, which handles a specific set of frames to place a sequence animation. Referenced from the Code column in MonMode.txt",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
-            }
+                "type": "parse",
+                "dataLength": 255,
+                "memSize": 0,
+                "description": "References a $!MonMode#code!$ or a $!monseq#sequence!$"
+            },
+            "altNames": [
+                "Sk1mode",
+                "Sk2mode",
+                "Sk3mode",
+                "Sk4mode",
+                "Sk5mode",
+                "Sk6mode",
+                "Sk7mode",
+                "Sk8mode"
+            ]
         },
         {
-            "name": "Sk1lvl",
+            "name": "Sk#lvl",
             "description": "Controls the base skill level of the related skill on the monster",
             "type": {
                 "type": "int",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "Sk1lvl",
+                "Sk2lvl",
+                "Sk3lvl",
+                "Sk4lvl",
+                "Sk5lvl",
+                "Sk6lvl",
+                "Sk7lvl",
+                "Sk8lvl"
+            ]
         },
         {
             "name": "Drain",
@@ -660,7 +726,11 @@ files["monstats"] = {
                 "type": "int",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "Drain(N)",
+                "Drain(H)"
+            ]
         },
         {
             "name": "coldeffect",
@@ -669,7 +739,11 @@ files["monstats"] = {
                 "type": "int",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "coldeffect(N)",
+                "coldeffect(H)"
+            ]
         },
         {
             "name": "ResDm",
@@ -678,7 +752,11 @@ files["monstats"] = {
                 "type": "int",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "ResDm(N)",
+                "ResDm(H)"
+            ]
         },
         {
             "name": "ResMa",
@@ -687,7 +765,11 @@ files["monstats"] = {
                 "type": "int",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "ResMa(N)",
+                "ResMa(H)"
+            ]
         },
         {
             "name": "ResFi",
@@ -696,7 +778,11 @@ files["monstats"] = {
                 "type": "int",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "ResFi(N)",
+                "ResFi(H)"
+            ]
         },
         {
             "name": "ResLi",
@@ -705,7 +791,11 @@ files["monstats"] = {
                 "type": "int",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "ResLi(N)",
+                "ResLi(H)"
+            ]
         },
         {
             "name": "ResCo",
@@ -714,7 +804,11 @@ files["monstats"] = {
                 "type": "int",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "ResCo(N)",
+                "ResCo(H)"
+            ]
         },
         {
             "name": "ResPo",
@@ -723,7 +817,11 @@ files["monstats"] = {
                 "type": "int",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "ResPo(N)",
+                "ResPo(H)"
+            ]
         },
         {
             "name": "DamageRegen",
@@ -738,9 +836,11 @@ files["monstats"] = {
             "name": "SkillDamage",
             "description": "Points to a skill from the \"skill\" field in the Skills.txt file. This changes the monster's min physical damage, max physical damage, and Attack Rating to be based off the values from the linked skill and its current level from the monster's owner (usually the player who summoned the monster)",
             "type": {
-                "type": "int",
-                "dataLength": 0,
-                "memSize": 0
+                "type": "reference",
+                "dataLength": 47,
+                "memSize": 16,
+                "file": "skills",
+                "field": "skill"
             }
         },
         {
@@ -768,7 +868,11 @@ files["monstats"] = {
                 "type": "int",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "ToBlock(N)",
+                "ToBlock(H)"
+            ]
         },
         {
             "name": "Crit",
@@ -804,7 +908,11 @@ files["monstats"] = {
                 "type": "int",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "AC(N)",
+                "AC(H)"
+            ]
         },
         {
             "name": "Exp",
@@ -813,7 +921,11 @@ files["monstats"] = {
                 "type": "int",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "Exp(N)",
+                "Exp(H)"
+            ]
         },
         {
             "name": "A1MinD",
@@ -822,7 +934,11 @@ files["monstats"] = {
                 "type": "int",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "A1MinD(N)",
+                "A1MinD(H)"
+            ]
         },
         {
             "name": "A1MaxD",
@@ -831,7 +947,11 @@ files["monstats"] = {
                 "type": "int",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "A1MaxD(N)",
+                "A1MaxD(H)"
+            ]
         },
         {
             "name": "A1TH",
@@ -840,7 +960,11 @@ files["monstats"] = {
                 "type": "int",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "A1TH(N)",
+                "A1TH(H)"
+            ]
         },
         {
             "name": "A2MinD",
@@ -849,7 +973,11 @@ files["monstats"] = {
                 "type": "int",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "A2MinD(N)",
+                "A2MinD(H)"
+            ]
         },
         {
             "name": "A2MaxD",
@@ -858,7 +986,11 @@ files["monstats"] = {
                 "type": "int",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "A2MaxD(N)",
+                "A2MaxD(H)"
+            ]
         },
         {
             "name": "A2TH",
@@ -867,7 +999,11 @@ files["monstats"] = {
                 "type": "int",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "A2TH(N)",
+                "A2TH(H)"
+            ]
         },
         {
             "name": "S1MinD",
@@ -876,7 +1012,11 @@ files["monstats"] = {
                 "type": "int",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "S1MinD(N)",
+                "S1MinD(H)"
+            ]
         },
         {
             "name": "S1MaxD",
@@ -885,7 +1025,11 @@ files["monstats"] = {
                 "type": "int",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "S1MaxD(N)",
+                "S1MaxD(H)"
+            ]
         },
         {
             "name": "S1TH",
@@ -894,96 +1038,166 @@ files["monstats"] = {
                 "type": "int",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "S1TH(N)",
+                "S1TH(H)"
+            ]
         },
         {
-            "name": "El1Mode",
+            "name": "El#Mode",
             "description": "Determines which animation mode will trigger an additional elemental damage type when used. Referenced from the Code column in MonMode.txt",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
-            }
+                "type": "reference",
+                "dataLength": 4,
+                "memSize": 8,
+                "file": "MonMode",
+                "field": "code"
+            },
+            "altNames": [
+                "El1Mode",
+                "El2Mode",
+                "El3Mode"
+            ]
         },
         {
-            "name": "El1Type",
+            "name": "El#Type",
             "description": "Defines the type of elemental damage. This field is used when El#Mode is not null. Referenced by the Code value of the Elemental Types Table",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
-            }
+                "type": "reference",
+                "dataLength": 4,
+                "memSize": 8,
+                "file": "ElemTypes",
+                "field": "Code"
+            },
+            "altNames": [
+                "El1Type",
+                "El2Type",
+                "El3Type"
+            ]
         },
         {
-            "name": "El1Pct",
+            "name": "El#Pct",
             "description": "Controls the random percent chance (out of 100) that the monster will append the element damage to the attack. This field is used when El#Mode is not null",
             "type": {
                 "type": "int",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "El1Pct",
+                "El2Pct",
+                "El3Pct",
+                "El1Pct(N)",
+                "El2Pct(N)",
+                "El3Pct(N)",
+                "El1Pct(H)",
+                "El2Pct(H)",
+                "El3Pct(H)"
+            ]
         },
         {
-            "name": "El1MinD",
+            "name": "El#MinD",
             "description": "The minimum element damage applied to the attack. This field is used when El#Mode is not null",
             "type": {
                 "type": "int",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "El1MinD",
+                "El2MinD",
+                "El3MinD",
+                "El1MinD(N)",
+                "El2MinD(N)",
+                "El3MinD(N)",
+                "El1MinD(H)",
+                "El2MinD(H)",
+                "El3MinD(H)"
+            ]
         },
         {
-            "name": "El1MaxD",
+            "name": "El#MaxD",
             "description": "The maximum element damage applied to the attack. This field is used when El#Mode is not null",
             "type": {
                 "type": "int",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "El1MaxD",
+                "El2MaxD",
+                "El3MaxD",
+                "El1MaxD(N)",
+                "El2MaxD(N)",
+                "El3MaxD(N)",
+                "El1MaxD(H)",
+                "El2MaxD(H)",
+                "El3MaxD(H)"
+            ]
         },
         {
-            "name": "El1Dur",
+            "name": "El#Dur",
             "description": "Controls the duration of the related element mode in frame lengths (25 Frames = 1 Second). This is only applicable for the Cold, Poison, Stun, Burning, Freeze elements. There are special cases when evaluating the elements, where Poison min and max damage are multiplied by 10, and Poison duration is multiplied by 2. This field is used when El#Mode is not null",
             "type": {
                 "type": "int",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "El1Dur",
+                "El2Dur",
+                "El3Dur",
+                "El1Dur(N)",
+                "El2Dur(N)",
+                "El3Dur(N)",
+                "El1Dur(H)",
+                "El2Dur(H)",
+                "El3Dur(H)"
+            ]
         },
         {
             "name": "TreasureClass",
             "description": "Defines which Treasure Class is used by the monster when a Normal monster type is killed; for each difficulty respectively",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
+                "type": "reference",
+                "dataLength": 47,
+                "memSize": 16,
+                "file": "treasureclassex",
+                "field": "Treasure Class"
             }
         },
         {
             "name": "TreasureClassChamp",
             "description": "Defines which Treasure Class is used by the monster when a Champion monster type is killed; for each difficulty respectively",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
+                "type": "reference",
+                "dataLength": 47,
+                "memSize": 16,
+                "file": "treasureclassex",
+                "field": "Treasure Class"
             }
         },
         {
             "name": "TreasureClassUnique",
             "description": "Defines which Treasure Class is used by the monster when a Unique monster type is killed; for each difficulty respectively",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
+                "type": "reference",
+                "dataLength": 47,
+                "memSize": 16,
+                "file": "treasureclassex",
+                "field": "Treasure Class"
             }
         },
         {
             "name": "TreasureClassQuest",
             "description": "Defines which Treasure Class is used by the monster when a Quest-Enabled monster type is killed; for each difficulty respectively. Based on the TCQuestID and TCQuestCP fields",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
+                "type": "reference",
+                "dataLength": 47,
+                "memSize": 16,
+                "file": "treasureclassex",
+                "field": "Treasure Class"
             }
         },
         {

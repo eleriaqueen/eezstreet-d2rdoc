@@ -3,6 +3,11 @@
 // https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS/Errors/CORSRequestNotHttp
 files["skills"] = {
     "title": "skills.txt",
+    "referenceFiles": [
+        "enums",
+        "PlayerClass",
+        "ElemTypes"
+    ],
     "overview": "This file controls all skill functionalities. Skills are abilities used by all units in the game.<br>This file uses many other data files, and other data files will reference fields in this file to verify certain functionalities.",
     "fields": [
         {
@@ -15,30 +20,29 @@ files["skills"] = {
             }
         },
         {
-            "name": "*ID",
-            "description": "This field is not read directly, but can be used as an Index for skills",
-            "type": {
-                "type": "int",
-                "dataLength": 0,
-                "memSize": 0
-            }
-        },
-        {
             "name": "charclass",
             "description": "Assigns the skill to a specific character class which affects how skill item modifiers work and what skills the class can learn. Referenced from the Code column in PlayerClass.txt",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
+                "type": "reference",
+                "dataLength": 4,
+                "memSize": 8,
+                "file": "PlayerClass",
+                "field": "Code"
+            },
+            "appendField": {
+                "file": "PlayerClass",
+                "field": "Code"
             }
         },
         {
             "name": "SkillDesc",
             "description": "Controls the skill's tooltip and general UI display. Points to the SkillDesc field from SkillDesc.txt",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
+                "type": "reference",
+                "dataLength": 47,
+                "memSize": 16,
+                "file": "skilldesc",
+                "field": "skilldesc"
             }
         },
         {
@@ -2106,22 +2110,33 @@ files["skills"] = {
             }
         },
         {
-            "name": "srvprgfunc1",
+            "name": "srvprgfunc#",
             "description": "Controls what srvdofunc is used when executing the progressive skill with a charge number equal to 1, 2, and 3, respectively. This field uses the same functions as the srvdofunc field",
             "type": {
                 "type": "int",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "srvprgfunc1",
+                "srvprgfunc2",
+                "srvprgfunc3"
+            ]
         },
         {
-            "name": "prgcalc1",
+            "name": "prgcalc#",
             "description": "Used as a possible parameter for calculating values when executing the progressive skill with a charge number equal to 1, 2, and 3, respectively",
             "type": {
-                "type": "calc",
-                "dataLength": 0,
-                "memSize": 0
-            }
+                "type": "parse",
+                "dataLength": 255,
+                "memSize": 0,
+                "description": "Skill scope BBE. See <a href=\"../docs/bbe-calc.html\" target=\"_blank\" class=\"reference-link\">BBE/Calc Fields</a>"
+            },
+            "altNames": [
+                "prgcalc1",
+                "prgcalc2",
+                "prgcalc3"
+            ]
         },
         {
             "name": "prgdam",
@@ -2186,9 +2201,11 @@ files["skills"] = {
             "name": "srvmissile",
             "description": "Used as a parameter for controlling what main missile is used for the server functions used (Missile field from Missiles.txt)",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
+                "type": "reference",
+                "dataLength": 47,
+                "memSize": 16,
+                "file": "missiles",
+                "field": "Missile"
             }
         },
         {
@@ -2210,13 +2227,20 @@ files["skills"] = {
             }
         },
         {
-            "name": "srvmissilea",
+            "name": "srvmissile#",
             "description": "Used as a parameter for controlling what secondary missile is used for the server functions used (Missile field from Missiles.txt)",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
-            }
+                "type": "reference",
+                "dataLength": 47,
+                "memSize": 16,
+                "file": "missiles",
+                "field": "Missile"
+            },
+            "altNames": [
+                "srvmissilea",
+                "srvmissileb",
+                "srvmissilec"
+            ]
         },
         {
             "name": "useServerMissilesOnRemoteClients",
@@ -2231,9 +2255,11 @@ files["skills"] = {
             "name": "srvoverlay",
             "description": "Creates an overlay on the target unit when the skill is used. This is a possible parameter used by various skill functions (overlay field from Overlay.txt)",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
+                "type": "reference",
+                "dataLength": 47,
+                "memSize": 16,
+                "file": "overlay",
+                "field": "overlay"
             }
         },
         {
@@ -2243,96 +2269,141 @@ files["skills"] = {
                 "type": "int",
                 "dataLength": 0,
                 "memSize": 0
+            },
+            "appendField": {
+                "file": "enums",
+                "field": "Aura Filter"
             }
         },
         {
             "name": "aurastate",
             "description": "Links to a state that can be applied to the caster unit when casting the skill, depending on the skill function used (state field from States.txt)",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
+                "type": "reference",
+                "dataLength": 47,
+                "memSize": 16,
+                "file": "states",
+                "field": "state"
             }
         },
         {
             "name": "auratargetstate",
             "description": "Links to a state that can be applied to the target unit when using the skill, depending on the skill function used (state field from States.txt)",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
+                "type": "reference",
+                "dataLength": 47,
+                "memSize": 16,
+                "file": "states",
+                "field": "state"
             }
         },
         {
             "name": "auralencalc",
             "description": "Controls the aura state duration on the unit (where 25 Frames = 1 second). If this value is empty, then the state duration will be controlled by other functions, or it will last forever. This can also be used as a parameter for certain skill functions",
             "type": {
-                "type": "calc",
-                "dataLength": 0,
-                "memSize": 0
+                "type": "parse",
+                "dataLength": 255,
+                "memSize": 0,
+                "description": "Skill scope BBE. See <a href=\"../docs/bbe-calc.html\" target=\"_blank\" class=\"reference-link\">BBE/Calc Fields</a>"
             }
         },
         {
             "name": "aurarangecalc",
             "description": "Controls the aura state's area radius size, measured in grid sub-tiles. This can also be used as a parameter for certain skill functions",
             "type": {
-                "type": "calc",
-                "dataLength": 0,
-                "memSize": 0
+                "type": "parse",
+                "dataLength": 255,
+                "memSize": 0,
+                "description": "Skill scope BBE. See <a href=\"../docs/bbe-calc.html\" target=\"_blank\" class=\"reference-link\">BBE/Calc Fields</a>"
             }
         },
         {
-            "name": "aurastat1",
+            "name": "aurastat#",
             "description": "Controls which stat modifiers will be altered or added by the aura state (Stat field from ItemStatCost.txt)",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
-            }
+                "type": "reference",
+                "dataLength": 47,
+                "memSize": 16,
+                "file": "itemstatcost",
+                "field": "Stat"
+            },
+            "altNames": [
+                "aurastat1",
+                "aurastat2",
+                "aurastat3",
+                "aurastat4",
+                "aurastat5",
+                "aurastat6"
+            ]
         },
         {
-            "name": "aurastatcalc1",
+            "name": "aurastatcalc#",
             "description": "Controls the value for the relative aurastat1 field",
             "type": {
-                "type": "calc",
-                "dataLength": 0,
-                "memSize": 0
-            }
+                "type": "parse",
+                "dataLength": 255,
+                "memSize": 0,
+                "description": "Skill scope BBE. See <a href=\"../docs/bbe-calc.html\" target=\"_blank\" class=\"reference-link\">BBE/Calc Fields</a>"
+            },
+            "altNames": [
+                "aurastatcalc1",
+                "aurastatcalc2",
+                "aurastatcalc3",
+                "aurastatcalc4",
+                "aurastatcalc5",
+                "aurastatcalc6"
+            ]
         },
         {
-            "name": "auraevent1",
+            "name": "auraevent#",
             "description": "Controls what event will trigger the relative auraeventfunc1 field function. (event field from Events.txt)",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
-            }
+                "type": "reference",
+                "dataLength": 47,
+                "memSize": 16,
+                "file": "events",
+                "field": "event"
+            },
+            "altNames": [
+                "auraevent1",
+                "auraevent2",
+                "auraevent3"
+            ]
         },
         {
-            "name": "auraeventfunc1",
+            "name": "auraeventfunc#",
             "description": "Controls the function used when the relative auraevent1 event is triggered. Referenced by the Code value of the Event Functions Table",
             "type": {
                 "type": "int",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "auraeventfunc1",
+                "auraeventfunc2",
+                "auraeventfunc3"
+            ]
         },
         {
             "name": "passivestate",
             "description": "Links to a state that can be applied by the passive skill, depending on the skill function used (state field from States.txt)",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
+                "type": "reference",
+                "dataLength": 47,
+                "memSize": 16,
+                "file": "states",
+                "field": "state"
             }
         },
         {
             "name": "passiveitype",
             "description": "Links to an Item Type to define what type of item needs to be equipped in order to enable the passive state (Code field from Itemtypes.txt)",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
+                "type": "reference",
+                "dataLength": 4,
+                "memSize": 16,
+                "file": "itemtypes",
+                "field": "ItemType"
             }
         },
         {
@@ -2345,93 +2416,139 @@ files["skills"] = {
             }
         },
         {
-            "name": "passivestat1",
+            "name": "passivestat#",
             "description": "Assigns stat modifiers to the passive skill (Stat field from ItemStatCost.txt)",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
-            }
+                "type": "reference",
+                "dataLength": 47,
+                "memSize": 16,
+                "file": "itemstatcost",
+                "field": "Stat"
+            },
+            "altNames": [
+                "passivestat1",
+                "passivestat2",
+                "passivestat3",
+                "passivestat4",
+                "passivestat5",
+                "passivestat6"
+            ]
         },
         {
-            "name": "passivecalc1",
+            "name": "passivecalc#",
             "description": "Controls the value for the relative passivestat1 field",
             "type": {
-                "type": "calc",
-                "dataLength": 0,
-                "memSize": 0
-            }
+                "type": "parse",
+                "dataLength": 255,
+                "memSize": 0,
+                "description": "Skill scope BBE. See <a href=\"../docs/bbe-calc.html\" target=\"_blank\" class=\"reference-link\">BBE/Calc Fields</a>"
+            },
+            "altNames": [
+                "passivecalc1",
+                "passivecalc2",
+                "passivecalc3",
+                "passivecalc4",
+                "passivecalc5",
+                "passivecalc6"
+            ]
         },
         {
             "name": "summon",
             "description": "Controls what monster is summoned by the skill (ID field from MonStats.txt). This field's usage will depend on the skill function used. This field can also be used as reference for AI behaviors and for SkillDesc.txt",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
+                "type": "reference",
+                "dataLength": 47,
+                "memSize": 16,
+                "file": "monstats",
+                "field": "Id"
             }
         },
         {
             "name": "PetType",
             "description": "Links to a pet type data to control how the summoned unit is displayed on the UI (PetType column in PetType.txt)",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
+                "type": "reference",
+                "dataLength": 47,
+                "memSize": 8,
+                "file": "pettype",
+                "field": "pet type"
             }
         },
         {
             "name": "petmax",
             "description": "Used skill functions that summon pets to control how many summon units are allowed at a time",
             "type": {
-                "type": "calc",
-                "dataLength": 0,
-                "memSize": 0
+                "type": "parse",
+                "dataLength": 255,
+                "memSize": 0,
+                "description": "Skill scope BBE. See <a href=\"../docs/bbe-calc.html\" target=\"_blank\" class=\"reference-link\">BBE/Calc Fields</a>"
             }
         },
         {
             "name": "summode",
             "description": "Defines the animation mode that the summoned monster will be initiated with. Referenced from the Code column in MonMode.txt",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
+                "type": "reference",
+                "dataLength": 4,
+                "memSize": 8,
+                "file": "MonMode",
+                "field": "code"
             }
         },
         {
-            "name": "sumskill1",
+            "name": "sumskill#",
             "description": "Assigns a skill to the summoned monster. Points to another Skill. This can be useful for adding a skill to a monster to transition its synergy bonuses",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
-            }
+                "type": "reference",
+                "dataLength": 47,
+                "memSize": 16,
+                "file": "skills",
+                "field": "skill"
+            },
+            "altNames": [
+                "sumskill1",
+                "sumskill2",
+                "sumskill3",
+                "sumskill4",
+                "sumskill5"
+            ]
         },
         {
-            "name": "sumsk1calc",
+            "name": "sumsk#calc",
             "description": "Controls the skill level for the designated sumskill1 field when the skill is assigned to the monster",
             "type": {
-                "type": "calc",
-                "dataLength": 0,
-                "memSize": 0
-            }
+                "type": "parse",
+                "dataLength": 255,
+                "memSize": 0,
+                "description": "Skill scope BBE. See <a href=\"../docs/bbe-calc.html\" target=\"_blank\" class=\"reference-link\">BBE/Calc Fields</a>"
+            },
+            "altNames": [
+                "sumsk1calc",
+                "sumsk2calc",
+                "sumsk3calc",
+                "sumsk4calc",
+                "sumsk5calc"
+            ]
         },
         {
             "name": "sumumod",
             "description": "Assigns a monster modifier to the summoned monster (ID field from MonUMod.txt)",
             "type": {
-                "type": "int",
-                "dataLength": 0,
-                "memSize": 0
+                "type": "parse",
+                "dataLength": 255,
+                "memSize": 0,
+                "description": "Skill scope BBE. See <a href=\"../docs/bbe-calc.html\" target=\"_blank\" class=\"reference-link\">BBE/Calc Fields</a>"
             }
         },
         {
             "name": "sumoverlay",
             "description": "Creates an overlay on the summoned monster when it is first created (overlay field from Overlay.txt)",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
+                "type": "reference",
+                "dataLength": 47,
+                "memSize": 16,
+                "file": "overlay",
+                "field": "overlay"
             }
         },
         {
@@ -2447,18 +2564,22 @@ files["skills"] = {
             "name": "stsound",
             "description": "Controls what client sound is played when the skill is used, based on the client starting function (Sound field from Sounds.txt)",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
+                "type": "reference",
+                "dataLength": 47,
+                "memSize": 16,
+                "file": "sounds",
+                "field": "Sound"
             }
         },
         {
             "name": "stsoundclass",
             "description": "Controls what client sound is played when the skill is used by the skill's assigned class (charclass), based on the client starting function (Sound field from Sounds.txt). If the unit using the skill is not the same class as the \"charclass\" value for the skill, then this sound will not play",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
+                "type": "reference",
+                "dataLength": 47,
+                "memSize": 16,
+                "file": "sounds",
+                "field": "Sound"
             }
         },
         {
@@ -2555,73 +2676,95 @@ files["skills"] = {
             "name": "dosound",
             "description": "Controls the sound for the skill each time the cltdofunc is used (Sound field from Sounds.txt)",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
+                "type": "reference",
+                "dataLength": 47,
+                "memSize": 16,
+                "file": "sounds",
+                "field": "Sound"
             }
         },
         {
             "name": "dosound a",
             "description": "Used as a possible parameter for playing additional sounds based on the cltdofunc used(Sound field from Sounds.txt)",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
-            }
+                "type": "reference",
+                "dataLength": 47,
+                "memSize": 16,
+                "file": "sounds",
+                "field": "Sound"
+            },
+            "altNames": [
+                "dosound b"
+            ]
         },
         {
             "name": "tgtoverlay",
             "description": "Used as a possible parameter for adding an Overlay on the target unit, based on the cltdofunc used (overlay field from Overlay.txt)",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
+                "type": "reference",
+                "dataLength": 47,
+                "memSize": 16,
+                "file": "overlay",
+                "field": "overlay"
             }
         },
         {
             "name": "tgtsound",
             "description": "Used as a possible parameter for playing a sound located on the target unit, based on the cltdofunc used (Sound field from Sounds.txt)",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
+                "type": "reference",
+                "dataLength": 47,
+                "memSize": 16,
+                "file": "sounds",
+                "field": "Sound"
             }
         },
         {
             "name": "prgoverlay",
             "description": "Used as a possible parameter for adding an Overlay on the caster unit for progressive charge-up skill functions, based on the cltdofunc used and how many progressive charges the caster unit has (overlay field from Overlay.txt)",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
+                "type": "reference",
+                "dataLength": 47,
+                "memSize": 16,
+                "file": "overlay",
+                "field": "overlay"
             }
         },
         {
             "name": "prgsound",
             "description": "Used as a possible parameter for playing a sound when using the skill for progressive charge-up skill functions, based on the cltdofunc used and how many progressive charges the caster unit has (Sound field from Sounds.txt)",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
+                "type": "reference",
+                "dataLength": 47,
+                "memSize": 16,
+                "file": "sounds",
+                "field": "Sound"
             }
         },
         {
             "name": "castoverlay",
             "description": "Used as a possible parameter for adding an Overlay on the caster unit when using the skill, based on the Client Start/Do function used (overlay field from Overlay.txt)",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
+                "type": "reference",
+                "dataLength": 47,
+                "memSize": 16,
+                "file": "overlay",
+                "field": "overlay"
             }
         },
         {
             "name": "cltoverlaya",
             "description": "Used as a possible parameter for adding additional Overlays on the caster unit, based on the Client Start/Do function used (overlay field from Overlay.txt)",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
-            }
+                "type": "reference",
+                "dataLength": 47,
+                "memSize": 16,
+                "file": "overlay",
+                "field": "overlay"
+            },
+            "altNames": [
+                "cltoverlayb"
+            ]
         },
         {
             "name": "cltstfunc",
@@ -4043,40 +4186,61 @@ files["skills"] = {
             ]
         },
         {
-            "name": "cltprgfunc1",
+            "name": "cltprgfunc#",
             "description": "Controls which Client Do function is used when the skill is executed while having a progressive charge number equal to 1, 2, and 3, respectively. (uses cltdofunc values)",
             "type": {
                 "type": "int",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "cltprgfunc1",
+                "cltprgfunc2",
+                "cltprgfunc3"
+            ]
         },
         {
             "name": "cltmissile",
             "description": "Used as a parameter for controlling what main missile is used for the client functions used (Missile field from Missiles.txt)",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
+                "type": "reference",
+                "dataLength": 47,
+                "memSize": 16,
+                "file": "missiles",
+                "field": "Missile"
             }
         },
         {
-            "name": "cltmissilea",
+            "name": "cltmissile#",
             "description": "Used as a parameter for controlling what secondary missile is used for the client functions used (Missile field from Missiles.txt)",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
-            }
+                "type": "reference",
+                "dataLength": 47,
+                "memSize": 16,
+                "file": "missiles",
+                "field": "Missile"
+            },
+            "altNames": [
+                "cltmissilea",
+                "cltmissileb",
+                "cltmissilec",
+                "cltmissiled"
+            ]
         },
         {
-            "name": "cltcalc1",
+            "name": "cltcalc#",
             "description": "Use as a possible parameter for controlling values for the client functions",
             "type": {
-                "type": "calc",
-                "dataLength": 0,
-                "memSize": 0
-            }
+                "type": "parse",
+                "dataLength": 255,
+                "memSize": 0,
+                "description": "Skill scope BBE. See <a href=\"../docs/bbe-calc.html\" target=\"_blank\" class=\"reference-link\">BBE/Calc Fields</a>"
+            },
+            "altNames": [
+                "cltcalc1",
+                "cltcalc2",
+                "cltcalc3"
+            ]
         },
         {
             "name": "warp",
@@ -4150,66 +4314,98 @@ files["skills"] = {
             ]
         },
         {
-            "name": "itypea1",
+            "name": "itypea#",
             "description": "Controls what Item Types are included, or allowed, when determining if this skill can be used (Code field from ItemTypes.txt)",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
-            }
+                "type": "reference",
+                "dataLength": 4,
+                "memSize": 16,
+                "file": "itemtypes",
+                "field": "Code"
+            },
+            "altNames": [
+                "itypea1",
+                "itypea2",
+                "itypea3"
+            ]
         },
         {
-            "name": "etypea1",
+            "name": "etypea#",
             "description": "Controls what Item Types are excluded, or not allowed, when determining if this skill can be used (Code field from ItemTypes.txt)",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
-            }
+                "type": "reference",
+                "dataLength": 4,
+                "memSize": 16,
+                "file": "itemtypes",
+                "field": "Code"
+            },
+            "altNames": [
+                "etypea1",
+                "etypea2"
+            ]
         },
         {
-            "name": "itypeb1",
+            "name": "itypeb#",
             "description": "Controls what alternate Item Types are included, or allowed, when determining if this skill can be used (Code field from ItemTypes.txt). This acts as a second set of Item Types to check",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
-            }
+                "type": "reference",
+                "dataLength": 4,
+                "memSize": 16,
+                "file": "itemtypes",
+                "field": "Code"
+            },
+            "altNames": [
+                "itypeb1",
+                "itypeb2",
+                "itypeb3"
+            ]
         },
         {
-            "name": "etypeb1",
+            "name": "etypeb#",
             "description": "Controls what alternate Item Types are excluded, or not allowed, when determining if this skill can be used (Code field from ItemTypes.txt). This acts as a second set of Item Types to check",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
-            }
+                "type": "reference",
+                "dataLength": 4,
+                "memSize": 16,
+                "file": "itemtypes",
+                "field": "Code"
+            },
+            "altNames": [
+                "etypeb1",
+                "etypeb2"
+            ]
         },
         {
             "name": "anim",
             "description": "Controls the animation mode that the player character will use when using this skill. Setting the mode to Sequence (SQ) will cause the player character to play a time controlled animation sequence, utilizing certain sequence fields. Referenced from the Token column in PlrMode.txt",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
+                "type": "reference",
+                "dataLength": 4,
+                "memSize": 8,
+                "file": "PlrMode",
+                "field": "Code"
             }
         },
         {
             "name": "seqtrans",
             "description": "Uses the same inputs as the anim field. If the \"anim\" field equals SQ (Sequence) and this field equals SC (Cast), then the sequence animation speed can be modified by the faster cast rate stat modifier",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
+                "type": "reference",
+                "dataLength": 4,
+                "memSize": 8,
+                "file": "PlrMode",
+                "field": "Code"
             }
         },
         {
             "name": "monanim",
             "description": "Controls the animat on mode that the monster will use when using this skill. This is similar to the anim field except with monster units using the skill instead of player units. Referenced from the Token column in MonMode.txt",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
+                "type": "reference",
+                "dataLength": 4,
+                "memSize": 8,
+                "file": "MonMode",
+                "field": "code"
             }
         },
         {
@@ -4668,27 +4864,32 @@ files["skills"] = {
             "name": "ItemCastSound",
             "description": "Play a sound when the skill is used by an item event. (Sound field from Sounds.txt)",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
+                "type": "reference",
+                "dataLength": 47,
+                "memSize": 16,
+                "file": "sounds",
+                "field": "Sound"
             }
         },
         {
             "name": "ItemCastOverlay",
             "description": "Add a cast overlay when the skill is used by an item event. (overlay field from Overlay.txt)",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
+                "type": "reference",
+                "dataLength": 47,
+                "memSize": 16,
+                "file": "overlay",
+                "field": "overlay"
             }
         },
         {
             "name": "skpoints",
             "description": "Controls the number of Skill Points needed to level up the skill",
             "type": {
-                "type": "calc",
-                "dataLength": 0,
-                "memSize": 0
+                "type": "parse",
+                "dataLength": 255,
+                "memSize": 0,
+                "description": "Skill scope BBE. See <a href=\"../docs/bbe-calc.html\" target=\"_blank\" class=\"reference-link\">BBE/Calc Fields</a>"
             }
         },
         {
@@ -4746,13 +4947,20 @@ files["skills"] = {
             }
         },
         {
-            "name": "reqskill1",
+            "name": "reqskill#",
             "description": "Points to a Skill field to act as a prerequisite skill. The prerequisite skill must be least base level 1 before the player is allowed to spend Skill Points on this skill.",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
-            }
+                "type": "reference",
+                "dataLength": 47,
+                "memSize": 16,
+                "file": "skills",
+                "field": "skill"
+            },
+            "altNames": [
+                "reqskill1",
+                "reqskill2",
+                "reqskill3"
+            ]
         },
         {
             "name": "restrict",
@@ -4786,30 +4994,39 @@ files["skills"] = {
             ]
         },
         {
-            "name": "State1",
+            "name": "State#",
             "description": "Points to a state field from States.txt. Used as parameters for the restrict field to control what specific States will restrict the usage of the skill",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
-            }
+                "type": "reference",
+                "dataLength": 47,
+                "memSize": 16,
+                "file": "states",
+                "field": "state"
+            },
+            "altNames": [
+                "State1",
+                "State2",
+                "State3"
+            ]
         },
         {
             "name": "localdelay",
             "description": "Controls the Casting Delay duration for this skill after it is used (25 frames = 1 second)",
             "type": {
-                "type": "calc",
-                "dataLength": 0,
-                "memSize": 0
+                "type": "parse",
+                "dataLength": 255,
+                "memSize": 0,
+                "description": "Skill scope BBE. See <a href=\"../docs/bbe-calc.html\" target=\"_blank\" class=\"reference-link\">BBE/Calc Fields</a>"
             }
         },
         {
             "name": "globaldelay",
             "description": "Controls the Casting Delay duration for all other skills with Casting Delays after this skill is used (25 frames = 1 second)",
             "type": {
-                "type": "calc",
-                "dataLength": 0,
-                "memSize": 0
+                "type": "parse",
+                "dataLength": 255,
+                "memSize": 0,
+                "description": "Skill scope BBE. See <a href=\"../docs/bbe-calc.html\" target=\"_blank\" class=\"reference-link\">BBE/Calc Fields</a>"
             }
         },
         {
@@ -4942,9 +5159,10 @@ files["skills"] = {
             "name": "perdelay",
             "description": "Controls the periodic rate that the skill continuously executes its function. Minimum value equals 5. This field requires periodic or aura field to be enabled",
             "type": {
-                "type": "calc",
-                "dataLength": 0,
-                "memSize": 0
+                "type": "parse",
+                "dataLength": 255,
+                "memSize": 0,
+                "description": "Skill scope BBE. See <a href=\"../docs/bbe-calc.html\" target=\"_blank\" class=\"reference-link\">BBE/Calc Fields</a>"
             }
         },
         {
@@ -5002,22 +5220,45 @@ files["skills"] = {
             }
         },
         {
-            "name": "calc1",
+            "name": "calc#",
             "description": "It is used as a possible parameter for skill functions or as a numeric input for other calculation fields",
             "type": {
-                "type": "calc",
-                "dataLength": 0,
-                "memSize": 0
-            }
+                "type": "parse",
+                "dataLength": 255,
+                "memSize": 0,
+                "description": "Skill scope BBE. See <a href=\"../docs/bbe-calc.html\" target=\"_blank\" class=\"reference-link\">BBE/Calc Fields</a>"
+            },
+            "altNames": [
+                "calc1",
+                "calc2",
+                "calc3",
+                "calc4",
+                "calc5",
+                "calc6"
+            ]
         },
         {
-            "name": "Param1",
+            "name": "Param#",
             "description": "It is used as a possible parameter for skill functions or as a numeric input for other calculation fields",
             "type": {
                 "type": "int",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "Param1",
+                "Param2",
+                "Param3",
+                "Param4",
+                "Param5",
+                "Param6",
+                "Param7",
+                "Param8",
+                "Param9",
+                "Param10",
+                "Param11",
+                "Param12"
+            ]
         },
         {
             "name": "InGame",
@@ -5050,9 +5291,10 @@ files["skills"] = {
             "name": "ToHitCalc",
             "description": "Calculates the bonus Attack Rating when using the skill. This will override the ToHit and LevToHit fields if it is not blank",
             "type": {
-                "type": "calc",
-                "dataLength": 0,
-                "memSize": 0
+                "type": "parse",
+                "dataLength": 255,
+                "memSize": 0,
+                "description": "Skill scope BBE. See <a href=\"../docs/bbe-calc.html\" target=\"_blank\" class=\"reference-link\">BBE/Calc Fields</a>"
             }
         },
         {
@@ -5171,13 +5413,20 @@ files["skills"] = {
             }
         },
         {
-            "name": "MinLevDam1",
+            "name": "MinLevDam#",
             "description": "Controls the additional minimum physical damage dealt by the skill, calculated using the leveling formula between 5 level thresholds of the missile's current level. The level thresholds are levels 2-8, 9-16, 17-22, 23-28, 29 and beyond. These 5 level thresholds correlate to each field number",
             "type": {
                 "type": "int",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "MinLevDam1",
+                "MinLevDam2",
+                "MinLevDam3",
+                "MinLevDam4",
+                "MinLevDam5"
+            ]
         },
         {
             "name": "MaxDam",
@@ -5189,30 +5438,44 @@ files["skills"] = {
             }
         },
         {
-            "name": "MaxLevDam1",
+            "name": "MaxLevDam#",
             "description": "Controls the additional maximum physical damage dealt by the skill, calculated using the leveling formula between 5 level thresholds of the missile's current level. The level thresholds are levels 2-8, 9-16, 17-22, 23-28, 29 and beyond. These 5 level thresholds correlate to each field number",
             "type": {
                 "type": "int",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "MaxLevDam1",
+                "MaxLevDam2",
+                "MaxLevDam3",
+                "MaxLevDam4",
+                "MaxLevDam5"
+            ]
         },
         {
             "name": "DmgSymPerCalc",
             "description": "Determines the percentage increase to the physical damage dealt by the skill",
             "type": {
-                "type": "calc",
-                "dataLength": 0,
-                "memSize": 0
+                "type": "parse",
+                "dataLength": 255,
+                "memSize": 0,
+                "description": "Skill scope BBE. See <a href=\"../docs/bbe-calc.html\" target=\"_blank\" class=\"reference-link\">BBE/Calc Fields</a>"
             }
         },
         {
             "name": "EType",
             "description": "Defines the type of elemental damage dealt by the skill. If this field is empty, then the related elemental fields below will not be used. Referenced by the Code value of the Elemental Types Table",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
+                "type": "reference",
+                "dataLength": 4,
+                "memSize": 8,
+                "file": "ElemTypes",
+                "field": "Code"
+            },
+            "appendField": {
+                "file": "ElemTypes",
+                "field": "Code"
             }
         },
         {
@@ -5225,13 +5488,20 @@ files["skills"] = {
             }
         },
         {
-            "name": "EMinLev1",
+            "name": "EMinLev#",
             "description": "Controls the additional minimum elemental damage dealt by the skill, calculated using the leveling formula between 5 level thresholds of the skill's current level. The level thresholds are levels 2-8, 9-16, 17-22, 23-28, 29 and beyond. These 5 level thresholds correlate to each field number",
             "type": {
                 "type": "int",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "EMinLev1",
+                "EMinLev2",
+                "EMinLev3",
+                "EMinLev4",
+                "EMinLev5"
+            ]
         },
         {
             "name": "EMax",
@@ -5243,21 +5513,29 @@ files["skills"] = {
             }
         },
         {
-            "name": "EMaxLev1",
+            "name": "EMaxLev#",
             "description": "Controls the additional maximum elemental damage dealt by the skill, calculated using the leveling formula between 5 level thresholds of the missile's current level. The level thresholds are levels 2-8, 9-16, 17-22, 23-28, 29 and beyond. These 5 level thresholds correlate to each field",
             "type": {
                 "type": "int",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "EMaxLev1",
+                "EMaxLev2",
+                "EMaxLev3",
+                "EMaxLev4",
+                "EMaxLev5"
+            ]
         },
         {
             "name": "EDmgSymPerCalc",
             "description": "Determines the percentage increase to the total elemental damage dealt by the skill",
             "type": {
-                "type": "calc",
-                "dataLength": 0,
-                "memSize": 0
+                "type": "parse",
+                "dataLength": 255,
+                "memSize": 0,
+                "description": "Skill scope BBE. See <a href=\"../docs/bbe-calc.html\" target=\"_blank\" class=\"reference-link\">BBE/Calc Fields</a>"
             }
         },
         {
@@ -5270,21 +5548,27 @@ files["skills"] = {
             }
         },
         {
-            "name": "ELevLen1",
+            "name": "ELevLen#",
             "description": "Controls the additional elemental duration added by the skill, calculated using the leveling formula between 3 level thresholds of the missile's current level. The level thresholds are levels 2-8, 9-16, 17 and beyond. These 3 level thresholds correlate to each field number. These fields only apply to appropriate elemental types with a duration",
             "type": {
                 "type": "int",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "ELevLen1",
+                "ELevLen2",
+                "ELevLen3"
+            ]
         },
         {
             "name": "ELenSymPerCalc",
             "description": "Determines the percentage increase to the total elemental duration dealt by the skill",
             "type": {
-                "type": "calc",
-                "dataLength": 0,
-                "memSize": 0
+                "type": "parse",
+                "dataLength": 255,
+                "memSize": 0,
+                "description": "Skill scope BBE. See <a href=\"../docs/bbe-calc.html\" target=\"_blank\" class=\"reference-link\">BBE/Calc Fields</a>"
             }
         },
         {

@@ -78,13 +78,19 @@ files["overlay"] = {
             }
         },
         {
-            "name": "Height1",
+            "name": "Height#",
             "description": "These are additional values added to Yoffset. Only 1 of these Height1 fields are added, and which field gets added depends on the OverlayHeight value from MonStats2.txt (Example: If the \"OverlayHeight\" value is 4, then use the \"Height4\" field). Furthermore, If the \"OverlayHeight\" value is 0, then ignore these \"Height\" fields and add a default value of 75 to \"Yoffset\". Player unit types will always use \"Height2\"",
             "type": {
                 "type": "int",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "Height1",
+                "Height2",
+                "Height3",
+                "Height4"
+            ]
         },
         {
             "name": "AnimRate",

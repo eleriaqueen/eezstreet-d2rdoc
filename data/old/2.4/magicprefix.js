@@ -114,7 +114,12 @@ files["magicprefix"] = {
             }
         },
         {
-            "name": "mod1code",
+            "name": "mod#code",
+            "altNames": [
+                "mod1code",
+                "mod2code",
+                "mod3code"
+            ],
             "description": "Controls the item properties for the item affix (Uses the Code field from Properties.txt)",
             "type": {
                 "type": "string",
@@ -123,7 +128,12 @@ files["magicprefix"] = {
             }
         },
         {
-            "name": "mod1param",
+            "name": "mod#param",
+            "altNames": [
+                "mod1param",
+                "mod2param",
+                "mod3param"
+            ],
             "description": "The \"parameter\" value associated with the listed property (mod). Usage depends on the (Function ID field from Properties.txt)",
             "type": {
                 "type": "int",
@@ -132,7 +142,12 @@ files["magicprefix"] = {
             }
         },
         {
-            "name": "mod1min",
+            "name": "mod#min",
+            "altNames": [
+                "mod1min",
+                "mod2min",
+                "mod3min"
+            ],
             "description": "The \"min\" value to assign to the listed property (mod). Usage depends on the (Function ID field from Properties.txt)",
             "type": {
                 "type": "int",
@@ -141,7 +156,12 @@ files["magicprefix"] = {
             }
         },
         {
-            "name": "mod1max",
+            "name": "mod#max",
+            "altNames": [
+                "mod1max",
+                "mod2max",
+                "mod3max"
+            ],
             "description": "The \"max\" value to assign to the listed property (mod). Usage depends on the (Function ID field from Properties.txt)",
             "type": {
                 "type": "int",
@@ -159,7 +179,16 @@ files["magicprefix"] = {
             }
         },
         {
-            "name": "itype1",
+            "name": "itype#",
+            "altNames": [
+                "itype1",
+                "itype2",
+                "itype3",
+                "itype4",
+                "itype5",
+                "itype6",
+                "itype7"
+            ],
             "description": "Controls what Item Types are allowed to spawn with this item affix. Uses the Code field from ItemTypes.txt",
             "type": {
                 "type": "string",
@@ -168,7 +197,14 @@ files["magicprefix"] = {
             }
         },
         {
-            "name": "etype1",
+            "name": "etype#",
+            "altNames": [
+                "etype1",
+                "etype2",
+                "etype3",
+                "etype4",
+                "etype5"
+            ],
             "description": "Controls what Item Types are excluded to spawn with this item affix. Uses the Code field from ItemTypes.txt",
             "type": {
                 "type": "string",

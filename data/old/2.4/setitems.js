@@ -18,9 +18,11 @@ files["setitems"] = {
             "name": "set",
             "description": "Defines the Set to link to this Set Item (must match the Index field from Sets.txt)",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
+                "type": "reference",
+                "dataLength": 47,
+                "memSize": 16,
+                "file": "sets",
+                "field": "index"
             }
         },
         {
@@ -63,18 +65,22 @@ files["setitems"] = {
             "name": "chrtransform",
             "description": "Controls the color change of the item when equipped on a character or dropped on the ground. If empty, then the item will have the default item color. Referenced from the Code column in Colors.txt",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
+                "type": "reference",
+                "dataLength": 4,
+                "memSize": 8,
+                "file": "colors",
+                "field": "Code"
             }
         },
         {
             "name": "invtransform",
             "description": "Controls the color change of the item in the inventory UI. If empty, then the item will have the default item color. Referenced from the Code column in Colors.txt",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
+                "type": "reference",
+                "dataLength": 4,
+                "memSize": 8,
+                "file": "colors",
+                "field": "Code"
             }
         },
         {
@@ -99,9 +105,11 @@ files["setitems"] = {
             "name": "dropsound",
             "description": "An override for the dropsound field from AMW.txt. Uses the item field by default",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
+                "type": "reference",
+                "dataLength": 47,
+                "memSize": 16,
+                "file": "sounds",
+                "field": "Sound"
             }
         },
         {
@@ -117,9 +125,11 @@ files["setitems"] = {
             "name": "usesound",
             "description": "An override for the usesound field from the AMW.txt. Uses the item field by default",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
+                "type": "reference",
+                "dataLength": 47,
+                "memSize": 16,
+                "file": "sounds",
+                "field": "Sound"
             }
         },
         {
@@ -168,112 +178,172 @@ files["setitems"] = {
             ]
         },
         {
-            "name": "prop1",
+            "name": "prop#",
             "description": "Controls the item properties that are add baseline to the Set Item (Uses the Code field from Properties.txt)",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
-            }
+                "type": "parse",
+                "dataLength": 255,
+                "memSize": 0,
+                "description": "Reference of $!properties#code!$"
+            },
+            "altNames": [
+                "prop1",
+                "prop2",
+                "prop3",
+                "prop4",
+                "prop5",
+                "prop6",
+                "prop7",
+                "prop8",
+                "prop9"
+            ]
         },
         {
-            "name": "par1",
+            "name": "par#",
             "description": "The stat's \"parameter\" value associated with the related property (prop1). Usage depends on the (Function ID field from Properties.txt)",
             "type": {
-                "type": "int",
-                "dataLength": 0,
-                "memSize": 0
-            }
+                "type": "parse",
+                "dataLength": 255,
+                "memSize": 0,
+                "description": "A number or references $!skills#skill!$, $!montype#type!$, or $!states#state!$"
+            },
+            "altNames": [
+                "par1",
+                "par2",
+                "par3",
+                "par4",
+                "par5",
+                "par6",
+                "par7",
+                "par8",
+                "par9"
+            ]
         },
         {
-            "name": "min1",
+            "name": "min#",
             "description": "The stat's \"min\" value to assign to the related property (prop1). Usage depends on the (Function ID field from Properties.txt)",
             "type": {
                 "type": "int",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "min1",
+                "min2",
+                "min3",
+                "min4",
+                "min5",
+                "min6",
+                "min7",
+                "min8",
+                "min9"
+            ]
         },
         {
-            "name": "max1",
+            "name": "max#",
             "description": "The stat's \"max\" value to assign to the related property (prop1). Usage depends on the (Function ID field from Properties.txt)",
             "type": {
                 "type": "int",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "max1",
+                "max2",
+                "max3",
+                "max4",
+                "max5",
+                "max6",
+                "max7",
+                "max8",
+                "max9"
+            ]
         },
         {
-            "name": "aprop1a",
+            "name": "aprop#",
             "description": "Controls the item properties that are added to the Set Item when other pieces of the Set are also equipped (Uses the Code field from Properties.txt)",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
-            }
+                "type": "parse",
+                "dataLength": 255,
+                "memSize": 0,
+                "description": "Reference of $!properties#code!$"
+            },
+            "altNames": [
+                "aprop1a",
+                "aprop1b",
+                "aprop2a",
+                "aprop2b",
+                "aprop3a",
+                "aprop3b",
+                "aprop4a",
+                "aprop4b",
+                "aprop5a",
+                "aprop5b"
+            ]
         },
         {
-            "name": "apar1a",
+            "name": "apar#",
             "description": "The stat's \"parameter\" value associated with the related property (aprop1a). Usage depends on the (Function ID field from Properties.txt)",
             "type": {
-                "type": "int",
-                "dataLength": 0,
-                "memSize": 0
-            }
+                "type": "parse",
+                "dataLength": 255,
+                "memSize": 0,
+                "description": "A number or references $!skills#skill!$, $!montype#type!$, or $!states#state!$"
+            },
+            "altNames": [
+                "apar1a",
+                "apar1b",
+                "apar2a",
+                "apar2b",
+                "apar3a",
+                "apar3b",
+                "apar4a",
+                "apar4b",
+                "apar5a",
+                "apar5b"
+            ]
         },
         {
-            "name": "amin1a",
+            "name": "amin#",
             "description": "The stat's \"min\" value to assign to the related property (aprop1a). Usage depends on the (Function ID field from Properties.txt)",
             "type": {
                 "type": "int",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "amin1a",
+                "amin1b",
+                "amin2a",
+                "amin2b",
+                "amin3a",
+                "amin3b",
+                "amin4a",
+                "amin4b",
+                "amin5a",
+                "amin5b"
+            ]
         },
         {
-            "name": "amax1a",
+            "name": "amax#",
             "description": "The stat's \"max\" value to assign to the related property (aprop1a). Usage depends on the (Function ID field from Properties.txt)",
             "type": {
                 "type": "int",
                 "dataLength": 0,
                 "memSize": 0
-            }
-        },
-        {
-            "name": "aprop1b",
-            "description": "Controls the item properties that are added to the Set Item when other pieces of the Set are also equipped. Each of these numbered fields are paired with the related \"aprop#a\" field as an additional item property. (Uses the Code field from Properties.txt)",
-            "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
-            }
-        },
-        {
-            "name": "apar1b",
-            "description": "The stat's \"parameter\" value associated with the related property (aprop1b). Usage depends on the (Function ID field from Properties.txt)",
-            "type": {
-                "type": "int",
-                "dataLength": 0,
-                "memSize": 0
-            }
-        },
-        {
-            "name": "amin1b",
-            "description": "The stat's \"min\" value to assign to the related property (aprop1b). Usage depends on the (Function ID field from Properties.txt)",
-            "type": {
-                "type": "int",
-                "dataLength": 0,
-                "memSize": 0
-            }
-        },
-        {
-            "name": "amax1b",
-            "description": "The stat's \"max\" value to assign to the related property (aprop1b). Usage depends on the (Function ID field from Properties.txt)",
-            "type": {
-                "type": "int",
-                "dataLength": 0,
-                "memSize": 0
-            }
+            },
+            "altNames": [
+                "amax1a",
+                "amax1b",
+                "amax2a",
+                "amax2b",
+                "amax3a",
+                "amax3b",
+                "amax4a",
+                "amax4b",
+                "amax5a",
+                "amax5b"
+            ]
         },
         {
             "name": "diablocloneweight",

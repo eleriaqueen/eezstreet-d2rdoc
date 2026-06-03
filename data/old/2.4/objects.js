@@ -24,15 +24,6 @@ files["objects"] = {
             }
         },
         {
-            "name": "*ID",
-            "description": "This field is not read directly, but can be used as an Index for objects",
-            "type": {
-                "type": "int",
-                "dataLength": 0,
-                "memSize": 0
-            }
-        },
-        {
             "name": "Token",
             "description": "Determines what files to use to display the graphics of the object. These are defined by the ObjType.txt file",
             "type": {
@@ -42,13 +33,23 @@ files["objects"] = {
             }
         },
         {
-            "name": "Selectable0",
+            "name": "Selectable#",
             "description": "If equals 1, then the object can be selected by the player and highlighted when hovered on by the mouse cursor. If equals 0, then the object cannot be selected and will not highlight when the player hovers the mouse over it",
             "type": {
                 "type": "bool",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "Selectable0",
+                "Selectable1",
+                "Selectable2",
+                "Selectable3",
+                "Selectable4",
+                "Selectable5",
+                "Selectable6",
+                "Selectable7"
+            ]
         },
         {
             "name": "SizeX & SizeY",
@@ -60,58 +61,118 @@ files["objects"] = {
             }
         },
         {
-            "name": "FrameCnt0",
+            "name": "FrameCnt#",
             "description": "Controls the frame length of the object's mode. If this equals 0, then that mode will be skipped",
             "type": {
                 "type": "int",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "FrameCnt0",
+                "FrameCnt1",
+                "FrameCnt2",
+                "FrameCnt3",
+                "FrameCnt4",
+                "FrameCnt5",
+                "FrameCnt6",
+                "FrameCnt7"
+            ]
         },
         {
-            "name": "FrameDelta0",
+            "name": "FrameDelta#",
             "description": "Controls the animation frame rate of how many frames to update per delta (Measured in 256ths)",
             "type": {
                 "type": "int",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "FrameDelta0",
+                "FrameDelta1",
+                "FrameDelta2",
+                "FrameDelta3",
+                "FrameDelta4",
+                "FrameDelta5",
+                "FrameDelta6",
+                "FrameDelta7"
+            ]
         },
         {
-            "name": "CycleAnim0",
+            "name": "CycleAnim#",
             "description": "If equals 1, then the object's current animation will loop back to play again when it finishes. If equals 0, then the object will generally play the Opened mode after playing the Operating mode",
             "type": {
                 "type": "bool",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "CycleAnim0",
+                "CycleAnim1",
+                "CycleAnim2",
+                "CycleAnim3",
+                "CycleAnim4",
+                "CycleAnim5",
+                "CycleAnim6",
+                "CycleAnim7"
+            ]
         },
         {
-            "name": "Lit0",
+            "name": "Lit#",
             "description": "Controls the Light Radius distance value for the object. If this value equals 0, then the object will not emit a Light Radius",
             "type": {
                 "type": "int",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "Lit0",
+                "Lit1",
+                "Lit2",
+                "Lit3",
+                "Lit4",
+                "Lit5",
+                "Lit6",
+                "Lit7"
+            ]
         },
         {
-            "name": "BlocksLight0",
+            "name": "BlocksLight#",
             "description": "If equals 1, then the object will draw a shadow. If equals 0, then the object will not draw a shadow",
             "type": {
                 "type": "bool",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "BlocksLight0",
+                "BlocksLight1",
+                "BlocksLight2",
+                "BlocksLight3",
+                "BlocksLight4",
+                "BlocksLight5",
+                "BlocksLight6",
+                "BlocksLight7"
+            ]
         },
         {
-            "name": "HasCollision0",
+            "name": "HasCollision#",
             "description": "If equals 1, then the object will have collision. If equals 0, then the object will not have collision, and units can walk through it",
             "type": {
                 "type": "bool",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "HasCollision0",
+                "HasCollision1",
+                "HasCollision2",
+                "HasCollision3",
+                "HasCollision4",
+                "HasCollision5",
+                "HasCollision6",
+                "HasCollision7"
+            ]
         },
         {
             "name": "IsAttackable0",
@@ -123,13 +184,23 @@ files["objects"] = {
             }
         },
         {
-            "name": "Start0",
+            "name": "Start#",
             "description": "Controls the frame for where the object will start playing the next animation",
             "type": {
                 "type": "int",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "Start0",
+                "Start1",
+                "Start2",
+                "Start3",
+                "Start4",
+                "Start5",
+                "Start6",
+                "Start7"
+            ]
         },
         {
             "name": "EnvEffect",
@@ -186,13 +257,23 @@ files["objects"] = {
             ]
         },
         {
-            "name": "OrderFlag0",
+            "name": "OrderFlag#",
             "description": "Controls how the object's Sprite is drawn, which can affect how it is displayed in Perspective game camera mode.",
             "type": {
                 "type": "int",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "OrderFlag0",
+                "OrderFlag1",
+                "OrderFlag2",
+                "OrderFlag3",
+                "OrderFlag4",
+                "OrderFlag5",
+                "OrderFlag6",
+                "OrderFlag7"
+            ]
         },
         {
             "name": "PreOperate",
@@ -204,13 +285,23 @@ files["objects"] = {
             }
         },
         {
-            "name": "Mode0",
+            "name": "Mode#",
             "description": "If equals 1, then confirm that this object has the correlating mode. If equals 0, then this object will not have the correlating mode. This flag can affect how the object functions work",
             "type": {
                 "type": "bool",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "Mode0",
+                "Mode1",
+                "Mode2",
+                "Mode3",
+                "Mode4",
+                "Mode5",
+                "Mode6",
+                "Mode7"
+            ]
         },
         {
             "name": "Xoffset & Yoffset",
@@ -258,85 +349,31 @@ files["objects"] = {
             }
         },
         {
-            "name": "HD",
+            "name": "COMP",
             "description": "If equals 1, then the object will be flagged to have a Head composite piece, and the game will use the component system to handle the object's mouse selection collision box. If equals 0, then ignore this",
             "type": {
                 "type": "bool",
                 "dataLength": 0,
                 "memSize": 0
-            }
-        },
-        {
-            "name": "TR",
-            "description": "If equals 1, then the object will be flagged to have a Torso composite piece, and the game will use the component system to handle the object's mouse selection collision box. If equals 0, then ignore this",
-            "type": {
-                "type": "bool",
-                "dataLength": 0,
-                "memSize": 0
-            }
-        },
-        {
-            "name": "LG",
-            "description": "If equals 1, then the object will be flagged to have a Legs composite piece, and the game will use the component system to handle the object's mouse selection collision box. If equals 0, then ignore this",
-            "type": {
-                "type": "bool",
-                "dataLength": 0,
-                "memSize": 0
-            }
-        },
-        {
-            "name": "RA",
-            "description": "If equals 1, then the object will be flagged to have a Right Arm composite piece, and the game will use the component system to handle the object's mouse selection collision box. If equals 0, then ignore this",
-            "type": {
-                "type": "bool",
-                "dataLength": 0,
-                "memSize": 0
-            }
-        },
-        {
-            "name": "LA",
-            "description": "If equals 1, then the object will be flagged to have a Left Arm composite piece, and the game will use the component system to handle the object's mouse selection collision box. If equals 0, then ignore this",
-            "type": {
-                "type": "bool",
-                "dataLength": 0,
-                "memSize": 0
-            }
-        },
-        {
-            "name": "RH",
-            "description": "If equals 1, then the object will be flagged to have a Right Hand composite piece, and the game will use the component system to handle the object's mouse selection collision box. If equals 0, then ignore this",
-            "type": {
-                "type": "bool",
-                "dataLength": 0,
-                "memSize": 0
-            }
-        },
-        {
-            "name": "LH",
-            "description": "If equals 1, then the object will be flagged to have a Left Hand composite piece, and the game will use the component system to handle the object's mouse selection collision box. If equals 0, then ignore this",
-            "type": {
-                "type": "bool",
-                "dataLength": 0,
-                "memSize": 0
-            }
-        },
-        {
-            "name": "SH",
-            "description": "If equals 1, then the object will be flagged to have a Shield composite piece, and the game will use the component system to handle the object's mouse selection collision box. If equals 0, then ignore this",
-            "type": {
-                "type": "bool",
-                "dataLength": 0,
-                "memSize": 0
-            }
-        },
-        {
-            "name": "S1",
-            "description": "If equals 1, then the object will be flagged to have a Special # composite piece, and the game will use the component system to handle the object's mouse selection collision box. If equals 0, then ignore this",
-            "type": {
-                "type": "bool",
-                "dataLength": 0,
-                "memSize": 0
-            }
+            },
+            "altNames": [
+                "HD",
+                "TR",
+                "LG",
+                "RA",
+                "LA",
+                "RH",
+                "LH",
+                "SH",
+                "S1",
+                "S2",
+                "S3",
+                "S4",
+                "S5",
+                "S6",
+                "S7",
+                "S8"
+            ]
         },
         {
             "name": "TotalPieces",
@@ -402,13 +439,20 @@ files["objects"] = {
             }
         },
         {
-            "name": "Parm0",
+            "name": "Parm#",
             "description": "Used as possible parameters for various functions for the object",
             "type": {
                 "type": "int",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "Parm0",
+                "Parm1",
+                "Parm2",
+                "Parm3",
+                "Parm4"
+            ]
         },
         {
             "name": "Lockable",

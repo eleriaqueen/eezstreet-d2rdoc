@@ -287,13 +287,19 @@ files["automap"] = {
             }
         },
         {
-            "name": "Cel1",
+            "name": "Cel#",
             "description": "Determines the unique image frame to use from the MaxiMap.dc6 file that will be used to display on the Automap for that position of the level tile. There are multiple of these fields because they can be randomly chosen to give image variety in the Automap display. If the value equals -1, then this cell is not valid and will be ignored. If no cell is chosen overall, then nothing will be drawn in this area on the Automap.",
             "type": {
                 "type": "int",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "Cel1",
+                "Cel2",
+                "Cel3",
+                "Cel4"
+            ]
         }
     ]
 }

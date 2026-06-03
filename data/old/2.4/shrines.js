@@ -146,13 +146,17 @@ files["shrines"] = {
             ]
         },
         {
-            "name": "Arg0",
+            "name": "Arg#",
             "description": "Integer value used as a possible parameter for the Code function",
             "type": {
                 "type": "int",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "Arg0",
+                "Arg1"
+            ]
         },
         {
             "name": "Duration in frames",

@@ -233,9 +233,11 @@ files["cubemain"] = {
             "name": "class",
             "description": "Defines the recipe to be only usable by a defined class. Referenced from the Code column in PlayerClass.txt",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
+                "type": "reference",
+                "dataLength": 4,
+                "memSize": 8,
+                "file": "PlayerClass",
+                "field": "Code"
             }
         },
         {
@@ -248,21 +250,32 @@ files["cubemain"] = {
             }
         },
         {
-            "name": "input 1",
+            "name": "input #",
             "description": "Controls what items are required for the recipe. Uses either the item's unique code or a combination of pre-defined codes from the table below, separated by commas if needed. (hiq,noe)",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
-            }
+                "type": "parse",
+                "dataLength": 255,
+                "memSize": 0,
+                "description": "References an $!itemtypes#ItemType!$, item code, $!uniqueitems#index!$, $!sets#index!$, or one of the modifiers described below"
+            },
+            "altNames": [
+                "input 1",
+                "input 2",
+                "input 3",
+                "input 4",
+                "input 5",
+                "input 6",
+                "input 7"
+            ]
         },
         {
             "name": "output",
             "description": "Controls the first to third output items. Uses either the item's unique code or a combination of pre-defined codes from the table below, separated by commas if needed. (hiq,noe).",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
+                "type": "parse",
+                "dataLength": 255,
+                "memSize": 0,
+                "description": "References an $!itemtypes#ItemType!$, item code, $!uniqueitems#index!$, $!sets#index!$, or one of the modifiers described below"
             },
             "table": [
                 [
@@ -385,6 +398,10 @@ files["cubemain"] = {
                     "lvl=#",
                     "A parameter for other output modifiers."
                 ]
+            ],
+            "altNames": [
+                "output b",
+                "output c"
             ]
         },
         {
@@ -394,7 +411,11 @@ files["cubemain"] = {
                 "type": "int",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "b lvl",
+                "c lvl"
+            ]
         },
         {
             "name": "plvl",
@@ -403,7 +424,11 @@ files["cubemain"] = {
                 "type": "int",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "b plvl",
+                "c plvl"
+            ]
         },
         {
             "name": "ilvl",
@@ -412,52 +437,142 @@ files["cubemain"] = {
                 "type": "int",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "b ilvl",
+                "c ilvl"
+            ]
         },
         {
-            "name": "mod 1",
+            "name": "mod #",
             "description": "Controls the output item properties (Uses the Code field from Properties.txt)",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
-            }
+                "type": "parse",
+                "dataLength": 255,
+                "memSize": 0,
+                "description": "Reference of $!properties#code!$"
+            },
+            "altNames": [
+                "mod 1",
+                "mod 2",
+                "mod 3",
+                "mod 4",
+                "mod 5",
+                "b mod 1",
+                "b mod 2",
+                "b mod 3",
+                "b mod 4",
+                "b mod 5",
+                "c mod 1",
+                "c mod 2",
+                "c mod 3",
+                "c mod 4",
+                "c mod 5"
+            ]
         },
         {
-            "name": "mod 1 chance",
+            "name": "mod # chance",
             "description": "The percent chance that the property will be assigned. If this equals 0, then the Property will always be assigned",
             "type": {
                 "type": "int",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "mod 1 chance",
+                "mod 2 chance",
+                "mod 3 chance",
+                "mod 4 chance",
+                "mod 5 chance",
+                "b mod 1 chance",
+                "b mod 2 chance",
+                "b mod 3 chance",
+                "b mod 4 chance",
+                "b mod 5 chance",
+                "c mod 1 chance",
+                "c mod 2 chance",
+                "c mod 3 chance",
+                "c mod 4 chance",
+                "c mod 5 chance"
+            ]
         },
         {
-            "name": "mod 1 param",
+            "name": "mod # param",
             "description": "The \"parameter\" value associated with the listed property (mod). Usage depends on the (Function ID field from Properties.txt)",
             "type": {
                 "type": "int",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "mod 1 param",
+                "mod 2 param",
+                "mod 3 param",
+                "mod 4 param",
+                "mod 5 param",
+                "b mod 1 param",
+                "b mod 2 param",
+                "b mod 3 param",
+                "b mod 4 param",
+                "b mod 5 param",
+                "c mod 1 param",
+                "c mod 2 param",
+                "c mod 3 param",
+                "c mod 4 param",
+                "c mod 5 param"
+            ]
         },
         {
-            "name": "mod 1 min",
+            "name": "mod # min",
             "description": "The \"min\" value to assign to the listed property (mod). Usage depends on the (Function ID field from Properties.txt)",
             "type": {
                 "type": "int",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "mod 1 min",
+                "mod 2 min",
+                "mod 3 min",
+                "mod 4 min",
+                "mod 5 min",
+                "b mod 1 min",
+                "b mod 2 min",
+                "b mod 3 min",
+                "b mod 4 min",
+                "b mod 5 min",
+                "c mod 1 min",
+                "c mod 2 min",
+                "c mod 3 min",
+                "c mod 4 min",
+                "c mod 5 min"
+            ]
         },
         {
-            "name": "mod 1 max",
+            "name": "mod # max",
             "description": "The \"max\" value to assign to the listed property (mod). Usage depends on the (Function ID field from Properties.txt)",
             "type": {
                 "type": "int",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "mod 1 max",
+                "mod 2 max",
+                "mod 3 max",
+                "mod 4 max",
+                "mod 5 max",
+                "b mod 1 max",
+                "b mod 2 max",
+                "b mod 3 max",
+                "b mod 4 max",
+                "b mod 5 max",
+                "c mod 1 max",
+                "c mod 2 max",
+                "c mod 3 max",
+                "c mod 4 max",
+                "c mod 5 max"
+            ]
         }
     ]
 }

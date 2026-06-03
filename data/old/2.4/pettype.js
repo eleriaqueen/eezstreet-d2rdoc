@@ -132,22 +132,34 @@ files["pettype"] = {
             }
         },
         {
-            "name": "mclass1",
+            "name": "mclass#",
             "description": "Defines the alternative pet to use for the PetType by using that specific unit's hcIDx from Monstats.txt",
             "type": {
                 "type": "string",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "mclass1",
+                "mclass2",
+                "mclass3",
+                "mclass4"
+            ]
         },
         {
-            "name": "micon1",
+            "name": "micon#",
             "description": "Defines which DC6 file to use for the related \"mclass\" Pet's icon in its party frame",
             "type": {
                 "type": "string",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "micon1",
+                "micon2",
+                "micon3",
+                "micon4"
+            ]
         }
     ]
 }

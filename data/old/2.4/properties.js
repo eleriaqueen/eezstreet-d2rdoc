@@ -15,40 +15,78 @@ files["properties"] = {
             }
         },
         {
-            "name": "func1",
+            "name": "func#",
             "description": "Code function used to define the Property. Uses numeric ID values to define what function to use.",
             "type": {
                 "type": "int",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "func1",
+                "func2",
+                "func3",
+                "func4",
+                "func5",
+                "func6",
+                "func7"
+            ]
         },
         {
-            "name": "stat1",
+            "name": "stat#",
             "description": "Stat applied by the property. Used by the func1 field as a possible parameter using a Stat entry from ItemStatCost.txt. A stat is comprised of a \"min\" and \"max\" value which it uses to calculate the actual numeric value. Stats also can have a \"parameter\" value, depending on its function",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
-            }
+                "type": "reference",
+                "dataLength": 47,
+                "memSize": 16,
+                "file": "itemstatcost",
+                "field": "Stat"
+            },
+            "altNames": [
+                "stat1",
+                "stat2",
+                "stat3",
+                "stat4",
+                "stat5",
+                "stat6",
+                "stat7"
+            ]
         },
         {
-            "name": "set1",
+            "name": "set#",
             "description": "Used by the func1 field as a possible parameter. If equals 1, then set the stat value regardless of its current value. If equals 0, then add to the stat value",
             "type": {
                 "type": "bool",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "set1",
+                "set2",
+                "set3",
+                "set4",
+                "set5",
+                "set6",
+                "set7"
+            ]
         },
         {
-            "name": "val1",
+            "name": "val#",
             "description": "sed by the func1 field as a possible input parameter for additional function calculations",
             "type": {
                 "type": "int",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "val1",
+                "val2",
+                "val3",
+                "val4",
+                "val5",
+                "val6",
+                "val7"
+            ]
         }
     ]
 }

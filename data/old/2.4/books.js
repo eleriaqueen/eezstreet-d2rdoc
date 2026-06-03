@@ -54,18 +54,22 @@ files["books"] = {
             "name": "ScrollSkill",
             "description": "Defines which Skill to use for the scroll item (Uses the skill field from Skills.txt)",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
+                "type": "reference",
+                "dataLength": 47,
+                "memSize": 32,
+                "file": "skills",
+                "field": "skill"
             }
         },
         {
             "name": "BookSkill",
             "description": "Defines which Skill to use for the book item (Uses the skill field from Skills.txt)",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
+                "type": "reference",
+                "dataLength": 47,
+                "memSize": 32,
+                "file": "skills",
+                "field": "skill"
             }
         },
         {

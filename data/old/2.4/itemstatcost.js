@@ -15,15 +15,6 @@ files["itemstatcost"] = {
             }
         },
         {
-            "name": "*ID",
-            "description": "This field is not read directly, but can be used as an Index for stats",
-            "type": {
-                "type": "int",
-                "dataLength": 0,
-                "memSize": 0
-            }
-        },
-        {
             "name": "Send Other",
             "description": "If equals 1, then only add the stat to a new monster if the that has no state and has an item mask. If equals 0, then ignore this",
             "type": {
@@ -352,19 +343,28 @@ files["itemstatcost"] = {
             "name": "op base",
             "description": "Used as a possible parameter value for the \"op\" function",
             "type": {
-                "type": "int",
-                "dataLength": 0,
-                "memSize": 0
+                "type": "reference",
+                "dataLength": 47,
+                "memSize": 16,
+                "file": "itemstatcost",
+                "field": "Stat"
             }
         },
         {
-            "name": "op stat1",
+            "name": "op stat#",
             "description": "Used as a possible parameter value for the \"op\" function",
             "type": {
-                "type": "int",
-                "dataLength": 0,
-                "memSize": 0
-            }
+                "type": "reference",
+                "dataLength": 47,
+                "memSize": 16,
+                "file": "itemstatcost",
+                "field": "Stat"
+            },
+            "altNames": [
+                "op stat1",
+                "op stat2",
+                "op stat3"
+            ]
         },
         {
             "name": "direct",
@@ -379,9 +379,11 @@ files["itemstatcost"] = {
             "name": "maxstat",
             "description": "Controls which stat is associated with this stat to be treated as the maximum version of this stat. This means that 2 stats are essentially linked so that there can be a current version of the stat and a maximum version to control the cap of stat's value. This is used for Life, Mana, Stamina, and Durability. This field relies on the \"direct\" field to be enabled unless it is being used for the healing potion item spell",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
+                "type": "reference",
+                "dataLength": 47,
+                "memSize": 16,
+                "file": "itemstatcost",
+                "field": "Stat"
             }
         },
         {
@@ -394,22 +396,32 @@ files["itemstatcost"] = {
             }
         },
         {
-            "name": "itemevent1",
+            "name": "itemevent#",
             "description": "Uses an event that will activate the specified function defined by \"itemeventfunc#\". Referenced from the event column in Events.txt",
             "type": {
-                "type": "int",
-                "dataLength": 0,
-                "memSize": 0
-            }
+                "type": "reference",
+                "dataLength": 47,
+                "memSize": 16,
+                "file": "events",
+                "field": "event"
+            },
+            "altNames": [
+                "itemevent1",
+                "itemevent2"
+            ]
         },
         {
-            "name": "itemeventfunc1",
+            "name": "itemeventfunc#",
             "description": "Specifies the function to use after the related item event occurred. Functions are defined by a numeric ID code. This is only applied based on the \"itemevent#\" field definition. Referenced by the Code value of the Event Functions Table",
             "type": {
                 "type": "int",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "itemeventfunc1",
+                "itemeventfunc2"
+            ]
         },
         {
             "name": "descpriority",

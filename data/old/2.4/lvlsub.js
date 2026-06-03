@@ -87,31 +87,52 @@ files["lvlsub"] = {
             }
         },
         {
-            "name": "Prob0",
+            "name": "Prob#",
             "description": "This value affects the probability that the tile substitution is used. This is a random chance out of 100. Which \"Prob#\" field that is checked depends on the SubTheme value from the Levels.txt file",
             "type": {
                 "type": "int",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "Prob0",
+                "Prob1",
+                "Prob2",
+                "Prob3",
+                "Prob4"
+            ]
         },
         {
-            "name": "Trials0",
+            "name": "Trials#",
             "description": "Controls the number of times to randomly substitute tiles in a cluster. If this value equals -1, then the game will try to do as many tile substitutions that can be allowed based on the cluster and tile size. This field depends on the CheckAll field being equal to 0",
             "type": {
                 "type": "int",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "Trials0",
+                "Trials1",
+                "Trials2",
+                "Trials3",
+                "Trials4"
+            ]
         },
         {
-            "name": "Max0",
+            "name": "Max#",
             "description": "The maximum number of clusters of tiles to substitute randomly. This field depends on the CheckAll field being equal to 0.",
             "type": {
                 "type": "int",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "Max0",
+                "Max1",
+                "Max2",
+                "Max3",
+                "Max4"
+            ]
         }
     ]
 }

@@ -36,109 +36,94 @@ files["gems"] = {
             "name": "code",
             "description": "Defines the unique item code used to create the gem/rune",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
+                "type": "reference",
+                "dataLength": 4,
+                "memSize": 32,
+                "file": "misc",
+                "field": "code"
             }
         },
         {
-            "name": "weaponMod1Code",
+            "name": "Mod#Code",
             "description": "Controls the item properties that the gem/rune provides when socketed into an item with a \"gemapplytype\" value that equals 0 (Uses the Code field from Properties.txt)",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
-            }
+                "type": "parse",
+                "dataLength": 255,
+                "memSize": 0,
+                "description": "References a $!properties#code!$"
+            },
+            "altNames": [
+                "weaponMod1Code",
+                "weaponMod2Code",
+                "weaponMod3Code",
+                "helmMod1Code",
+                "helmMod2Code",
+                "helmMod3Code",
+                "shieldMod1Code",
+                "shieldMod2Code",
+                "shieldMod3Code"
+            ]
         },
         {
-            "name": "weaponMod1Param",
+            "name": "Mod#Param",
             "description": "The stat's \"parameter\" value associated with the listed property (weaponMod1Code). Usage depends on the (Function ID field from Properties.txt)",
             "type": {
-                "type": "int",
-                "dataLength": 0,
-                "memSize": 0
-            }
+                "type": "parse",
+                "dataLength": 255,
+                "memSize": 0,
+                "description": "A number or references $!skills#skill!$, $!montype#type!$, or $!states#state!$"
+            },
+            "altNames": [
+                "weaponMod1Param",
+                "weaponMod2Param",
+                "weaponMod3Param",
+                "helmMod1Param",
+                "helmMod2Param",
+                "helmMod3Param",
+                "shieldMod1Param",
+                "shieldMod2Param",
+                "shieldMod3Param"
+            ]
         },
         {
-            "name": "weaponMod1Min",
+            "name": "Mod#Min",
             "description": "The stat's \"min\" value associated with the listed property (weaponMod1Code). Usage depends on the (Function ID field from Properties.txt)",
             "type": {
                 "type": "int",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "weaponMod1Min",
+                "weaponMod2Min",
+                "weaponMod3Min",
+                "helmMod1Min",
+                "helmMod2Min",
+                "helmMod3Min",
+                "shieldMod1Min",
+                "shieldMod2Min",
+                "shieldMod3Min"
+            ]
         },
         {
-            "name": "weaponMod1Max",
+            "name": "Mod#Max",
             "description": "The stat's \"max\" value to assign to the listed property (weaponMod1Code). Usage depends on the (Function ID field from Properties.txt)",
             "type": {
                 "type": "int",
                 "dataLength": 0,
                 "memSize": 0
-            }
-        },
-        {
-            "name": "helmMod1Code",
-            "description": "Controls the item properties that the gem/rune provides when socketed into an item with a \"gemapplytype\" value that equals 1 (Uses the Code field from Properties.txt)",
-            "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
-            }
-        },
-        {
-            "name": "helmMod1Param",
-            "description": "The stat's \"parameter\" value associated with the listed property (helmMod1Code). Usage depends on the (Function ID field from Properties.txt)",
-            "type": {
-                "type": "int",
-                "dataLength": 0,
-                "memSize": 0
-            }
-        },
-        {
-            "name": "helmMod1Min",
-            "description": "The stat's \"min\" value associated with the listed property (helmMod1Code). Usage depends on the (Function ID field from Properties.txt)",
-            "type": {
-                "type": "int",
-                "dataLength": 0,
-                "memSize": 0
-            }
-        },
-        {
-            "name": "helmMod1Max",
-            "description": "The stat's \"max\" value to assign to the listed property (helmMod1Code). Usage depends on the (Function ID field from Properties.txt)shieldMod1Code - [O] - Controls the item properties that the gem/rune provides when socketed into an item with a \"gemapplytype\" value that equals 2 (Uses the Code field from Properties.txt)",
-            "type": {
-                "type": "int",
-                "dataLength": 0,
-                "memSize": 0
-            }
-        },
-        {
-            "name": "shieldMod1Param",
-            "description": "The stat's \"parameter\" value associated with the listed property (shieldMod1Code). Usage depends on the (Function ID field from Properties.txt)",
-            "type": {
-                "type": "int",
-                "dataLength": 0,
-                "memSize": 0
-            }
-        },
-        {
-            "name": "shieldMod1Min",
-            "description": "The stat's \"min\" value associated with the listed property (shieldMod1Code). Usage depends on the (Function ID field from Properties.txt)",
-            "type": {
-                "type": "int",
-                "dataLength": 0,
-                "memSize": 0
-            }
-        },
-        {
-            "name": "shieldMod1Max",
-            "description": "The stat's \"max\" value to assign to the listed property (shieldMod1Code). Usage depends on the (Function ID field from Properties.txt)",
-            "type": {
-                "type": "int",
-                "dataLength": 0,
-                "memSize": 0
-            }
+            },
+            "altNames": [
+                "weaponMod1Max",
+                "weaponMod2Max",
+                "weaponMod3Max",
+                "helmMod1Max",
+                "helmMod2Max",
+                "helmMod3Max",
+                "shieldMod1Max",
+                "shieldMod2Max",
+                "shieldMod3Max"
+            ]
         }
     ]
 }

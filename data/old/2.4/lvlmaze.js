@@ -30,10 +30,17 @@ files["lvlmaze"] = {
                 "type": "int",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "Rooms(N)",
+                "Rooms(H)"
+            ]
         },
         {
-            "name": "SizeX & SizeY",
+            "name": "SizeX",
+            "altNames": [
+                "SizeY"
+            ],
             "description": "Controls the length and width sizes of each room (DS1 map files) that are added to the Level Maze. This is measured in tile sizes",
             "type": {
                 "type": "int",

@@ -141,76 +141,30 @@ files["monstats2"] = {
             }
         },
         {
-            "name": "HDv",
+            "name": "COMPv",
             "description": "Head visual",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
-            }
-        },
-        {
-            "name": "TRv",
-            "description": "Torso visual",
-            "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
-            }
-        },
-        {
-            "name": "LGv",
-            "description": "Legs visual",
-            "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
-            }
-        },
-        {
-            "name": "RAv",
-            "description": "Right Arm visual",
-            "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
-            }
-        },
-        {
-            "name": "LAv",
-            "description": "Left Arm visual",
-            "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
-            }
-        },
-        {
-            "name": "RHv",
-            "description": "Right Hand visual",
-            "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
-            }
-        },
-        {
-            "name": "LHv",
-            "description": "Left Hand visual",
-            "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
-            }
-        },
-        {
-            "name": "SHv",
-            "description": "Shield visual",
-            "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
-            }
+                "type": "parse",
+                "dataLength": 255,
+                "memSize": 0,
+                "description": "Comma \",\" separated inputs. For a list of possible component inputs, see the $!compcode!$ file."
+            },
+            "altNames": [
+                "HDv",
+                "TRv",
+                "LGv",
+                "RHv",
+                "LHv",
+                "SHv",
+                "S1v",
+                "S2v",
+                "S3v",
+                "S4v",
+                "S5v",
+                "S6v",
+                "S7v",
+                "S8v"
+            ]
         },
         {
             "name": "S1v (to S8v)",
@@ -222,85 +176,31 @@ files["monstats2"] = {
             }
         },
         {
-            "name": "HD",
+            "name": "COMP",
             "description": "Head",
             "type": {
                 "type": "bool",
                 "dataLength": 0,
                 "memSize": 0
-            }
-        },
-        {
-            "name": "TR",
-            "description": "Torso",
-            "type": {
-                "type": "bool",
-                "dataLength": 0,
-                "memSize": 0
-            }
-        },
-        {
-            "name": "LG",
-            "description": "Legs",
-            "type": {
-                "type": "bool",
-                "dataLength": 0,
-                "memSize": 0
-            }
-        },
-        {
-            "name": "RA",
-            "description": "Right Arm",
-            "type": {
-                "type": "bool",
-                "dataLength": 0,
-                "memSize": 0
-            }
-        },
-        {
-            "name": "LA",
-            "description": "Left Arm",
-            "type": {
-                "type": "bool",
-                "dataLength": 0,
-                "memSize": 0
-            }
-        },
-        {
-            "name": "RH",
-            "description": "Right Hand",
-            "type": {
-                "type": "bool",
-                "dataLength": 0,
-                "memSize": 0
-            }
-        },
-        {
-            "name": "LH",
-            "description": "Left Hand",
-            "type": {
-                "type": "bool",
-                "dataLength": 0,
-                "memSize": 0
-            }
-        },
-        {
-            "name": "SH",
-            "description": "Shield",
-            "type": {
-                "type": "bool",
-                "dataLength": 0,
-                "memSize": 0
-            }
-        },
-        {
-            "name": "S1",
-            "description": "Special 1 to Special 8",
-            "type": {
-                "type": "bool",
-                "dataLength": 0,
-                "memSize": 0
-            }
+            },
+            "altNames": [
+                "HD",
+                "TR",
+                "LG",
+                "RA",
+                "LA",
+                "RH",
+                "LH",
+                "SH",
+                "S1",
+                "S2",
+                "S3",
+                "S4",
+                "S5",
+                "S6",
+                "S7",
+                "S8"
+            ]
         },
         {
             "name": "TotalPieces",
@@ -375,13 +275,19 @@ files["monstats2"] = {
             }
         },
         {
-            "name": "mS1",
+            "name": "mS#",
             "description": "If equals 1, then enable the Skill 1 (to Skill4) Mode for the monster. If equals 0, then this mode is disabled",
             "type": {
                 "type": "bool",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "mS1",
+                "mS2",
+                "mS3",
+                "mS4"
+            ]
         },
         {
             "name": "mDD",
@@ -483,13 +389,19 @@ files["monstats2"] = {
             }
         },
         {
-            "name": "dS1",
+            "name": "dS#",
             "description": "Defines the number of directions that the monster can face during Skill 1 (to Skill 4) Mode",
             "type": {
                 "type": "int",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "dS1",
+                "dS2",
+                "dS3",
+                "dS4"
+            ]
         },
         {
             "name": "dDD",
@@ -546,13 +458,19 @@ files["monstats2"] = {
             }
         },
         {
-            "name": "S1mv",
+            "name": "S#mv",
             "description": "If equals 1, then enable the Skill 1 (to Skill 4) Mode while the monster is moving with the Walk mode or Run mode. If equals 0, then this mode is disabled while the monster is moving",
             "type": {
                 "type": "bool",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "S1mv",
+                "S2mv",
+                "S3mv",
+                "S4mv"
+            ]
         },
         {
             "name": "noGfxHitTest",
@@ -900,27 +818,33 @@ files["monstats2"] = {
             "name": "ResurrectMode",
             "description": "Controls which monster mode to set on the monster when it is resurrected. Referenced from the Code column in MonMode.txt",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
+                "type": "reference",
+                "dataLength": 4,
+                "memSize": 8,
+                "file": "MonMode",
+                "field": "code"
             }
         },
         {
             "name": "ResurrectSkill",
             "description": "Controls what skill should the monster use when it is resurrected (Skills.txt)",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
+                "type": "reference",
+                "dataLength": 47,
+                "memSize": 16,
+                "file": "skills",
+                "field": "skill"
             }
         },
         {
             "name": "SpawnUniqueMod",
             "description": "Controls what unique modifier the monster should always spawn with (MonUMod.txt)",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
+                "type": "reference",
+                "dataLength": 47,
+                "memSize": 16,
+                "file": "monumod",
+                "field": "uniquemod"
             }
         }
     ]

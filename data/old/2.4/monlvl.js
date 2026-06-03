@@ -15,7 +15,11 @@ files["monlvl"] = {
             }
         },
         {
-            "name": "AC & AC(N) & AC(H)",
+            "name": "AC",
+            "altNames": [
+                "AC(N)",
+                "AC(H)"
+            ],
             "description": "Percentage multiplier for increasing the Monster's Defense (multiplies with the AC field)",
             "type": {
                 "type": "int",
@@ -24,7 +28,11 @@ files["monlvl"] = {
             }
         },
         {
-            "name": "TH & TH(N) & TH(H)",
+            "name": "TH",
+            "altNames": [
+                "TH(N)",
+                "TH(H)"
+            ],
             "description": "Percentage multiplier for increasing the Monster's Attack Rating (multiplies with the A1TH and A2TH fields)",
             "type": {
                 "type": "int",
@@ -33,7 +41,11 @@ files["monlvl"] = {
             }
         },
         {
-            "name": "HP & HP(N) & HP(H)",
+            "name": "HP",
+            "altNames": [
+                "HP(N)",
+                "HP(H)"
+            ],
             "description": "Percentage multiplier for increasing the Monster's Life (multiplies with the minHP and maxHP fields)",
             "type": {
                 "type": "int",
@@ -42,7 +54,11 @@ files["monlvl"] = {
             }
         },
         {
-            "name": "DM & DM(N) & DM(H)",
+            "name": "DM",
+            "altNames": [
+                "DM(N)",
+                "DM(H)"
+            ],
             "description": "Percentage multiplier for increasing the Monster's Damage (multiplies with the A1MinD, A1MaxD, A2MinD, A2MaxD, El1MinD and El1MaxD fields)",
             "type": {
                 "type": "int",
@@ -51,7 +67,11 @@ files["monlvl"] = {
             }
         },
         {
-            "name": "XP & XP(N) & XP(H)",
+            "name": "XP",
+            "altNames": [
+                "XP(N)",
+                "XP(H)"
+            ],
             "description": "Percentage multiplier for increasing the Experience provided to the player when killing the Monster (multiplies with the Exp fields)",
             "type": {
                 "type": "int",
@@ -60,7 +80,11 @@ files["monlvl"] = {
             }
         },
         {
-            "name": "L-AC & L-AC(N) & L-AC(H)",
+            "name": "L-AC",
+            "altNames": [
+                "L-AC(N)",
+                "L-AC(H)"
+            ],
             "description": "Percentage multiplier for increasing the Monster's Defense (multiplies with the AC field)",
             "type": {
                 "type": "int",
@@ -69,7 +93,11 @@ files["monlvl"] = {
             }
         },
         {
-            "name": "L-TH & L-TH(N) & L-TH(H)",
+            "name": "L-TH",
+            "altNames": [
+                "L-TH(N)",
+                "L-TH(H)"
+            ],
             "description": "Percentage multiplier for increasing the Monster's Attack Rating (multiplies with the A1TH and A2TH fields)",
             "type": {
                 "type": "int",
@@ -78,7 +106,11 @@ files["monlvl"] = {
             }
         },
         {
-            "name": "L-HP & L-HP(N) & L-HP(H)",
+            "name": "L-HP",
+            "altNames": [
+                "L-HP(N)",
+                "L-HP(H)"
+            ],
             "description": "Percentage multiplier for increasing the Monster's Life (multiplies with the minHP and maxHP fields)",
             "type": {
                 "type": "int",
@@ -87,7 +119,11 @@ files["monlvl"] = {
             }
         },
         {
-            "name": "L-DM & L-DM(N) & L-DM(H)",
+            "name": "L-DM",
+            "altNames": [
+                "L-DM(N)",
+                "L-DM(H)"
+            ],
             "description": "Percentage multiplier for increasing the Monster's Damage (multiplies with the A1MinD, A1MaxD, A2MinD, A2MaxD, El1MinD and El1MaxD fields)",
             "type": {
                 "type": "int",
@@ -96,7 +132,11 @@ files["monlvl"] = {
             }
         },
         {
-            "name": "L-XP & L-XP(N) & L-XP(H)",
+            "name": "L-XP",
+            "altNames": [
+                "L-XP(N)",
+                "L-XP(H)"
+            ],
             "description": "Percentage multiplier for increasing the Experience provided to the player when killing the Monster (multiplies with the Exp fields)",
             "type": {
                 "type": "int",

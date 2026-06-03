@@ -360,40 +360,64 @@ files["skilldesc"] = {
             ]
         },
         {
-            "name": "ddam calc1",
+            "name": "ddam calc#",
             "description": "Integer calc value used as a possible parameter for the descdam function",
             "type": {
-                "type": "calc",
-                "dataLength": 0,
-                "memSize": 0
-            }
+                "type": "parse",
+                "dataLength": 255,
+                "memSize": 0,
+                "description": "Skill scope BBE. See <a href=\"../docs/bbe-calc.html\" target=\"_blank\" class=\"reference-link\">BBE/Calc Fields</a>"
+            },
+            "altNames": [
+                "ddam calc1",
+                "ddam calc2"
+            ]
         },
         {
-            "name": "p1dmelem",
+            "name": "p#dmelem",
             "description": "Used for skills that have charge-ups to display the damage on the Character Screen, controls the elemental type for that charge",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
-            }
+                "type": "reference",
+                "dataLength": 4,
+                "memSize": 8,
+                "file": "ElemTypes",
+                "field": "Code"
+            },
+            "altNames": [
+                "p1dmelem",
+                "p2dmelem",
+                "p3dmelem"
+            ]
         },
         {
-            "name": "p1dmmin",
+            "name": "p#dmmin",
             "description": "Used for skills that have charge-ups to display the damage on the Character Screen, controls the minimum damage for that charge",
             "type": {
-                "type": "calc",
-                "dataLength": 0,
-                "memSize": 0
-            }
+                "type": "parse",
+                "dataLength": 255,
+                "memSize": 0,
+                "description": "Skill scope BBE. See <a href=\"../docs/bbe-calc.html\" target=\"_blank\" class=\"reference-link\">BBE/Calc Fields</a>"
+            },
+            "altNames": [
+                "p1dmmin",
+                "p2dmmin",
+                "p3dmmin"
+            ]
         },
         {
-            "name": "p1dmmax",
+            "name": "p#dmmax",
             "description": "Used for skills that have charge-ups to display the damage on the Character Screen, controls the maximum damage for that charge",
             "type": {
-                "type": "calc",
-                "dataLength": 0,
-                "memSize": 0
-            }
+                "type": "parse",
+                "dataLength": 255,
+                "memSize": 0,
+                "description": "Skill scope BBE. See <a href=\"../docs/bbe-calc.html\" target=\"_blank\" class=\"reference-link\">BBE/Calc Fields</a>"
+            },
+            "altNames": [
+                "p1dmmax",
+                "p2dmmax",
+                "p3dmmax"
+            ]
         },
         {
             "name": "descatt",
@@ -435,148 +459,281 @@ files["skilldesc"] = {
             ]
         },
         {
-            "name": "descmissile1",
+            "name": "descmissile#",
             "description": "Links a missile from Missiles.txt to be used as a reference value for calculations",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
-            }
+                "type": "reference",
+                "dataLength": 47,
+                "memSize": 16,
+                "file": "missiles",
+                "field": "Missile"
+            },
+            "altNames": [
+                "descmissile1",
+                "descmissile2",
+                "descmissile3"
+            ]
         },
         {
-            "name": "descline1",
+            "name": "descline#",
             "description": "Uses an ID value to select a description function to format the string value. Displays this text as the current level and next level description lines in the skill tooltip.",
             "type": {
                 "type": "int",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "descline1",
+                "descline2",
+                "descline3",
+                "descline4",
+                "descline5",
+                "descline6"
+            ]
         },
         {
-            "name": "desctexta1",
+            "name": "desctexta#",
             "description": "String value used as the first possible string parameter for the descline1 function",
             "type": {
                 "type": "string",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "desctexta1",
+                "desctexta2",
+                "desctexta3",
+                "desctexta4",
+                "desctexta5",
+                "desctexta6"
+            ]
         },
         {
-            "name": "desctextb1",
+            "name": "desctextb#",
             "description": "String value used as the second possible string parameter for the descline1 function",
             "type": {
                 "type": "string",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "desctextb1",
+                "desctextb2",
+                "desctextb3",
+                "desctextb4",
+                "desctextb5",
+                "desctextb6"
+            ]
         },
         {
-            "name": "desccalca1",
+            "name": "desccalca#",
             "description": "Integer calculation value used as the first possible numeric parameter for the descline1 function",
             "type": {
-                "type": "calc",
-                "dataLength": 0,
-                "memSize": 0
-            }
+                "type": "parse",
+                "dataLength": 255,
+                "memSize": 0,
+                "description": "Skill scope BBE. See <a href=\"../docs/bbe-calc.html\" target=\"_blank\" class=\"reference-link\">BBE/Calc Fields</a>"
+            },
+            "altNames": [
+                "desccalca1",
+                "desccalca2",
+                "desccalca3",
+                "desccalca4",
+                "desccalca5",
+                "desccalca6"
+            ]
         },
         {
-            "name": "desccalcb1",
+            "name": "desccalcb#",
             "description": "Integer calculation value used as the second possible numeric parameter for the descline1 function",
             "type": {
-                "type": "calc",
-                "dataLength": 0,
-                "memSize": 0
-            }
+                "type": "parse",
+                "dataLength": 255,
+                "memSize": 0,
+                "description": "Skill scope BBE. See <a href=\"../docs/bbe-calc.html\" target=\"_blank\" class=\"reference-link\">BBE/Calc Fields</a>"
+            },
+            "altNames": [
+                "desccalcb1",
+                "desccalcb2",
+                "desccalcb3",
+                "desccalcb4",
+                "desccalcb5",
+                "desccalcb6"
+            ]
         },
         {
-            "name": "dsc2line1",
+            "name": "dsc2line#",
             "description": "Uses an ID value to select a description function to format the string value. Displays this text as a pinned line, after the skill description. (Uses the same function codes as descline1)",
             "type": {
                 "type": "int",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "dsc2line1",
+                "dsc2line2",
+                "dsc2line3",
+                "dsc2line4",
+                "dsc2line5"
+            ]
         },
         {
-            "name": "dsc2texta1",
+            "name": "dsc2texta#",
             "description": "String value used as the first possible string parameter for the dsc2line1 function",
             "type": {
                 "type": "string",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "dsc2texta1",
+                "dsc2texta2",
+                "dsc2texta3",
+                "dsc2texta4",
+                "dsc2texta5"
+            ]
         },
         {
-            "name": "dsc2textb1",
+            "name": "dsc2textb#",
             "description": "String value used as the second possible string parameter for the dsc2line1 function",
             "type": {
                 "type": "string",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "dsc2textb1",
+                "dsc2textb2",
+                "dsc2textb3",
+                "dsc2textb4",
+                "dsc2textb5"
+            ]
         },
         {
-            "name": "dsc2calca1",
+            "name": "dsc2calca#",
             "description": "Integer Calc value used as the first possible numeric parameter for the dsc2line1 function",
             "type": {
-                "type": "calc",
-                "dataLength": 0,
-                "memSize": 0
-            }
+                "type": "parse",
+                "dataLength": 255,
+                "memSize": 0,
+                "description": "Skill scope BBE. See <a href=\"../docs/bbe-calc.html\" target=\"_blank\" class=\"reference-link\">BBE/Calc Fields</a>"
+            },
+            "altNames": [
+                "dsc2calca1",
+                "dsc2calca2",
+                "dsc2calca3",
+                "dsc2calca4",
+                "dsc2calca5"
+            ]
         },
         {
-            "name": "dsc2calcb1",
+            "name": "dsc2calcb#",
             "description": "Integer Calc value used as the second possible numeric parameter for the dsc2line1 function",
             "type": {
-                "type": "calc",
-                "dataLength": 0,
-                "memSize": 0
-            }
+                "type": "parse",
+                "dataLength": 255,
+                "memSize": 0,
+                "description": "Skill scope BBE. See <a href=\"../docs/bbe-calc.html\" target=\"_blank\" class=\"reference-link\">BBE/Calc Fields</a>"
+            },
+            "altNames": [
+                "dsc2calcb1",
+                "dsc2calcb2",
+                "dsc2calcb3",
+                "dsc2calcb4",
+                "dsc2calcb5"
+            ]
         },
         {
-            "name": "dsc3line1",
+            "name": "dsc3line#",
             "description": "Uses an ID value to select a description function to format the string value. Displays this text as a pinned line at the bottom of the skill tooltip. (Uses the same function codes as descline1)",
             "type": {
                 "type": "int",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "dsc3line1",
+                "dsc3line2",
+                "dsc3line3",
+                "dsc3line4",
+                "dsc3line5",
+                "dsc3line6",
+                "dsc3line7"
+            ]
         },
         {
-            "name": "dsc3texta1",
+            "name": "dsc3texta#",
             "description": "String value used as the first possible string parameter for the dsc3line1 function",
             "type": {
                 "type": "string",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "dsc3texta1",
+                "dsc3texta2",
+                "dsc3texta3",
+                "dsc3texta4",
+                "dsc3texta5",
+                "dsc3texta6",
+                "dsc3texta7"
+            ]
         },
         {
-            "name": "dsc3textb1",
+            "name": "dsc3textb#",
             "description": "String value used as the second possible string parameter for the dsc3line1 function",
             "type": {
                 "type": "string",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "dsc3textb1",
+                "dsc3textb2",
+                "dsc3textb3",
+                "dsc3textb4",
+                "dsc3textb5",
+                "dsc3textb6",
+                "dsc3textb7"
+            ]
         },
         {
-            "name": "dsc3calca1",
+            "name": "dsc3calca#",
             "description": "Integer Calc value used as the first possible numeric parameter for the dsc3line1 function",
             "type": {
-                "type": "calc",
-                "dataLength": 0,
-                "memSize": 0
-            }
+                "type": "parse",
+                "dataLength": 255,
+                "memSize": 0,
+                "description": "Skill scope BBE. See <a href=\"../docs/bbe-calc.html\" target=\"_blank\" class=\"reference-link\">BBE/Calc Fields</a>"
+            },
+            "altNames": [
+                "dsc3calca1",
+                "dsc3calca2",
+                "dsc3calca3",
+                "dsc3calca4",
+                "dsc3calca5",
+                "dsc3calca6",
+                "dsc3calca7"
+            ]
         },
         {
-            "name": "dsc3calcb1",
+            "name": "dsc3calcb#",
             "description": "Integer Calc value used as the second possible numeric parameter for the dsc3line1 function",
             "type": {
-                "type": "calc",
-                "dataLength": 0,
-                "memSize": 0
-            }
+                "type": "parse",
+                "dataLength": 255,
+                "memSize": 0,
+                "description": "Skill scope BBE. See <a href=\"../docs/bbe-calc.html\" target=\"_blank\" class=\"reference-link\">BBE/Calc Fields</a>"
+            },
+            "altNames": [
+                "dsc3calcb1",
+                "dsc3calcb2",
+                "dsc3calcb3",
+                "dsc3calcb4",
+                "dsc3calcb5",
+                "dsc3calcb6",
+                "dsc3calcb7"
+            ]
         }
     ]
 }

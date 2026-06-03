@@ -87,7 +87,10 @@ files["lvlprest"] = {
             }
         },
         {
-            "name": "SizeX & SizeY",
+            "name": "SizeX",
+            "altNames": [
+                "SizeY"
+            ],
             "description": "Specifies the Length and Width tile size values of the Level Preset, which are used for determining how big to build area levels. These values are equal to 0 for Level Presets that are static",
             "type": {
                 "type": "int",
@@ -141,13 +144,21 @@ files["lvlprest"] = {
             }
         },
         {
-            "name": "File1",
+            "name": "File#",
             "description": "Specifies the name of which ds1 file to use. The ds1 files contain data for building Level Presets. If this value equals 0, then this field will be ignored. The number of these defined fields should match the value used in the \"Files\" field",
             "type": {
                 "type": "string",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "File1",
+                "File2",
+                "File3",
+                "File4",
+                "File5",
+                "File6"
+            ]
         },
         {
             "name": "Dt1Mask",

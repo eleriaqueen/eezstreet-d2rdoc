@@ -60,46 +60,68 @@ files["misc"] = {
             "name": "state",
             "description": "Links to a State field defined in the States.txt file. It signifies what state will be applied to the player when the item is used. Used as a parameter for a PSpell function",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
+                "type": "reference",
+                "dataLength": 47,
+                "memSize": 16,
+                "file": "states",
+                "field": "state"
             }
         },
         {
-            "name": "cstate1",
+            "name": "cstate#",
             "description": "Links to a State field defined in the States.txt file. It signifies what state will be removed from the player when the item is used. Used as a parameter for a PSpell function",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
-            }
+                "type": "reference",
+                "dataLength": 47,
+                "memSize": 16,
+                "file": "states",
+                "field": "state"
+            },
+            "altNames": [
+                "cstate1",
+                "cstate2"
+            ]
         },
         {
             "name": "len",
             "description": "Calculates the frame length of a state. Used as a parameter for a PSpell function",
             "type": {
-                "type": "int",
-                "dataLength": 0,
-                "memSize": 0
+                "type": "parse",
+                "dataLength": 255,
+                "memSize": 0,
+                "description": "Item scope BBE. See <a href=\"../docs/bbe-calc.html\" target=\"_blank\" class=\"reference-link\">BBE/Calc Fields</a>"
             }
         },
         {
-            "name": "stat1",
+            "name": "stat#",
             "description": "Controls the stat modifier when the item is used (Uses the Code field from Properties.txt). Used as a parameter for a PSpell function",
             "type": {
-                "type": "int",
-                "dataLength": 0,
-                "memSize": 0
-            }
+                "type": "reference",
+                "dataLength": 47,
+                "memSize": 16,
+                "file": "itemstatcost",
+                "field": "Stat"
+            },
+            "altNames": [
+                "stat1",
+                "stat2",
+                "stat3"
+            ]
         },
         {
-            "name": "calc1",
+            "name": "calc#",
             "description": "Calculates the value of the above stat1 field. Used as a parameter for a PSpell function",
             "type": {
-                "type": "calc",
-                "dataLength": 0,
-                "memSize": 0
-            }
+                "type": "parse",
+                "dataLength": 255,
+                "memSize": 0,
+                "description": "Item scope BBE. See <a href=\"../docs/bbe-calc.html\" target=\"_blank\" class=\"reference-link\">BBE/Calc Fields</a>"
+            },
+            "altNames": [
+                "calc1",
+                "calc2",
+                "calc3"
+            ]
         },
         {
             "name": "spelldesc",
@@ -149,24 +171,19 @@ files["misc"] = {
                 "type": "string",
                 "dataLength": 0,
                 "memSize": 0
-            }
-        },
-        {
-            "name": "spelldescstr2",
-            "description": "Defines the secondary string key used by the spelldesc table",
-            "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
-            }
+            },
+            "altNames": [
+                "spelldescstr2"
+            ]
         },
         {
             "name": "spelldesccalc",
             "description": "Value applied or used by the spelldesc table",
             "type": {
-                "type": "calc",
-                "dataLength": 0,
-                "memSize": 0
+                "type": "parse",
+                "dataLength": 255,
+                "memSize": 0,
+                "description": "Item scope BBE. See <a href=\"../docs/bbe-calc.html\" target=\"_blank\" class=\"reference-link\">BBE/Calc Fields</a>"
             }
         },
         {

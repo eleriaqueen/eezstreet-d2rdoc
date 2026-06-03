@@ -15,13 +15,20 @@ files["montype"] = {
             }
         },
         {
-            "name": "equiv1",
+            "name": "equiv#",
             "description": "Points to the index of another Monster Type to reference as a parent. This is used to create a hierarchy for Monster Types where the parents will have more universal settings shared across the related children",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
-            }
+                "type": "reference",
+                "dataLength": 47,
+                "memSize": 16,
+                "file": "montype",
+                "field": "type"
+            },
+            "altNames": [
+                "equiv1",
+                "equiv2",
+                "equiv3"
+            ]
         },
         {
             "name": "strplur",
@@ -36,9 +43,11 @@ files["montype"] = {
             "name": "element",
             "description": "Defines the monster's element type. This can be used for the Necromancer's Raise Skeletal Mage skill for determining what elemental type a Skeletal Mage should be based on the monster it was raised from (If the monster has no element, then the skeletal mage element will be randomly selected).",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
+                "type": "reference",
+                "dataLength": 4,
+                "memSize": 8,
+                "file": "ElemTypes",
+                "field": "Code"
             }
         }
     ]

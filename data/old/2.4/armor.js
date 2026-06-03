@@ -39,58 +39,21 @@ files["armor"] = {
             }
         },
         {
-            "name": "rArm",
+            "name": "armor component",
             "description": "Controls the character's graphics and animations for the Right Arm component when wearing the armor, where the value 0 = Light or \"lit\", 1 = Medium or \"med\", and 2 = Heavy or \"hvy\"",
             "type": {
                 "type": "int",
                 "dataLength": 0,
                 "memSize": 0
-            }
-        },
-        {
-            "name": "lArm",
-            "description": "Controls the character's graphics and animations for the Left Arm component when wearing the armor, where the value 0 = Light or \"lit\", 1 = Medium or \"med\", and 2 = Heavy or \"hvy\"",
-            "type": {
-                "type": "int",
-                "dataLength": 0,
-                "memSize": 0
-            }
-        },
-        {
-            "name": "Torso",
-            "description": "Controls the character's graphics and animations for the Torso component when wearing the armor, where the value 0 = Light or \"lit\", 1 = Medium or \"med\", and 2 = Heavy or \"hvy\"",
-            "type": {
-                "type": "int",
-                "dataLength": 0,
-                "memSize": 0
-            }
-        },
-        {
-            "name": "Legs",
-            "description": "Controls the character's graphics and animations for the Legs component when wearing the armor, where the value 0 = Light or \"lit\", 1 = Medium or \"med\", and 2 = Heavy or \"hvy\"",
-            "type": {
-                "type": "int",
-                "dataLength": 0,
-                "memSize": 0
-            }
-        },
-        {
-            "name": "rSPad",
-            "description": "Controls the character's graphics and animations for the Right Shoulder Pad component when wearing the armor, where the value 0 = Light or \"lit\", 1 = Medium or \"med\", and 2 = Heavy or \"hvy\"",
-            "type": {
-                "type": "int",
-                "dataLength": 0,
-                "memSize": 0
-            }
-        },
-        {
-            "name": "lSPad",
-            "description": "Controls the character's graphics and animations for the Left Shoulder Pad component when wearing the armor, where the value 0 = Light or \"lit\", 1 = Medium or \"med\", and 2 = Heavy or \"hvy\"",
-            "type": {
-                "type": "int",
-                "dataLength": 0,
-                "memSize": 0
-            }
+            },
+            "altNames": [
+                "rArm",
+                "lArm",
+                "Torso",
+                "Legs",
+                "rSPad",
+                "lSPad"
+            ]
         }
     ]
 }

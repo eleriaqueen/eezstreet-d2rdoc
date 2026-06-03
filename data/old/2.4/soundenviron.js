@@ -27,81 +27,99 @@ files["soundenviron"] = {
             "name": "Song",
             "description": "Play this sound as the background music while the player is in an area level",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
+                "type": "reference",
+                "dataLength": 47,
+                "memSize": 32,
+                "file": "sounds",
+                "field": "Sound"
             }
         },
         {
             "name": "Day Ambience",
             "description": "Play this sound as an ambient sound while it is currently daytime in the game",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
+                "type": "reference",
+                "dataLength": 47,
+                "memSize": 32,
+                "file": "sounds",
+                "field": "Sound"
             }
         },
         {
             "name": "HD Day Ambience",
             "description": "Play this sound as an ambient sound while it is currently daytime in the game while playing in the new graphics mode",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
+                "type": "reference",
+                "dataLength": 47,
+                "memSize": 32,
+                "file": "sounds",
+                "field": "Sound"
             }
         },
         {
             "name": "Night Ambience",
             "description": "Play this sound as an ambient sound while it is currently nighttime in the game",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
+                "type": "reference",
+                "dataLength": 47,
+                "memSize": 32,
+                "file": "sounds",
+                "field": "Sound"
             }
         },
         {
             "name": "HD Night Ambience",
             "description": "Play this sound as an ambient sound while it is currently nighttime in the game while playing in the new graphics mode",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
+                "type": "reference",
+                "dataLength": 47,
+                "memSize": 32,
+                "file": "sounds",
+                "field": "Sound"
             }
         },
         {
             "name": "Day Event",
             "description": "Play this sound at a random range and variance in the background when it is currently daytime in the game",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
+                "type": "reference",
+                "dataLength": 47,
+                "memSize": 32,
+                "file": "sounds",
+                "field": "Sound"
             }
         },
         {
             "name": "HD Day Event",
             "description": "Play this sound at a random range and variance in the background when it is currently daytime in the game while playing in the new graphics mode",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
+                "type": "reference",
+                "dataLength": 47,
+                "memSize": 32,
+                "file": "sounds",
+                "field": "Sound"
             }
         },
         {
             "name": "Night Event",
             "description": "Play this sound at a random range and variance in the background when it is currently nighttime in the game",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
+                "type": "reference",
+                "dataLength": 47,
+                "memSize": 32,
+                "file": "sounds",
+                "field": "Sound"
             }
         },
         {
             "name": "HD Night Event",
             "description": "Play this sound at a random range and variance in the background when it is currently nighttime in the game while playing in the new graphics mode",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
+                "type": "reference",
+                "dataLength": 47,
+                "memSize": 32,
+                "file": "sounds",
+                "field": "Sound"
             }
         },
         {
@@ -132,22 +150,30 @@ files["soundenviron"] = {
             }
         },
         {
-            "name": "Material 1",
+            "name": "Material #",
             "description": "Controls the material of the Sound Environment, which affects which footstep sounds are played. Uses a code to define a specific material.",
             "type": {
                 "type": "int",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "Material 1",
+                "Material 2"
+            ]
         },
         {
-            "name": "HD Material 1",
+            "name": "HD Material #",
             "description": "Controls the material of the Sound Environment, which affects which footstep sounds are played. Uses a code to define a specific material. This only applies when the game is being played in the new graphics mode. See Material 1 for the code descriptions.",
             "type": {
                 "type": "int",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "HD Material 1",
+                "HD Material 2"
+            ]
         },
         {
             "name": "SFX EAX Environ",

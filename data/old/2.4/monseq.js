@@ -18,9 +18,11 @@ files["monseq"] = {
             "name": "mode",
             "description": "Defines which monster mode animation to use for the sequence. Referenced from the Code column in MonMode.txt",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
+                "type": "reference",
+                "dataLength": 4,
+                "memSize": 8,
+                "file": "MonMode",
+                "field": "code"
             }
         },
         {

@@ -60,9 +60,11 @@ files["weapons"] = {
             "name": "hit class",
             "description": "Defines the hit class of the weapon which is used to know what SFX to use when the weapon hits an enemy. Referenced from the Code column in HitClass.txt",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
+                "type": "reference",
+                "dataLength": 4,
+                "memSize": 8,
+                "file": "HitClass",
+                "field": "Code"
             }
         },
         {

@@ -2248,91 +2248,124 @@ files["missiles"] = {
             "name": "SrvCalc1",
             "description": "Used as a parameter for the pSrvDoFunc field",
             "type": {
-                "type": "calc",
-                "dataLength": 0,
-                "memSize": 0
+                "type": "parse",
+                "dataLength": 255,
+                "memSize": 0,
+                "description": "Missile scope BBE. See <a href=\"../docs/bbe-calc.html\" target=\"_blank\" class=\"reference-link\">BBE/Calc Fields</a>"
             }
         },
         {
-            "name": "Param1",
+            "name": "Param#",
             "description": "Used as a parameter for the pSrvDoFunc field",
             "type": {
                 "type": "int",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "Param1",
+                "Param2",
+                "Param3",
+                "Param4",
+                "Param5"
+            ]
         },
         {
             "name": "CltCalc1",
             "description": "Used as a parameter for the pCltDoFunc field",
             "type": {
-                "type": "calc",
-                "dataLength": 0,
-                "memSize": 0
+                "type": "parse",
+                "dataLength": 255,
+                "memSize": 0,
+                "description": "Missile scope BBE. See <a href=\"../docs/bbe-calc.html\" target=\"_blank\" class=\"reference-link\">BBE/Calc Fields</a>"
             }
         },
         {
-            "name": "CltParam1",
+            "name": "CltParam#",
             "description": "Used as a parameter for the pCltDoFunc field",
             "type": {
                 "type": "int",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "CltParam1",
+                "CltParam2",
+                "CltParam3",
+                "CltParam4",
+                "CltParam5"
+            ]
         },
         {
             "name": "SHitCalc1",
             "description": "Used as a parameter for the pSrvHitFunc field",
             "type": {
-                "type": "calc",
-                "dataLength": 0,
-                "memSize": 0
+                "type": "parse",
+                "dataLength": 255,
+                "memSize": 0,
+                "description": "Missile scope BBE. See <a href=\"../docs/bbe-calc.html\" target=\"_blank\" class=\"reference-link\">BBE/Calc Fields</a>"
             }
         },
         {
-            "name": "sHitPar1",
+            "name": "sHitPar#",
             "description": "Used as a parameter for the pSrvHitFunc field",
             "type": {
                 "type": "int",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "sHitPar1",
+                "sHitPar2",
+                "sHitPar3"
+            ]
         },
         {
             "name": "CHitCalc1",
             "description": "Used as a parameter for the pCltHitFunc field",
             "type": {
-                "type": "calc",
-                "dataLength": 0,
-                "memSize": 0
+                "type": "parse",
+                "dataLength": 255,
+                "memSize": 0,
+                "description": "Missile scope BBE. See <a href=\"../docs/bbe-calc.html\" target=\"_blank\" class=\"reference-link\">BBE/Calc Fields</a>"
             }
         },
         {
-            "name": "cHitPar1",
+            "name": "cHitPar#",
             "description": "Used as a parameter for the pCltHitFunc field",
             "type": {
                 "type": "int",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "cHitPar1",
+                "cHitPar2",
+                "cHitPar3"
+            ]
         },
         {
             "name": "DmgCalc1",
             "description": "Used as a parameter for the pSrvDmgFunc field",
             "type": {
-                "type": "calc",
-                "dataLength": 0,
-                "memSize": 0
+                "type": "parse",
+                "dataLength": 255,
+                "memSize": 0,
+                "description": "Missile scope BBE. See <a href=\"../docs/bbe-calc.html\" target=\"_blank\" class=\"reference-link\">BBE/Calc Fields</a>"
             }
         },
         {
-            "name": "dParam1",
+            "name": "dParam#",
             "description": "Used as a parameter for the pSrvDmgFunc field",
             "type": {
                 "type": "int",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "dParam1",
+                "dParam2"
+            ]
         },
         {
             "name": "Vel",
@@ -2374,9 +2407,10 @@ files["missiles"] = {
             "name": "Range",
             "description": "Controls the baseline duration that the missile will exist for after it is created. This is measured in frames where 25 Frames = 1 second",
             "type": {
-                "type": "int",
-                "dataLength": 0,
-                "memSize": 0
+                "type": "parse",
+                "dataLength": 255,
+                "memSize": 0,
+                "description": "Missile scope BBE. See <a href=\"../docs/bbe-calc.html\" target=\"_blank\" class=\"reference-link\">BBE/Calc Fields</a>"
             }
         },
         {
@@ -2857,9 +2891,11 @@ files["missiles"] = {
             "name": "Skill",
             "description": "Links to the \"skill\" field from the Skills.txt file. This will look up the specified skill's damage and use it for the missile instead of using the missile's defined damage",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
+                "type": "reference",
+                "dataLength": 47,
+                "memSize": 16,
+                "file": "skills",
+                "field": "skill"
             }
         },
         {
@@ -2935,13 +2971,20 @@ files["missiles"] = {
             }
         },
         {
-            "name": "MinLevDam1",
+            "name": "MinLevDam#",
             "description": "Controls the additional minimum physical damage dealt by the missile, calculated using the leveling formula between 5 level thresholds of the missile's current level. The level thresholds are levels 2-8, 9-16, 17-22, 23-28, 29 and beyond. These 5 level thresholds correlate to each field",
             "type": {
                 "type": "int",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "MinLevDam1",
+                "MinLevDam2",
+                "MinLevDam3",
+                "MinLevDam4",
+                "MinLevDam5"
+            ]
         },
         {
             "name": "MaxDamage",
@@ -2953,30 +2996,40 @@ files["missiles"] = {
             }
         },
         {
-            "name": "MaxLevDam1",
+            "name": "MaxLevDam#",
             "description": "Controls the additional maximum physical damage dealt by the missile, calculated using the leveling formula between 5 level thresholds of the missile's current level. The level thresholds are levels 2-8, 9-16, 17-22, 23-28, 29 and beyond. These 5 level thresholds correlate to each field",
             "type": {
                 "type": "int",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "MaxLevDam1",
+                "MaxLevDam2",
+                "MaxLevDam3",
+                "MaxLevDam4",
+                "MaxLevDam5"
+            ]
         },
         {
             "name": "DmgSymPerCalc",
             "description": "Determines the percentage increase to the physical damage dealt by the missile based on specified skill levels",
             "type": {
-                "type": "calc",
-                "dataLength": 0,
-                "memSize": 0
+                "type": "parse",
+                "dataLength": 255,
+                "memSize": 0,
+                "description": "Missile scope BBE. See <a href=\"../docs/bbe-calc.html\" target=\"_blank\" class=\"reference-link\">BBE/Calc Fields</a>"
             }
         },
         {
             "name": "EType",
             "description": "Defines the type of elemental damage dealt by the missile. If this field is empty, then the related elemental fields below will not be used. Referenced by the Code value of the Elemental Types Table",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
+                "type": "reference",
+                "dataLength": 4,
+                "memSize": 8,
+                "file": "ElemTypes",
+                "field": "Code"
             }
         },
         {
@@ -2989,13 +3042,20 @@ files["missiles"] = {
             }
         },
         {
-            "name": "MinELev1",
+            "name": "MinELev#",
             "description": "Controls the additional minimum elemental damage dealt by the missile, calculated using the leveling formula between 5 level thresholds of the missile's current level. The level thresholds are levels 2-8, 9-16, 17-22, 23-28, 29 and beyond. These 5 level thresholds correlate to each field number",
             "type": {
                 "type": "int",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "MinELev1",
+                "MinELev2",
+                "MinELev3",
+                "MinELev4",
+                "MinELev5"
+            ]
         },
         {
             "name": "EMax",
@@ -3007,21 +3067,29 @@ files["missiles"] = {
             }
         },
         {
-            "name": "MaxELev1",
+            "name": "MaxELev#",
             "description": "Controls the additional maximum elemental damage dealt by the missile, calculated using the leveling formula between 5 level thresholds of the missile's current level. The level thresholds are levels 2-8, 9-16, 17-22, 23-28, 29 and beyond. These 5 level thresholds correlate to each field",
             "type": {
                 "type": "int",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "MaxELev1",
+                "MaxELev2",
+                "MaxELev3",
+                "MaxELev4",
+                "MaxELev5"
+            ]
         },
         {
             "name": "EDmgSymPerCalc",
             "description": "Determines the percentage increase to the elemental damage dealt by the missile based on specified skill levels",
             "type": {
-                "type": "calc",
-                "dataLength": 0,
-                "memSize": 0
+                "type": "parse",
+                "dataLength": 255,
+                "memSize": 0,
+                "description": "Missile scope BBE. See <a href=\"../docs/bbe-calc.html\" target=\"_blank\" class=\"reference-link\">BBE/Calc Fields</a>"
             }
         },
         {
@@ -3034,13 +3102,18 @@ files["missiles"] = {
             }
         },
         {
-            "name": "ELevLen1",
+            "name": "ELevLen#",
             "description": "Controls the additional elemental duration added by the missile, calculated using the leveling formula between 3 level thresholds of the missile's current level. The level thresholds are levels 2-8, 9-16, 17 and beyond. These 3 level thresholds correlate to each field. These fields only apply to appropriate elemental types with a duration",
             "type": {
                 "type": "int",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "ELevLen1",
+                "ELevLen2",
+                "ELevLen3"
+            ]
         },
         {
             "name": "HitClass",
@@ -3082,82 +3155,122 @@ files["missiles"] = {
             "name": "TravelSound",
             "description": "Points to a Sound field defined in the Sounds.txt file. Used when the missile is created and while it is alive",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
+                "type": "reference",
+                "dataLength": 47,
+                "memSize": 16,
+                "file": "sounds",
+                "field": "Sound"
             }
         },
         {
             "name": "HitSound",
             "description": "Points to a Sound field defined in the Sounds.txt file. Used when the collides with a target",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
+                "type": "reference",
+                "dataLength": 47,
+                "memSize": 16,
+                "file": "sounds",
+                "field": "Sound"
             }
         },
         {
             "name": "ProgSound",
             "description": "Points to a Sound field defined in the Sounds.txt file. Used for a programmed special event based on the client function",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
+                "type": "reference",
+                "dataLength": 47,
+                "memSize": 16,
+                "file": "sounds",
+                "field": "Sound"
             }
         },
         {
             "name": "ProgOverlay",
             "description": "Points to the overlay field defined in the Overlay.txt file. Used for a programmed special event based on the server or client function",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
+                "type": "reference",
+                "dataLength": 47,
+                "memSize": 16,
+                "file": "overlay",
+                "field": "overlay"
             }
         },
         {
             "name": "ExplosionMissile",
             "description": "Points to the Missile field for another missile. Used for the missile created on the client when this missile explodes",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
+                "type": "reference",
+                "dataLength": 47,
+                "memSize": 16,
+                "file": "missiles",
+                "field": "Missile"
             }
         },
         {
-            "name": "SubMissile1",
+            "name": "SubMissile#",
             "description": "Points to the Missile field for another missile. Used for creating a new missile based on the server function used",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
-            }
+                "type": "reference",
+                "dataLength": 47,
+                "memSize": 16,
+                "file": "missiles",
+                "field": "Missile"
+            },
+            "altNames": [
+                "SubMissile1",
+                "SubMissile2",
+                "SubMissile3"
+            ]
         },
         {
-            "name": "HitSubMissile1",
+            "name": "HitSubMissile#",
             "description": "Points to the Missile field for another missile. Used for a new missile after a collision, based on the server function used",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
-            }
+                "type": "reference",
+                "dataLength": 47,
+                "memSize": 16,
+                "file": "missiles",
+                "field": "Missile"
+            },
+            "altNames": [
+                "HitSubMissile1",
+                "HitSubMissile2",
+                "HitSubMissile3",
+                "HitSubMissile4"
+            ]
         },
         {
-            "name": "CltSubMissile1",
+            "name": "CltSubMissile#",
             "description": "Points to the Missile field for another missile. Used for creating a new missile based on the client function used",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
-            }
+                "type": "reference",
+                "dataLength": 47,
+                "memSize": 16,
+                "file": "missiles",
+                "field": "Missile"
+            },
+            "altNames": [
+                "CltSubMissile1",
+                "CltSubMissile2",
+                "CltSubMissile3"
+            ]
         },
         {
-            "name": "CltHitSubMissile1",
+            "name": "CltHitSubMissile#",
             "description": "Points to the Missile field for another missile. Used for a new missile after a collision, based on the client function used.",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
-            }
+                "type": "reference",
+                "dataLength": 47,
+                "memSize": 16,
+                "file": "missiles",
+                "field": "Missile"
+            },
+            "altNames": [
+                "CltHitSubMissile1",
+                "CltHitSubMissile2",
+                "CltHitSubMissile3",
+                "CltHitSubMissile4"
+            ]
         }
     ]
 }

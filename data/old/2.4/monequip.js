@@ -9,9 +9,11 @@ files["monequip"] = {
             "name": "monster",
             "description": "Defines the monster that should be equipped. Points to the matching ID value in the MonStats.txt file. If the monster has multiple defined equipment possibilities, then they should always be grouped together. The game will go through the list in order to match what is best to use for the monster",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
+                "type": "reference",
+                "dataLength": 47,
+                "memSize": 16,
+                "file": "monstats",
+                "field": "Id"
             }
         },
         {
@@ -33,31 +35,48 @@ files["monequip"] = {
             }
         },
         {
-            "name": "item1",
+            "name": "item#",
             "description": "Item code that can be equipped on the monster",
             "type": {
                 "type": "string",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "item1",
+                "item2",
+                "item3"
+            ]
         },
         {
-            "name": "loc1",
+            "name": "loc#",
             "description": "Specifies the inventory slot where the item will be equipped. Once an item is equipped on that body location, then the game will skip any duplicate calls to equipping the same body location. This is another reason why the equipment should be ordered from highest level to lowest level. Referenced from the Code column in BodyLocs.txt",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
-            }
+                "type": "reference",
+                "dataLength": 4,
+                "memSize": 8,
+                "file": "bodylocs",
+                "field": "Code"
+            },
+            "altNames": [
+                "loc1",
+                "loc2",
+                "loc3"
+            ]
         },
         {
-            "name": "mod1",
+            "name": "mod#",
             "description": "Controls the quality level of the related item",
             "type": {
                 "type": "int",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "mod1",
+                "mod2",
+                "mod3"
+            ]
         }
     ]
 }

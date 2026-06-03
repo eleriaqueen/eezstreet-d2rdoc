@@ -9,9 +9,11 @@ files["npc"] = {
             "name": "NPC",
             "description": "Points to the matching \"ID\" value in the monstats.txt file. This should not be changed",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
+                "type": "reference",
+                "dataLength": 47,
+                "memSize": 32,
+                "file": "monstats",
+                "field": "Id"
             }
         },
         {
@@ -42,43 +44,67 @@ files["npc"] = {
             }
         },
         {
-            "name": "questflag A",
+            "name": "questflag",
             "description": "If the player has this quest flag progress, then apply the relative additional price calculations. Referenced by the Code value of the Quest Flags Table",
             "type": {
                 "type": "int",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "questflag A",
+                "questflag B",
+                "questflag C"
+            ]
         },
         {
-            "name": "questbuymult A",
+            "name": "questbuymult",
             "description": "Same functionality as the buy mult field, except it applies after it and relies on the questflag A field",
             "type": {
                 "type": "int",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "questbuymult A",
+                "questbuymult B",
+                "questbuymult C"
+            ]
         },
         {
-            "name": "questsellmult A",
+            "name": "questsellmult",
             "description": "Same functionality as the sell mult field, except it applies after it and relies on the questflag A field",
             "type": {
                 "type": "int",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "questsellmult A",
+                "questsellmult B",
+                "questsellmult C"
+            ]
         },
         {
-            "name": "questrepmult A",
+            "name": "questrepmult",
             "description": "Same functionality as the rep mult field, except it applies after it and relies on the questflag A field",
             "type": {
                 "type": "int",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "questrepmult A",
+                "questrepmult B",
+                "questrepmult C"
+            ]
         },
         {
-            "name": "max buy & max buy (N) & max buy (H)",
+            "name": "max buy",
+            "altNames": [
+                "max buy (N)",
+                "max buy (H)"
+            ],
             "description": "Sets the maximum price that the NPC will pay, when the player sells an item in Normal Difficulty, Nightmare Difficulty, and Hell Difficulty, respectively",
             "type": {
                 "type": "int",

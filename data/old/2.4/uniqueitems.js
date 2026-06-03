@@ -108,18 +108,22 @@ files["uniqueitems"] = {
             "name": "chrtransform",
             "description": "Controls the color change of the item when equipped on a character or dropped on the ground. If empty, then the item will have the default item color. Referenced from the Code column in Colors.txt",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
+                "type": "reference",
+                "dataLength": 4,
+                "memSize": 8,
+                "file": "colors",
+                "field": "Code"
             }
         },
         {
             "name": "invtransform",
             "description": "Controls the color change of the item in the inventory UI. If empty, then the item will have the default item color. Referenced from the Code column in Colors.txt",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
+                "type": "reference",
+                "dataLength": 4,
+                "memSize": 8,
+                "file": "colors",
+                "field": "Code"
             }
         },
         {
@@ -144,9 +148,11 @@ files["uniqueitems"] = {
             "name": "dropsound",
             "description": "An override for the \"dropsound\" field from the weapon.txt, Armor.txt, or Misc.txt files. By default, the Unique item will use what was defined by the baseline item from the \"item\" field",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
+                "type": "reference",
+                "dataLength": 47,
+                "memSize": 16,
+                "file": "sounds",
+                "field": "Sound"
             }
         },
         {
@@ -162,46 +168,106 @@ files["uniqueitems"] = {
             "name": "usesound",
             "description": "An override for the \"usesound\" field from the weapon.txt, Armor.txt, or Misc.txt files. By default, the Unique item will use what was defined by the baseline item from the \"item\" field",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
+                "type": "reference",
+                "dataLength": 47,
+                "memSize": 16,
+                "file": "sounds",
+                "field": "Sound"
             }
         },
         {
-            "name": "prop1",
+            "name": "prop#",
             "description": "Controls the item properties for the Unique item (Uses the Code field from Properties.txt)",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
-            }
+                "type": "parse",
+                "dataLength": 255,
+                "memSize": 0,
+                "description": "References a $!properties#code!$"
+            },
+            "altNames": [
+                "prop1",
+                "prop2",
+                "prop3",
+                "prop4",
+                "prop5",
+                "prop6",
+                "prop7",
+                "prop8",
+                "prop9",
+                "prop10",
+                "prop11",
+                "prop12"
+            ]
         },
         {
-            "name": "par1",
+            "name": "par#",
             "description": "The stat's \"parameter\" value associated with the related property (prop#). Usage depends on the (Function ID field from Properties.txt)",
             "type": {
-                "type": "int",
-                "dataLength": 0,
-                "memSize": 0
-            }
+                "type": "parse",
+                "dataLength": 255,
+                "memSize": 0,
+                "description": "A number or references $!skills#skill!$, $!montype#type!$, or $!states#state!$"
+            },
+            "altNames": [
+                "par1",
+                "par2",
+                "par3",
+                "par4",
+                "par5",
+                "par6",
+                "par7",
+                "par8",
+                "par9",
+                "par10",
+                "par11",
+                "par12"
+            ]
         },
         {
-            "name": "min1",
+            "name": "min#",
             "description": "The stat's \"min\" value to assign to the related property (prop#). Usage depends on the (Function ID field from Properties.txt)",
             "type": {
                 "type": "int",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "min1",
+                "min2",
+                "min3",
+                "min4",
+                "min5",
+                "min6",
+                "min7",
+                "min8",
+                "min9",
+                "min10",
+                "min11",
+                "min12"
+            ]
         },
         {
-            "name": "max1",
+            "name": "max#",
             "description": "The stat's \"max\" value to assign to the related property (prop#). Usage depends on the (Function ID field from Properties.txt)",
             "type": {
                 "type": "int",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "max1",
+                "max2",
+                "max3",
+                "max4",
+                "max5",
+                "max6",
+                "max7",
+                "max8",
+                "max9",
+                "max10",
+                "max11",
+                "max12"
+            ]
         },
         {
             "name": "diablocloneweight",

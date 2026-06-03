@@ -18,9 +18,10 @@ files["monpreset"] = {
             "name": "Place",
             "description": "Defines a Super Unique monster from SuperUniques.txt, a monster from MonStats.txt or a place from MonPlace.txt. This defines the Monster Preset which is used for preloading, such as during level transitions",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
+                "type": "parse",
+                "dataLength": 255,
+                "memSize": 0,
+                "description": "Reference of a $!superuniques#Superunique!$, $!monstats#Id!$, or $!MonPlace#code!$"
             }
         }
     ]

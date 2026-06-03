@@ -27,9 +27,11 @@ files["objpreset"] = {
             "name": "ObjectClass",
             "description": "Uses the Class field from Objects.txt, which assigns an Object to this Object Preset",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
+                "type": "reference",
+                "dataLength": 47,
+                "memSize": 32,
+                "file": "objects",
+                "field": "Class"
             }
         }
     ]

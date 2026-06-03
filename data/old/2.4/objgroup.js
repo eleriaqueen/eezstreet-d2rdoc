@@ -15,40 +15,61 @@ files["objgroup"] = {
             }
         },
         {
-            "name": "*ID",
-            "description": "This field is not read directly, but can be used as an Index for groups",
-            "type": {
-                "type": "int",
-                "dataLength": 0,
-                "memSize": 0
-            }
-        },
-        {
-            "name": "ID0",
+            "name": "ID#",
             "description": "Uses the ID field from Objects.txt as an index to choose which Objects are assigned to this Object Group",
             "type": {
                 "type": "int",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "ID0",
+                "ID1",
+                "ID2",
+                "ID3",
+                "ID4",
+                "ID5",
+                "ID6",
+                "ID7"
+            ]
         },
         {
-            "name": "Density0",
+            "name": "DENSITY#",
             "description": "Controls the number of Objects to spawn in the area level. This is also affected by the Object's populate function defined by the PopulateFn field from the objects.txt file. The maximum value allowed is 128",
             "type": {
                 "type": "int",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "DENSITY0",
+                "DENSITY1",
+                "DENSITY2",
+                "DENSITY3",
+                "DENSITY4",
+                "DENSITY5",
+                "DENSITY6",
+                "DENSITY7"
+            ]
         },
         {
-            "name": "Prob0",
+            "name": "PROB#",
             "description": "Controls the probability that the Object will spawn in the area level. This is calculated in order so the first probability that is successful will be chosen. This also means that these field values should add up to exactly 100 in total to guarantee that one of the objects spawn.",
             "type": {
                 "type": "int",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "PROB0",
+                "PROB1",
+                "PROB2",
+                "PROB3",
+                "PROB4",
+                "PROB5",
+                "PROB6",
+                "PROB7"
+            ]
         }
     ]
 }

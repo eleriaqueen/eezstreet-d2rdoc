@@ -216,19 +216,35 @@ files["charstats"] = {
             "name": "StartSkill",
             "description": "Controls what skill will be added by default to the character's starting weapon and will be slotted in the Right Skill selection (Uses the skill field from Skills.txt)",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
+                "type": "reference",
+                "dataLength": 47,
+                "memSize": 16,
+                "file": "skills",
+                "field": "skill"
             }
         },
         {
-            "name": "Skill 1",
+            "name": "Skill #",
             "description": "Skill that the character starts with and will always have available (Uses the skill field from Skills.txt)",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
-            }
+                "type": "reference",
+                "dataLength": 47,
+                "memSize": 16,
+                "file": "skills",
+                "field": "skill"
+            },
+            "altNames": [
+                "Skill 1",
+                "Skill 2",
+                "Skill 3",
+                "Skill 4",
+                "Skill 5",
+                "Skill 6",
+                "Skill 7",
+                "Skill 8",
+                "Skill 9",
+                "Skill 10"
+            ]
         },
         {
             "name": "StrAllSkills",
@@ -240,13 +256,18 @@ files["charstats"] = {
             }
         },
         {
-            "name": "StrSkillTab1",
+            "name": "StrSkillTab#",
             "description": "String key for displaying the item modifier bonus to all skills for the class's first to third skill tab (Ex: \"+1 to Warcries\")",
             "type": {
                 "type": "string",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "StrSkillTab1",
+                "StrSkillTab2",
+                "StrSkillTab3"
+            ]
         },
         {
             "name": "StrClassOnly",
@@ -285,40 +306,90 @@ files["charstats"] = {
             }
         },
         {
-            "name": "item1",
+            "name": "item#",
             "description": "Item that the character starts with (Uses the code field from Weapons.txt, Armor.txt or Misc.txt)",
             "type": {
                 "type": "string",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "item1",
+                "item2",
+                "item3",
+                "item4",
+                "item5",
+                "item6",
+                "item7",
+                "item8",
+                "item9",
+                "item10"
+            ]
         },
         {
-            "name": "item1loc",
+            "name": "item#loc",
             "description": "Location where the related item will be placed in the character's inventory. Referenced from the Code column in BodyLocs.txt",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
-            }
+                "type": "reference",
+                "dataLength": 4,
+                "memSize": 8,
+                "file": "bodylocs",
+                "field": "Code"
+            },
+            "altNames": [
+                "item1loc",
+                "item2loc",
+                "item3loc",
+                "item4loc",
+                "item5loc",
+                "item6loc",
+                "item7loc",
+                "item8loc",
+                "item9loc",
+                "item10loc"
+            ]
         },
         {
-            "name": "item1count",
+            "name": "item#count",
             "description": "The amount of the related item that the character starts with",
             "type": {
                 "type": "int",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "item1count",
+                "item2count",
+                "item3count",
+                "item4count",
+                "item5count",
+                "item6count",
+                "item7count",
+                "item8count",
+                "item9count",
+                "item10count"
+            ]
         },
         {
-            "name": "item1quality",
+            "name": "item#quality",
             "description": "Controls the quality level of the related item using the below table:",
             "type": {
                 "type": "string",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "item1quality",
+                "item2quality",
+                "item3quality",
+                "item4quality",
+                "item5quality",
+                "item6quality",
+                "item7quality",
+                "item8quality",
+                "item9quality",
+                "item10quality"
+            ]
         }
     ]
 }

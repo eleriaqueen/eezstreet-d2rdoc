@@ -6,40 +6,57 @@ files["qualityitems"] = {
     "overview": "This file controls the groups item modifiers for High Quality (Superior) item types.<br>The game will randomly choose between one of these High Quality groups, if it is allowed for the item type.",
     "fields": [
         {
-            "name": "mod1code",
+            "name": "mod#code",
             "description": "Controls the item properties for the item affix (Uses the Code field from Properties.txt)",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
-            }
+                "type": "parse",
+                "dataLength": 255,
+                "memSize": 0,
+                "description": "Reference of $!properties#code!$"
+            },
+            "altNames": [
+                "mod1code",
+                "mod2code"
+            ]
         },
         {
-            "name": "mod1param",
+            "name": "mod#param",
             "description": "The \"parameter\" value associated with the listed property (mod). Usage depends on the (Function ID field from Properties.txt)",
             "type": {
                 "type": "int",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "mod1param",
+                "mod2param"
+            ]
         },
         {
-            "name": "mod1min",
+            "name": "mod#min",
             "description": "The \"min\" value to assign to the listed property (mod). Usage depends on the (Function ID field from Properties.txt)",
             "type": {
                 "type": "int",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "mod1min",
+                "mod2min"
+            ]
         },
         {
-            "name": "mod1max",
+            "name": "mod#max",
             "description": "The \"max\" value to assign to the listed property (mod). Usage depends on the (Function ID field from Properties.txt)",
             "type": {
                 "type": "int",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "mod1max",
+                "mod2max"
+            ]
         },
         {
             "name": "armor",

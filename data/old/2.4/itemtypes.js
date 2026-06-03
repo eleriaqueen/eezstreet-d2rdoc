@@ -24,13 +24,19 @@ files["itemtypes"] = {
             }
         },
         {
-            "name": "Equiv1",
+            "name": "Equiv#",
             "description": "Points to the index of another Item Type to reference as a parent. This is used to create a hierarchy for Item Types where the parents will have more universal settings shared across the related children",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
-            }
+                "type": "reference",
+                "dataLength": 4,
+                "memSize": 16,
+                "file": "itemtypes",
+                "field": "Code"
+            },
+            "altNames": [
+                "Equiv1",
+                "Equiv2"
+            ]
         },
         {
             "name": "Repair",
@@ -51,30 +57,40 @@ files["itemtypes"] = {
             }
         },
         {
-            "name": "BodyLoc1",
+            "name": "BodyLoc#",
             "description": "These are required parameters if the Body field is enabled. These fields specify the inventory slots where the item can be equipped. Referenced from the Code column in BodyLocs.txt",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
-            }
+                "type": "reference",
+                "dataLength": 4,
+                "memSize": 8,
+                "file": "bodylocs",
+                "field": "Code"
+            },
+            "altNames": [
+                "BodyLoc1",
+                "BodyLoc2"
+            ]
         },
         {
             "name": "Shoots",
             "description": "Points to the index of another Item Type as the required equipped Item Type to be used as ammo",
             "type": {
-                "type": "int",
-                "dataLength": 0,
-                "memSize": 0
+                "type": "reference",
+                "dataLength": 4,
+                "memSize": 16,
+                "file": "itemtypes",
+                "field": "Code"
             }
         },
         {
             "name": "Quiver",
             "description": "Points to the index of another Item Type as the required equipped Item Type to be used as this ammo's weapon",
             "type": {
-                "type": "int",
-                "dataLength": 0,
-                "memSize": 0
+                "type": "reference",
+                "dataLength": 4,
+                "memSize": 16,
+                "file": "itemtypes",
+                "field": "Code"
             }
         },
         {
@@ -150,22 +166,31 @@ files["itemtypes"] = {
             }
         },
         {
-            "name": "MaxSockets1",
+            "name": "MaxSockets#",
             "description": "Determines the maximum possible number of sockets that can be spawned on the item when the item level is greater than or equal to 1 and less than or equal to the matching MaxSocketsLevelThreshold1 value(s). The number of sockets is also determined by the Gemsockets value from AMW.txt",
             "type": {
                 "type": "int",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "MaxSockets1",
+                "MaxSockets2",
+                "MaxSockets3"
+            ]
         },
         {
-            "name": "MaxSocketsLevelThreshold1",
+            "name": "MaxSocketsLevelThreshold#",
             "description": "Defines the item level thresholds using the above MaxSockets1 field(s)",
             "type": {
                 "type": "int",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "MaxSocketsLevelThreshold1",
+                "MaxSocketsLevelThreshold2"
+            ]
         },
         {
             "name": "TreasureClass",
@@ -189,18 +214,22 @@ files["itemtypes"] = {
             "name": "StaffMods",
             "description": "Determines if the Item Type should have class specific item skill modifiers. Grants skills to the class listed using the Code column in PlayerClass.txt",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
+                "type": "reference",
+                "dataLength": 4,
+                "memSize": 8,
+                "file": "PlayerClass",
+                "field": "Code"
             }
         },
         {
             "name": "Class",
             "description": "Determines if this item should be useable only by a specific class. Referenced from the Code column in PlayerClass.txt",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
+                "type": "reference",
+                "dataLength": 4,
+                "memSize": 8,
+                "file": "PlayerClass",
+                "field": "Code"
             }
         },
         {
@@ -213,21 +242,31 @@ files["itemtypes"] = {
             }
         },
         {
-            "name": "InvGfx1",
+            "name": "InvGfx#",
             "description": "Defines a DC6 file to use for the item's inventory graphics. The entry amount should equal the value used in above VarInvGfx",
             "type": {
                 "type": "string",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "InvGfx1",
+                "InvGfx2",
+                "InvGfx3",
+                "InvGfx4",
+                "InvGfx5",
+                "InvGfx6"
+            ]
         },
         {
             "name": "StorePage",
             "description": "Uses a code to determine which UI tab page on the NPC shop UI to display this Item Type, such as after it is sold to the NPC. Referenced from the Code column in StorePage.txt",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
+                "type": "reference",
+                "dataLength": 4,
+                "memSize": 8,
+                "file": "StorePage",
+                "field": "Code"
             }
         }
     ]

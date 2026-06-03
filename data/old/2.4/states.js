@@ -384,48 +384,64 @@ files["states"] = {
             }
         },
         {
-            "name": "overlay1",
+            "name": "overlay#",
             "description": "Controls which overlay to use for normally displaying the state (Uses the overlay field from Overlay.txt). The usage depends on the specific state defined and/or the function using the state. Typically, States use \"overlay1\" for the Front overlay and \"overlay2\" for the Back overlay. Other cases can have States use each overlay field as the Front Start, Front End, Back Start, and Back End, respectively",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
-            }
+                "type": "reference",
+                "dataLength": 47,
+                "memSize": 16,
+                "file": "overlay",
+                "field": "overlay"
+            },
+            "altNames": [
+                "overlay1",
+                "overlay2",
+                "overlay3",
+                "overlay4"
+            ]
         },
         {
             "name": "pgsvoverlay",
             "description": "Controls which overlay to use when the state has progressive charges on the unit, such as for the charge-up stat when using Assassin Martial Arts charge-up skills (Uses the overlay field from Overlay.txt)",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
+                "type": "reference",
+                "dataLength": 47,
+                "memSize": 16,
+                "file": "overlay",
+                "field": "overlay"
             }
         },
         {
             "name": "castoverlay",
             "description": "Controls which overlay to use when the state is initially applied on the unit (Uses the overlay field from Overlay.txt)",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
+                "type": "reference",
+                "dataLength": 47,
+                "memSize": 16,
+                "file": "overlay",
+                "field": "overlay"
             }
         },
         {
             "name": "removerlay",
             "description": "Controls which overlay to use when the state is removed from the unit (Uses the overlay field from Overlay.txt)",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
+                "type": "reference",
+                "dataLength": 47,
+                "memSize": 16,
+                "file": "overlay",
+                "field": "overlay"
             }
         },
         {
             "name": "stat",
             "description": "Controls the stat associated with the stat. This is also used when determining how to add the progressive overlay (Uses the Stat field from ItemStatCost.txt)",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
+                "type": "reference",
+                "dataLength": 47,
+                "memSize": 16,
+                "file": "itemstatcost",
+                "field": "Stat"
             }
         },
         {
@@ -650,36 +666,44 @@ files["states"] = {
             "name": "missile",
             "description": "Used as a possible parameter for the setfunc field (Uses the Missile field from Missiles.txt)",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
+                "type": "reference",
+                "dataLength": 47,
+                "memSize": 16,
+                "file": "missiles",
+                "field": "Missile"
             }
         },
         {
             "name": "skill",
             "description": "Used as a possible parameter for the setfunc field (Uses the Skill field from Skills.txt)",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
+                "type": "reference",
+                "dataLength": 47,
+                "memSize": 16,
+                "file": "skills",
+                "field": "skill"
             }
         },
         {
             "name": "itemtype",
             "description": "Defines a potential ItemType that can be affected by the state's color change",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
+                "type": "reference",
+                "dataLength": 4,
+                "memSize": 16,
+                "file": "itemtypes",
+                "field": "ItemType"
             }
         },
         {
             "name": "itemtrans",
             "description": "Controls the color change of the item when the unit has this state. Referenced from the Code column in Colors.txt",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
+                "type": "reference",
+                "dataLength": 4,
+                "memSize": 8,
+                "file": "colors",
+                "field": "Code"
             }
         },
         {
@@ -825,18 +849,22 @@ files["states"] = {
             "name": "onsound",
             "description": "Plays a sound when the state is initially applied to the unit. Links to a Sound from Sounds.txt",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
+                "type": "reference",
+                "dataLength": 47,
+                "memSize": 16,
+                "file": "sounds",
+                "field": "Sound"
             }
         },
         {
             "name": "offsound",
             "description": "Plays a sound when the state is removed from the unit. Links to a Sound from Sounds.txt",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
+                "type": "reference",
+                "dataLength": 47,
+                "memSize": 16,
+                "file": "sounds",
+                "field": "Sound"
             }
         },
         {
@@ -861,9 +889,11 @@ files["states"] = {
             "name": "cltevent",
             "description": "Controls the event to check on the client side to determine when to use the function defined in the clteventfunc field (Uses an event defined in the Events.txt file)",
             "type": {
-                "type": "int",
-                "dataLength": 0,
-                "memSize": 0
+                "type": "reference",
+                "dataLength": 47,
+                "memSize": 16,
+                "file": "events",
+                "field": "event"
             }
         },
         {

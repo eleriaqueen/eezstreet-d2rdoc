@@ -24,13 +24,47 @@ files["lvltypes"] = {
             }
         },
         {
-            "name": "File 1",
+            "name": "File #",
             "description": "Specifies the name of which dt1 file to use. The dt1 files contain the images for each area tile found in each Act. If this value equals 0, then this field will be ignored",
             "type": {
                 "type": "string",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "altNames": [
+                "File 1",
+                "File 2",
+                "File 3",
+                "File 4",
+                "File 5",
+                "File 6",
+                "File 7",
+                "File 8",
+                "File 9",
+                "File 10",
+                "File 11",
+                "File 12",
+                "File 13",
+                "File 14",
+                "File 15",
+                "File 16",
+                "File 17",
+                "File 18",
+                "File 19",
+                "File 20",
+                "File 21",
+                "File 22",
+                "File 23",
+                "File 24",
+                "File 25",
+                "File 26",
+                "File 27",
+                "File 28",
+                "File 29",
+                "File 30",
+                "File 31",
+                "File 32"
+            ]
         },
         {
             "name": "Act",
