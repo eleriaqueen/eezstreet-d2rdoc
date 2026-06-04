@@ -144,6 +144,15 @@ function initVersionSwitcher(basePath, fileKey, renderCallback) {
             return;
         }
 
+        var selectedSchema = null;
+        for (var i = 0; i < schemas.length; i++) {
+            if (schemas[i].directory === selectedDirectory) {
+                selectedSchema = schemas[i];
+                break;
+            }
+        }
+        filterSiteSidebar(selectedSchema && selectedSchema.availableFiles ? selectedSchema.availableFiles : null);
+
         switchVersion(basePath, fileKey, selectedDirectory, function(success) {
             if (success) {
                 reRenderPage(fileKey);
@@ -170,6 +179,15 @@ function initVersionSwitcher(basePath, fileKey, renderCallback) {
 
     // Initial render: load stored version if different from default
     if (activeVersion !== defaultDirectory) {
+        var activeSchema = null;
+        for (var i = 0; i < schemas.length; i++) {
+            if (schemas[i].directory === activeVersion) {
+                activeSchema = schemas[i];
+                break;
+            }
+        }
+        filterSiteSidebar(activeSchema && activeSchema.availableFiles ? activeSchema.availableFiles : null);
+
         switchVersion(basePath, fileKey, activeVersion, function(success) {
             if (success) {
                 renderCallback();

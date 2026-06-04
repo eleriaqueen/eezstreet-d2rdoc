@@ -34,6 +34,11 @@ function populateSidebarRecursive(index, pathToHomeDirectory, ul) {
         li.addEventListener("click", closeResponsiveSidebar);
         li.appendChild(link);
         if (ulChildren) li.appendChild(ulChildren);
+
+        const fileKeyMatch = index.path && index.path.match(/\/files\/([^/]+)\.html$/);
+        if (fileKeyMatch) {
+            li.dataset.fileKey = fileKeyMatch[1];
+        }
     }
     else if (ulChildren) {
         // Non-link with children: render as an accordion
@@ -46,6 +51,7 @@ function populateSidebarRecursive(index, pathToHomeDirectory, ul) {
             details.open = true;
         }
         li.appendChild(details);
+        li.classList.add("sidebar-group");
     }
     else {
         li.innerHTML = index.name;
@@ -310,4 +316,22 @@ function fixupPageSidebar() {
     // Add highlight animation on targeted elements
     window.addEventListener("hashchange", playActiveAnimation);
     playActiveAnimation();
+}
+
+///////////////////////////////////////////////
+// Version filtering
+
+function filterSiteSidebar(availableFiles) {
+    const availableSet = availableFiles ? new Set(availableFiles) : null;
+
+    for (const item of document.querySelectorAll("#site-sidebar li[data-file-key]")) {
+        item.hidden = availableSet !== null && !availableSet.has(item.dataset.fileKey);
+    }
+
+    for (const item of document.querySelectorAll("#site-sidebar li.sidebar-group")) {
+        const fileItems = item.querySelectorAll("li[data-file-key]");
+        if (fileItems.length > 0) {
+            item.hidden = Array.from(fileItems).every(fi => fi.hidden);
+        }
+    }
 }
