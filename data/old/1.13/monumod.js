@@ -105,6 +105,33 @@ files["monumod"] = {
                 "exclude2"
             ]
         },
+        ,
+        {
+            "name": "cpick",
+            "altNames": [
+                "cpick (N)",
+                "cpick (H)"
+            ],
+            "description": "Modifies the chances that this monster modifier will be chosen for a Champion monster, compared to other monster modifiers. The higher the value is, then the more likely this modifier will be chosen. This value acts as a numerator and a denominator. All \"cpick\" values get summed together to give a total denominator, used for the random roll. For example, if there are 3 possible monster modifiers, and their \"cpick\" values are 3, 4, 6, then their chances to be chosen are 3/13, 4/13, and 6/13 respectively",
+            "type": {
+                "type": "int",
+                "dataLength": 0,
+                "memSize": 0
+            }
+        },
+        {
+            "name": "upick",
+            "altNames": [
+                "upick (N)",
+                "upick (H)"
+            ],
+            "description": "Modifies the chances that this monster modifier will be chosen for a Unique monster, compared to other monster modifiers. The higher the value is, then the more likely this modifier will be chosen. This value acts as a numerator and a denominator. All \"upick\" values get summed together to give a total denominator, used for the random roll. For example, if there are 3 possible monster modifiers, and their \"upick\" values are 3, 4, 6, then their chances to be chosen are 3/13, 4/13, and 6/13 respectively",
+            "type": {
+                "type": "int",
+                "dataLength": 0,
+                "memSize": 0
+            }
+        },
         {
             "name": "constants",
             "description": "These values control a special list of numeric parameters for special monsters. The row that each constant appears in the data file is unrelated. You can treat this column almost like a separate data file that controls other aspects of special monsters. See the description next to each value for more specific clarification on each constant.",

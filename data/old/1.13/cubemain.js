@@ -266,6 +266,88 @@ files["cubemain"] = {
                 "input 5",
                 "input 6",
                 "input 7"
+            ],
+            "table": [
+                [
+                    "Code",
+                    "Description"
+                ],
+                [
+                    "any",
+                    "Any item"
+                ],
+                [
+                    "qty=#",
+                    "The number (#) of this item type required for the recipe"
+                ],
+                [
+                    "low",
+                    "Low Quality"
+                ],
+                [
+                    "nor",
+                    "Normal Quality"
+                ],
+                [
+                    "hiq",
+                    "High Quality (Superior)"
+                ],
+                [
+                    "mag",
+                    "Magic Item"
+                ],
+                [
+                    "set",
+                    "Set Item"
+                ],
+                [
+                    "rar",
+                    "Rare Item"
+                ],
+                [
+                    "uni",
+                    "Unique Item"
+                ],
+                [
+                    "crf",
+                    "Crafted Item"
+                ],
+                [
+                    "tmp",
+                    "Tempered Item"
+                ],
+                [
+                    "nos",
+                    "Item with no sockets"
+                ],
+                [
+                    "sock=#",
+                    "Item with sockets, where # defines the number of sockets"
+                ],
+                [
+                    "noe",
+                    "Item that is not Ethereal"
+                ],
+                [
+                    "eth",
+                    "Item that is Ethereal"
+                ],
+                [
+                    "upg",
+                    "Item that allows Upgrades"
+                ],
+                [
+                    "bas",
+                    "Basic Item"
+                ],
+                [
+                    "exc",
+                    "Exceptional Item"
+                ],
+                [
+                    "eli",
+                    "Elite Item"
+                ]
             ]
         },
         {

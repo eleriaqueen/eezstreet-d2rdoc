@@ -52,7 +52,10 @@ files["objects"] = {
             ]
         },
         {
-            "name": "SizeX & SizeY",
+            "name": "SizeX",
+            "altNames": [
+                "SizeY"
+            ],
             "description": "Controls the amount of sub tiles that the object occupies using X and Y coordinates. This is generally used for measuring the object's size when trying to spawn objects in rooms and controlling their distances apart",
             "type": {
                 "type": "int",

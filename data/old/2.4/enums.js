@@ -633,69 +633,6 @@ files["enums"] = {
                     },
                     "$!skills#aurastatcalc1!$<br>$!skills#aurastatcalc2!$<br>$!skills#aurastatcalc3!$<br>$!skills#aurastatcalc4!$<br>$!skills#sumskill1!$<br>$!skills#sumsk1calc!$",
                     "Based on a random chance controlled by the $!skills#aurastatcalc1!$ value, cast a skill (determined by $!skills#sumskill1!$) with a skill level controlled by $!skills#sumsk1calc!$. If $!skills#aurastatcalc2!$ value is greater than 0, then factor the $!skills#passiveitype!$ and $!skills#passivereqweaponcount!$ fields for determining if the skill should be cast or not. If $!skills#aurastatcalc3!$ is set, then swap the attacker and target units. If $!skills#aurastatcalc4!$ is set, then swap the caster unit with the unit that originally installed the event."
-                ],
-                [
-                    "34",
-                    {
-                        "id": "WarApplyExecute",
-                        "text": "WarApplyExecute"
-                    },
-                    "$!skills#calc1!$<br>$!skills#calc2!$",
-                    "Kill a monster if they are at a certain percentage of health remaining. Use $!skills#calc1!$ for normal monsters and $!skills#calc2!$ for elite monsters (unique, champion, superunique)."
-                ],
-                [
-                    "35",
-                    {
-                        "id": "WarApplyBloodOathShare",
-                        "text": "WarApplyBloodOathShare"
-                    },
-                    "$!skills#pettype!$<br>$!skills#calc1!$<br>$!skills#calc2!$",
-                    "Remove $!skills#calc1!$ percent from incoming damage and transfer it evenly to $!skills#calc2!$ amount of pets. If $!skills#pettype!$ is set, only share with pets of that type (also checks pooled pets, see $!pettype#pool!$)."
-                ],
-                [
-                    "36",
-                    {
-                        "id": "WarApplyHexDebuff",
-                        "text": "WarApplyHexDebuff"
-                    },
-                    "$!skills#auratargetstate!$<br>$!skills#aurastat#!$<br>$!skills#calc1!$<br>$!skills#calc3!$<br>$!skills#Param1!$",
-                    "Apply a statslist to the target of length $!skills#calc1!$ using $!skills#auratargetstate!$ and applying all $!skills#aurastat#!$. If the $!skills#auratargetstate!$ is equal to \"hexpurgedebuff\", apply $!skills#Param1!$ as the $!#Server Event Functions!$ for the events \"damagedbymissile\". \"damagedinmelee\", and \"hextrigger\". Save off the value of $!skills#calc3!$ for use in $!#WarApplyPurgeExplosion!$ where it is used as the max amounts of charges."
-                ],
-                [
-                    "37",
-                    {
-                        "id": "WarApplyPsychicWard",
-                        "text": "WarApplyPsychicWard"
-                    },
-                    "$!skills#calc1!$",
-                    "Apply a stun of length $!skills#calc1!$ on the attacker."
-                ],
-                [
-                    "38",
-                    {
-                        "id": "WarApplyHealthLink",
-                        "text": "WarApplyHealthLink"
-                    },
-                    "$!skills#aurafilter!$<br>$!skills#auratargetstate!$<br>$!skills#aurarangecalc!$<br>$!skills#calc1!$",
-                    "Duplicate a $!skills#calc1!$ percent of the incoming damage to $!skills#aurarangecalc!$ nearby units that have $!skills#auratargetstate!$ active, filtering units using $!skills#aurafilter!$. Only duplicate damage once for each individual skill cast. Remove absorbs, status effects (cold, freeze, stun, pull, knockback), elemental conversion, and drains from the duplicated damage."
-                ],
-                [
-                    "39",
-                    {
-                        "id": "WarApplyPurgeExplosion",
-                        "text": "WarApplyPurgeExplosion"
-                    },
-                    "$!skills#aurafilter!$<br>$!skills#auratargetstate!$<br>$!skills#aurarangecalc!$<br>$!skills#calc2!$<br>$!skills#calc3!$<br>$!skills#srvoverlay!$",
-                    "Roll a $!skills#calc1!$ chance to explode, applying the skill's physical and elemental damage to $!skills#aurarangecalc!$ nearby units, filtering units using $!skills#aurafilter!$, and applying $!skills#srvoverlay!$. Use $!skills#calc3!$ as the total charges, and grab the stored charges from $!#WarApplyHexDebuff!$ using $!skills#auratargetstate!$, decrementing by one. If no charges remain then remove the state."
-                ],
-                [
-                    "40",
-                    {
-                        "id": "WarPsychicWardAbsorbDamage",
-                        "text": "WarPsychicWardAbsorbDamage"
-                    },
-                    "$!skills#aurastate!$<br>$!skills#aurastat1!$<br>$!skills#aurastat2!$<br>$!skills#prgoverlay!$",
-                    "Calculates the amount of damage to absorb based on the aura stat values. If no remaining absorbing damage is left, then remove the $!skills#aurastate!$. $!skills#aurastat1!$ is the current amount of damage left to absorb. $!skills#aurastat2!$ is the maximum amount of damage to absorb. Displays an overlay, using the $!skills#prgoverlay!$ as a base and then adding 0-7 based on the direction."
                 ]
             ]
         },

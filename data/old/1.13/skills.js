@@ -647,33 +647,6 @@ files["skills"] = {
                     },
                     "",
                     "Validate that the caster unit has enough ammunition and durability"
-                ],
-                [
-                    "66",
-                    {
-                        "id": "ApplyPassiveAuraEvents",
-                        "text": "ApplyPassiveAuraEvents"
-                    },
-                    "$!#auraevent1!$<br>$!#auraeventfunc1!$<br>$!#auraevent2!$<br>$!#auraeventfunc2!$<br>$!#auraevent3!$<br>$!#auraeventfunc3!$",
-                    "Check each of the aura events on the skill and apply the event handler to use the aura event functions"
-                ],
-                [
-                    "67",
-                    {
-                        "id": "BarStartFrenzy",
-                        "text": "BarStartFrenzy"
-                    },
-                    "",
-                    "Resets internal variables used to keep track of frames and attacks."
-                ],
-                [
-                    "68",
-                    {
-                        "id": "srv-BarStartDoubleSwing",
-                        "text": "BarStartDoubleSwing (Server)"
-                    },
-                    "$!#calc2!$",
-                    "Uses $!#calc3!$ to apply an attack rate bonus."
                 ]
             ]
         },

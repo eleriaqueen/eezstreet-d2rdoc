@@ -1185,15 +1185,6 @@ files["missiles"] = {
                     },
                     "$!#cHitPar1!$<br>$!#CltHitSubMissile1!$<br>$!#Param1!$<br>$!#Param2!$",
                     "Create a disc of sub missiles where $!#cHitPar1!$ controls the ring density (minimum value equals 1). Each sub missile will use its $!#Param1!$ and $!#Param2!$ fields to define their velocities"
-                ],
-                [
-                    "64",
-                    {
-                        "id": "clt-HitBladeFury",
-                        "text": "HitBladeFury (Client)"
-                    },
-                    "$!#cHitPar1!$<br>$!#CltHitSubMissile1!$",
-                    "Create a disc of sub missiles with the parameter controlling the ring density (minimum value equals 1)"
                 ]
             ]
         },
@@ -2232,15 +2223,6 @@ files["missiles"] = {
                     },
                     "$!#dParam1!$<br>$!#dParam2!$",
                     "Uses $!#dParam2!$ as the percent chance to knockback the target unit. Uses $!#dParam1!$ to control how this percent chance is modified. Also relies on the $!monstats2#small!$ and $!monstats2#large!$ fields.<br>· If the target unit is a player and $!#dParam1!$ is greater than or equal to 1, then set the knockback chance to $!#dParam2!$<br>· If $!#dParam1!$ is less than 1 and the monster is a small size, then set the knockback chance to $!#dParam2!$<br>· If $!#dParam1!$ equals 1 and the monster is a small size, then set the knockback chance to $!#dParam2!$ * 2<br>· If $!#dParam1!$ equals 1 and the monster is a large size, then set the knockback chance to $!#dParam2!$<br>· If $!#dParam1!$ is greater than 1 and the monster is a small size, then set the knockback chance to $!#dParam2!$ * 3<br>· If $!#dParam1!$ is greater than 1 and the monster is a large size, then set the knockback chance to $!#dParam2!$ * 2<br>· If $!#dParam1!$ is greater than 1 and the monster is not a small or large size, then set the knockback chance to $!#dParam2!$"
-                ],
-                [
-                    "15",
-                    {
-                        "id": "DamageHolyBolt",
-                        "text": "DamageHolyBolt"
-                    },
-                    "$!#sHitPar2!$<br>$!#dParam1!$",
-                    "Uses $!#dParam1!$ as a percent damage multiplier for the total elemental damage, depending on the use case of $!#sHitPar2!$<br>· If the target unit is a monster<br>o If $!#sHitPar2!$ equals 0, then do not modify the damage<br>o If $!#sHitPar2!$ equals 1, then only modify the damage if the monster is an Undead type<br>o If $!#sHitPar2!$ equals 2, then only modify the damage if the monster is a Demon type<br>o If $!#sHitPar2!$ equals 3, then only modify the damage if the monster is an Undead or Demon type<br>· If the target unit is a player<br>o If $!#sHitPar2!$ equals 0, then modify the damage<br>o If $!#sHitPar2!$ equals 0, then do not modify the damage"
                 ]
             ]
         },

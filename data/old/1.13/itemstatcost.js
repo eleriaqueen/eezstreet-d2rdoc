@@ -416,12 +416,16 @@ files["itemstatcost"] = {
             "type": {
                 "type": "int",
                 "dataLength": 0,
-                "memSize": 0
+                "memSize": 16
             },
             "altNames": [
                 "itemeventfunc1",
                 "itemeventfunc2"
-            ]
+            ],
+            "appendField": {
+                "file": "enums",
+                "field": "Server Event Functions"
+            }
         },
         {
             "name": "descpriority",
@@ -590,11 +594,6 @@ files["itemstatcost"] = {
                     "28",
                     "$!#descstrpos!$<br>$!#descstrneg!$",
                     "Non Class Skill<br>Obtains the $!skilldesc#str name!$<br>Uses the stat value as the skill level<br>Combines these values into the designated \"descstr\" string"
-                ],
-                [
-                    "29",
-                    "$!#descstrpos!$<br>$!#descstrneg!$<br>$!#descstr2!$",
-                    "Sprintf num positive<br>Same as function 19, except the it uses the absolute value of [value]"
                 ]
             ]
         },

@@ -54,7 +54,120 @@ files["misc"] = {
                 "type": "int",
                 "dataLength": 0,
                 "memSize": 0
-            }
+            },
+            "table": [
+                [
+                    "Code",
+                    "Name",
+                    "Parameters",
+                    "Description"
+                ],
+                [
+                    "0",
+                    "",
+                    "",
+                    "Do nothing"
+                ],
+                [
+                    "1",
+                    {
+                        "id": "SkillItemIdentify",
+                        "text": "SkillItemIdentify"
+                    },
+                    "$!#spellicon!$",
+                    "Sets the spell icon. Identifies an item."
+                ],
+                [
+                    "2",
+                    {
+                        "id": "SkillItemTownPortal",
+                        "text": "SkillItemTownPortal"
+                    },
+                    "",
+                    "The player creates a town portal"
+                ],
+                [
+                    "3",
+                    {
+                        "id": "SkillItemHealPotion",
+                        "text": "SkillItemHealPotion"
+                    },
+                    "$!#state!$<br>$!#stat#!$<br>$!#calc#!$<br>$!#len!$",
+                    "<ol><li>Applies a $!#state!$ on the player that is controlled by the $!#len!$ field</li><li>This function requires that the stat parameters be either \"hitpoints\", \"hpregen\", \"mana\", or \"manarecovery\"</li><li>Calculates a flat amount of these stats to restore to the player, based on the class and Vitality/Energy attribute for Life/Mana stats</li></ol>"
+                ],
+                [
+                    "4",
+                    {
+                        "id": "SkillItemHealPotion2",
+                        "text": "SkillItemHealPotion2"
+                    },
+                    "$!#state!$<br>$!#stat#!$<br>$!#calc#!$<br>$!#len!$",
+                    "<ol><li>Applies a $!#state!$ on the player that is controlled by the $!#len!$ field</li><li>This function requires that the stat parameters be either \"hitpoints\", \"hpregen\", \"mana\", or \"manarecovery\"</li><li>Calculates a flat amount of these stats to restore to the player</li></ol>"
+                ],
+                [
+                    "5",
+                    {
+                        "id": "SkillItemRejuvPotion",
+                        "text": "SkillItemRejuvPotion"
+                    },
+                    "$!#stat#!$<br>$!#calc#!$",
+                    "Adds a percentage of the stat's \"maxstat\" value (see ItemStatCost.txt) to the current stat. This percentage is determined by the related calculated value."
+                ],
+                [
+                    "6",
+                    {
+                        "id": "SkillItemPotionAntidote",
+                        "text": "SkillItemPotionAntidote"
+                    },
+                    "$!#state!$<br>$!#cstate#!$<br>$!#len!$",
+                    "Clears the $!#cstate#!$ states on the user and applies the $!#state!$ state with its duration controlled by the $!#len!$ field."
+                ],
+                [
+                    "7",
+                    {
+                        "id": "SkillItemTransmogrify",
+                        "text": "SkillItemTransmogrify"
+                    },
+                    "",
+                    "Opens the Horadric Cube UI"
+                ],
+                [
+                    "8",
+                    {
+                        "id": "SkillItemElixir",
+                        "text": "SkillItemElixir"
+                    },
+                    "",
+                    "Get a stat from item's mod class and set it to the it's \"value\" stat"
+                ],
+                [
+                    "9",
+                    {
+                        "id": "SkillItemHerb",
+                        "text": "SkillItemHerb"
+                    },
+                    "$!#state!$<br>$!#stat#!$<br>$!#calc#!$<br>$!#len!$",
+                    "<ol><li>Applies a $!#state!$ on the player that is controlled by the $!#len!$ field</li><li>Calculates a flat amount of the stats to set on the player</li><li>Has a special case where if the stat equals \"staminarecoverybonus\" then also set the current \"stamina\" stat to be equals to the \"maxstamina\" stat</li></ol>"
+                ],
+                [
+                    "10",
+                    {
+                        "id": "SkillCastFireBallOnTarget",
+                        "text": "SkillCastFireBallOnTarget"
+                    },
+                    "",
+                    "Casts Fire Ball on the nearest enemy."
+                ],
+                [
+                    "11",
+                    {
+                        "id": "SkillCastFireBallAtLocation",
+                        "text": "SkillCastFireBallAtLocation"
+                    },
+                    "",
+                    "Casts Fire Ball at the target position."
+                ]
+            ]
         },
         {
             "name": "state",
@@ -150,16 +263,6 @@ files["misc"] = {
                 [
                     "2",
                     "$!#spelldescstr!$<br>$!#calc1!$<br>$!#stat1!$",
-                    "1. Evaluate the $!#calc1!$ field<br>2. If the $!#stat1!$ value equals \"hitpoints\" or \"hpregen\" then adjust the calculated value based on the relative $!charstats#HealthPotionPercent!$ value.<br>3. If the $!#stat1!$ value equals \"mana\" or \"manarecovery\" then adjust the calculated value based on the relative $!charstats#ManaPotionPercent!$ value.<br>4. Insert the calculated value into the $!#spelldescstr!$ string and add the string to the item tooltip"
-                ],
-                [
-                    "3",
-                    "$!#spelldescstr!$<br>$!#calc1!$",
-                    "1. Evaluate the $!#calc1!$ field<br>2. Add the $!#spelldescstr!$ string to the item tooltip<br>3. Append a space string and the calculated value after the $!#spelldescstr!$ string to the item tooltip"
-                ],
-                [
-                    "4",
-                    "$!#spelldescstr!$<br>$!#calc1!$",
                     "1. Evaluate the $!#calc1!$ field<br>2. Insert the calculated value into the $!#spelldescstr!$ string and add the string to the item tooltip"
                 ]
             ]

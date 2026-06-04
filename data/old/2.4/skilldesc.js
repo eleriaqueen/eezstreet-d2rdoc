@@ -489,6 +489,63 @@ files["skilldesc"] = {
                 "descline4",
                 "descline5",
                 "descline6"
+            ],
+            "table": [
+                [
+                    "0",
+                    "",
+                    "None"
+                ],
+                [
+                    "13",
+                    "$!#desctexta#!$<br>$!#desccalca#!$<br>$!#desccalcb#!$",
+                    "Calculates the Life value of the monster referenced from the $!skills#summon!$ field in the linked skill. Also multiplies this value with [$!#desccalca#!$] as a Life Percent bonus or adds to this value with [$!#desccalcb#!$] as a Life Add bonus.<br><br>Inserts this calculated Life value into [$!#desctexta#!$] and output that string"
+                ],
+                [
+                    "31",
+                    "$!#desctexta#!$<br>$!#desctextb#!$<br>$!#desccalca#!$<br>$!#desccalcb#!$",
+                    "Performs the calculation using the $!difficultylevels#AiCurseDivisor!$ based on the current game's difficulty mode: [$!#desccalca#!$] / [$!difficultylevels#AiCurseDivisor!$] / [$!#desccalcb#!$]<br><br>If this value is equals to 1, then insert the calculated value into [$!#desctexta#!$] and output that string<br>If this value is greater than or less than 1, then insert the calculated value into [$!#desctextb#!$] and output that string"
+                ],
+                [
+                    "34",
+                    "$!#desctexta#!$",
+                    "Calculates the Damage value of the monster referenced from the $!skills#summon!$ field in the linked skill. Then this function inserts that value into [$!#desctexta#!$] and outputs that string"
+                ],
+                [
+                    "36",
+                    "$!#desctexta#!$<br>$!#desctextb#!$<br>$!#desccalca#!$<br>$!#desccalcb#!$",
+                    "Performs the calculation of a value: [$!#desccalca#!$] / [$!#desccalcb#!$]<br><br>If this value is equals to 1, then insert the value into [$!#desctexta#!$] and output that string<br>If this value is greater than or less than 1, then insert the value into [$!#desctextb#!$] and output that string"
+                ],
+                [
+                    "40",
+                    "$!#desctexta#!$<br>$!#desctextb#!$<br>$!#desccalca#!$",
+                    "Use [$!#desccalca#!$] as a code to change the color of the string<br><br>0 = White (R=255, G=255, B=255)<br>1 = Red (R=255, G=77, B=77)<br>2 = Green (R=0, G=255, B=0)<br>3 = Blue (R=105, G=105, B=255)<br>4 = Light Gold (R=199, G=179, B=119)<br>5 = Grey (R=105, G=105, B=105)<br>6 = Black (R=0, G=0, B=0)<br>7 = Dark Gold (R=208, G=194, B=125)<br>8 = Orange (R=255, G=168, B=0)<br>9 = Yellow (R=255, G=255, B=100)<br>10 = Dark Green (R=0, G=128, B=0)<br>11 = Purple (R=174, G=0, B=255)<br>12 = Medium Green (R=0, G=200, B=0)<br><br>Inserts [$!#desctextb#!$] into [$!#desctexta#!$] and outputs that string"
+                ],
+                [
+                    "56",
+                    "",
+                    "Gets the quantity of the item that is connected to the linked skill and inserts this value into the \"scrollbooktext\" string and outputs that string"
+                ],
+                [
+                    "74",
+                    "$!#desctexta#!$<br>$!#desccalca#!$",
+                    "Inserts [$!#desccalca#!$] into [$!#desctexta#!$] and outputs that string"
+                ],
+                [
+                    "75",
+                    "$!#desctexta#!$<br>$!#desccalca#!$<br>$!#desccalcb#!$",
+                    "Inserts [$!#desccalca#!$] and [$!#desccalcb#!$] into [$!#desctexta#!$] and outputs that string"
+                ],
+                [
+                    "76",
+                    "$!#desctexta#!$<br>$!#desctextb#!$<br>$!#desccalca#!$",
+                    "Inserts [$!#desctextb#!$] and [$!#desccalca#!$] into [$!#desctexta#!$] and outputs that string"
+                ],
+                [
+                    "77",
+                    "$!#desctexta#!$<br>$!#desctextb#!$<br>$!#desccalca#!$<br>$!#desccalcb#!$",
+                    "Inserts [$!#desctextb#!$], [$!#desccalca#!$], and [$!#desccalcb#!$] into [$!#desctexta#!$] and outputs that string"
+                ]
             ]
         },
         {

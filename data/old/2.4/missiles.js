@@ -2899,7 +2899,7 @@ files["missiles"] = {
             }
         },
         {
-            "name": "[N]",
+            "name": "ResultFlags",
             "description": "Controls different flags that can affect how the target reacts after being hit by the missile. Uses an integer value to check against different bit fields by using the \"&\" operator. For example, if the value equals 5 (binary = 101) then that returns true for both the 4 (binary = 100) and 1 (binary = 1) bit field values. Referenced by the Bit Field Value of the Result Flags Table",
             "type": {
                 "type": "int",
