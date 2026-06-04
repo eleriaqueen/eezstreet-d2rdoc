@@ -44,7 +44,7 @@
       },
       {
         "name": "Transmogrify",
-        "note": "The Transmogrify behavior is unused in the base game, and is a relic from the alpha version of Diablo II, which allowed for the conversion of organs (dropped items) into various utility items. When Transmogrify is enabled, the item will get a piece of text in its tooltip, stating 'Right Click to Convert to X' and it will transform into another item."
+        "note": "The Transmogrify behavior is unused in the base game, and is a relic from the alpha version of Diablo II, which allowed for the conversion of organs (dropped items) into various utility items. When Transmogrify is enabled, the item will get a piece of text in its tooltip, stating 'Right Click to Convert to X' and it will transform into another item. **Transmogrify only works on legacy versions of the game.**"
       },
       {
         "name": "bitfield1",
@@ -58,6 +58,23 @@
       {
         "name": "item#",
         "note": "'mul', 'ma' and 'mg' function identically. 'cu', 'cs', 'cr', 'cm', 'ce', and 'cg' are in 1024ths - a value of 512 will cause the quality to appear 50% of the time."
+      }
+    ]
+  },
+  {
+    "file": "levels",
+    "fields": [
+      {
+        "name": "mon#",
+        "note": "In the legacy version of the game, only mon1-mon10 are present in the MPQ but the columns mon11-mon25 can be added to the file and work correctly. In Resurrected, all 25 columns are present in Blizzard's files."
+      },
+      {
+        "name": "nmon#",
+        "note": "In the legacy version of the game, only nmon1-nmon10 are present in the MPQ but the columns nmon11-nmon25 can be added to the file and work correctly. In Resurrected, all 25 columns are present in Blizzard's files."
+      },
+      {
+        "name": "umon#",
+        "note": "In the legacy version of the game, only umon1-umon10 are present in the MPQ but the columns umon11-umon25 can be added to the file and work correctly. In Resurrected, all 25 columns are present in Blizzard's files."
       }
     ]
   }
