@@ -6,7 +6,7 @@
 }
 
 #version-switcher-container label {
-    font-family: Formal, sans-serif;
+    font-family: 'Roboto';
     color: #afafaf;
     margin-right: 0.5rem;
 }
@@ -17,14 +17,14 @@
     border-radius: 6px;
     color: #BD9B4E;
     padding: 4px 8px;
-    font-family: Formal, sans-serif;
+    font-family: 'Roboto';
     outline: none;
     cursor: pointer;
 }
 
 .version-not-available {
     color: #afafaf;
-    font-family: Formal, sans-serif;
+    font-family: 'Roboto';
     font-style: italic;
     padding: 2rem;
 }
@@ -167,8 +167,7 @@
     text-decoration: none;
     width: 1px;
     white-space: nowrap;
-    font-family: Exocet, serif;
-    font-weight: normal;
+    font-family: 'Roboto';
 }
 
 .field-appendfield summary:hover {
@@ -181,6 +180,7 @@
 .community-note {
     color: #0062a9;
     margin-top: 0.75rem;
+    font-family: 'Roboto';
     font-style: italic;
     padding: 8px;
 }
