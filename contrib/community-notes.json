@@ -49,6 +49,18 @@
       {
         "name": "bitfield1",
         "note": "This can be used to control which items can be consumed to make an Iron Golem."
+      },
+      {
+        "name": "normcode",
+        "note": "This column doesn't exist by default in misc.txt. It can be safely added.<br>An item must have an entry in this column if it can be gambled, otherwise the game will crash. (Rings and amulets are a hardcoded exception.)"
+      },
+      {
+        "name": "ubercode",
+        "note": "This column doesn't exist by default in misc.txt. It can be safely added.<br>An item must have an entry in this column if it can be gambled, otherwise the game will crash. (Rings and amulets are a hardcoded exception.)"
+      },
+      {
+        "name": "ultracode",
+        "note": "This column doesn't exist by default in misc.txt. It can be safely added.<br>An item must have an entry in this column if it can be gambled, otherwise the game will crash. (Rings and amulets are a hardcoded exception.)"
       }
     ]
   },
