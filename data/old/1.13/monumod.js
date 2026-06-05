@@ -105,7 +105,6 @@ files["monumod"] = {
                 "exclude2"
             ]
         },
-        ,
         {
             "name": "cpick",
             "altNames": [
