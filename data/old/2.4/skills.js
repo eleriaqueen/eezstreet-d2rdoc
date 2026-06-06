@@ -2403,7 +2403,7 @@ files["skills"] = {
                 "dataLength": 4,
                 "memSize": 16,
                 "file": "itemtypes",
-                "field": "ItemType"
+                "field": "code"
             }
         },
         {
