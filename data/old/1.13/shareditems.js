@@ -432,7 +432,7 @@ files["shareditems"] = {
         },
         {
             "name": "Transmogrify",
-            "description": "If equals 1, then the item will use the transmogrify function. If equals 0, then ignore this. This field depends on the \"useable\" field being enabled. Does not function at all",
+            "description": "If equals 1, then the item will use the transmogrify function. If equals 0, then ignore this. This field depends on the \"useable\" field being enabled.",
             "type": {
                 "type": "int",
                 "dataLength": 0,
@@ -441,7 +441,7 @@ files["shareditems"] = {
         },
         {
             "name": "TMogType",
-            "description": "Links to a \"code\" field to determine which item is chosen to transmogrify this item to. Does not function at all",
+            "description": "Links to a \"code\" field to determine which item is chosen to transmogrify this item to when right-clicked.",
             "type": {
                 "type": "int",
                 "dataLength": 0,
@@ -450,7 +450,7 @@ files["shareditems"] = {
         },
         {
             "name": "TMogMin",
-            "description": "Controls the minimum quantity that the transmogrify item will have. This depends on what item was chosen in the \"TMogType\" field, and that the transmogrify item has quantity. Does not function at all",
+            "description": "Controls the minimum quantity that the transmogrify item will have. This depends on what item was chosen in the \"TMogType\" field, and that the transmogrify item has quantity.",
             "type": {
                 "type": "int",
                 "dataLength": 0,
@@ -459,7 +459,7 @@ files["shareditems"] = {
         },
         {
             "name": "TMogMax",
-            "description": "Controls the minimum quantity that the transmogrify item will have. This depends on what item was chosen in the \"TMogType\" field, and that the transmogrify item has quantity. Does not function at all",
+            "description": "Controls the minimum quantity that the transmogrify item will have. This depends on what item was chosen in the \"TMogType\" field, and that the transmogrify item has quantity.",
             "type": {
                 "type": "int",
                 "dataLength": 0,
