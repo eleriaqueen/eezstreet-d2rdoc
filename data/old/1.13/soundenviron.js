@@ -27,44 +27,36 @@ files["soundenviron"] = {
             "name": "Song",
             "description": "Play this sound as the background music while the player is in an area level",
             "type": {
-                "type": "reference",
-                "dataLength": 47,
-                "memSize": 32,
-                "file": "sounds",
-                "field": "Sound"
+                "type": "int",
+                "dataLength": 0,
+                "memSize": 0
             }
         },
         {
             "name": "Day Ambience",
             "description": "Play this sound as an ambient sound while it is currently daytime in the game",
             "type": {
-                "type": "reference",
-                "dataLength": 47,
-                "memSize": 32,
-                "file": "sounds",
-                "field": "Sound"
+                "type": "int",
+                "dataLength": 0,
+                "memSize": 0
             }
         },
         {
             "name": "Night Ambience",
             "description": "Play this sound as an ambient sound while it is currently nighttime in the game",
             "type": {
-                "type": "reference",
-                "dataLength": 47,
-                "memSize": 32,
-                "file": "sounds",
-                "field": "Sound"
+                "type": "int",
+                "dataLength": 0,
+                "memSize": 0
             }
         },
         {
             "name": "Day Event",
             "description": "Play this sound at a random range and variance in the background when it is currently daytime in the game",
             "type": {
-                "type": "reference",
-                "dataLength": 47,
-                "memSize": 32,
-                "file": "sounds",
-                "field": "Sound"
+                "type": "int",
+                "dataLength": 0,
+                "memSize": 0
             }
         },
         {
@@ -72,10 +64,8 @@ files["soundenviron"] = {
             "description": "Play this sound at a random range and variance in the background when it is currently nighttime in the game",
             "type": {
                 "type": "reference",
-                "dataLength": 47,
-                "memSize": 32,
-                "file": "sounds",
-                "field": "Sound"
+                "dataLength": 0,
+                "memSize": 0
             }
         },
         {

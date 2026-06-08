@@ -9,7 +9,7 @@ files["monseq"] = {
             "name": "sequence",
             "description": "Establishes the Monster Sequence index. An entire monster sequence can be composed of multiple sequence lines, which means that each line needs to have matching \"sequence\" fields and must be in contiguous order",
             "type": {
-                "type": "int",
+                "type": "string",
                 "dataLength": 0,
                 "memSize": 0
             }

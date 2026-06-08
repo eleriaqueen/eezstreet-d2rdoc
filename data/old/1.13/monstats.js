@@ -9,7 +9,7 @@ files["monstats"] = {
             "name": "ID",
             "description": "Controls the unique name ID to define the monster",
             "type": {
-                "type": "int",
+                "type": "string",
                 "dataLength": 0,
                 "memSize": 0
             }
