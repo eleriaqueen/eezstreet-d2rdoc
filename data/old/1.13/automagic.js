@@ -173,9 +173,11 @@ files["automagic"] = {
             "name": "transformcolor",
             "description": "Controls the color change of the item after spawning with this item affix. If empty, then the item affix will not change the item's color. Referenced from the Code column in colors.txt",
             "type": {
-                "type": "int",
+                "type": "reference",
                 "dataLength": 0,
-                "memSize": 0
+                "memSize": 0,
+                "file": "colors",
+                "field": "code"
             }
         },
         {
@@ -191,9 +193,11 @@ files["automagic"] = {
             ],
             "description": "Controls what Item Types are allowed to spawn with this item affix. Uses the Code field from ItemTypes.txt",
             "type": {
-                "type": "string",
-                "dataLength": 0,
-                "memSize": 0
+                "type": "reference",
+                "dataLength": 4,
+                "memSize": 16,
+                "file": "itemtypes",
+                "field": "code"
             }
         },
         {
@@ -208,8 +212,10 @@ files["automagic"] = {
             "description": "Controls what Item Types are forbidden to spawn with this item affix. Uses the Code field from ItemTypes.txt",
             "type": {
                 "type": "string",
-                "dataLength": 0,
-                "memSize": 0
+                "dataLength": 4,
+                "memSize": 16,
+                "file": "itemtypes",
+                "field": "code"
             }
         },
         {
