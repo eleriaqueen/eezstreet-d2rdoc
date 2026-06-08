@@ -443,7 +443,7 @@ files["shareditems"] = {
             "name": "TMogType",
             "description": "Links to a \"code\" field to determine which item is chosen to transmogrify this item to when right-clicked.",
             "type": {
-                "type": "int",
+                "type": "string",
                 "dataLength": 0,
                 "memSize": 0
             }
