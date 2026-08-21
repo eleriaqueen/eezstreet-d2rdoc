@@ -5,7 +5,8 @@ files["misc"] = {
     "title": "misc.txt",
     "referenceFiles": [
         "shareditems",
-        "enums"
+        "enums",
+        "ItemUICategories"
     ],
     "appendFiles": [
         "shareditems"

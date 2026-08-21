@@ -5,7 +5,8 @@ files["armor"] = {
     "title": "armor.txt",
     "referenceFiles": [
         "shareditems",
-        "enums"
+        "enums",
+        "ItemUICategories"
     ],
     "appendFiles": [
         "shareditems"

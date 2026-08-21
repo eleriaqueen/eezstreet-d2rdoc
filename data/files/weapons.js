@@ -6,7 +6,8 @@ files["weapons"] = {
     "referenceFiles": [
         "shareditems",
         "enums",
-        "HitClass"
+        "HitClass",
+        "ItemUICategories"
     ],
     "appendFiles": [
         "shareditems"

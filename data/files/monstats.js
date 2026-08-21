@@ -6,7 +6,8 @@ files["monstats"] = {
     "referenceFiles": [
         "enums",
         "MonMode",
-        "ElemTypes"
+        "ElemTypes",
+        "MonProp"
     ],
     "overview": "This file controls the main functionalities and statistics for every monster in the game. This includes enemy monsters, pets, and NPC units.<br>The \"(N)\" text in field names signifies to use that specific value for games in Nightmare difficulty. The \"(H)\" text in field names signifies to use that specific value for games in Hell difficulty.<br>Any column field name starting with \"*\" is considered a comment field and is not used by the game.",
     "fields": [

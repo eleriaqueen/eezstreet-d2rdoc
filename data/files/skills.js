@@ -643,7 +643,7 @@ files["skills"] = {
                         "text": "WarStartBindDemon"
                     },
                     "$!#aurastate!$",
-                    "Check if a monster is bindeable. Require $!#aurastate!$ to be valid. Require target to be bad aligned monster, not a herald or herald minion, and not a mercenary. Require the monster to have a $!MonPet!$ entry and a valid $!MonPet#bindchancecalc!$. Require $!MonPet#calc2!$ to evaluate to non-zero. Run $!#srv-SkillStartPlayerChannelSkill!$."
+                    "Check if a monster is bindeable. Require $!#aurastate!$ to be valid. Require target to be bad aligned monster, not a herald or herald minion, and not a mercenary. Require the monster to have a $!MonPet!$ entry and a valid $!MonPet#bindchancecalc!$. Require MonPet's calc2 to evaluate to non-zero. Run $!#srv-SkillStartPlayerChannelSkill!$."
                 ],
                 [
                     "65",
@@ -2142,7 +2142,7 @@ files["skills"] = {
                         "text": "WarDoBindDemon"
                     },
                     "$!#aurastate!$<br>$!#aurastat#!$<br>$!#auraevent#!$<br>$!#passivestat#!$<br>$!#pettype!$<br>$!#petmax!$<br>$!#sumskill#!$<br>$!#sumumod!$<br>$!#sumoverlay!$<br>$!#calc1!$<br>$!#calc2!$<br>$!#calc3!$<br>$!#calc4!$<br>$!#calc5!$<br>$!#calc6!$",
-                    "Convert an existing monster to a pet. Test the monster can be converted, has an entry in $!MonPet!$, and roll against $!MonPet#bindchancecalc!$. On a success convert the target to a $!#pettype!$ pet, limited by $!#petmax!$. Use $!#calc2!$, $!#calc3!$, $!#calc4!$, and $!#calc5!$ as monster mods to apply. The mods use alternate auras and curses. Set the monsters level to min(player level, monster level). Use $!#calc6!$ to determine HP regen behavior, with 0 being the monsters default HP regen behavior (no regen for elites), 1 disabling HP regen, and 2 always enabling HP regen. Apply $!#aurastate!$, all $!#aurastat#!$, all $!#auraevent#!$, all $!#passivestat#!$, all $!#sumskill#!$, $!#sumumod!$, and $!#sumoverlay!$ to the monster. Use $!#calc1!$ as additional percent max life. Add any equipment from $!monequip!$. Apply any $!MonPet#BoundStat#!$."
+                    "Convert an existing monster to a pet. Test the monster can be converted, has an entry in $!MonPet!$, and roll against $!MonPet#bindchancecalc!$. On a success convert the target to a $!#pettype!$ pet, limited by $!#petmax!$. Use $!#calc2!$, $!#calc3!$, $!#calc4!$, and $!#calc5!$ as monster mods to apply. The mods use alternate auras and curses. Set the monsters level to min(player level, monster level). Use $!#calc6!$ to determine HP regen behavior, with 0 being the monsters default HP regen behavior (no regen for elites), 1 disabling HP regen, and 2 always enabling HP regen. Apply $!#aurastate!$, all $!#aurastat#!$, all $!#auraevent#!$, all $!#passivestat#!$, all $!#sumskill#!$, $!#sumumod!$, and $!#sumoverlay!$ to the monster. Use $!#calc1!$ as additional percent max life. Add any equipment from $!monequip!$. Apply any MonPet's BoundStat."
                 ],
                 [
                     "159",
@@ -3568,7 +3568,7 @@ files["skills"] = {
                         "text": "WarStartBindDemon"
                     },
                     "$!#aurastate!$",
-                    "Check if a monster is bindeable and play a the \"impossible\" sound if not. Require $!#aurastate!$ to be valid. Require target to be bad aligned monster, not a herald or herald minion, and not a mercenary. Require the monster to have a $!MonPet!$ entry and a valid $!MonPet#bindchancecalc!$. Require $!MonPet#calc2!$ to evaluate to non-zero. Run $!#clt-SkillStartPlayerChannelSkill!$."
+                    "Check if a monster is bindeable and play a the \"impossible\" sound if not. Require $!#aurastate!$ to be valid. Require target to be bad aligned monster, not a herald or herald minion, and not a mercenary. Require the monster to have a $!MonPet!$ entry and a valid $!MonPet#bindchancecalc!$. Require MonPet's calc2 to evaluate to non-zero. Run $!#clt-SkillStartPlayerChannelSkill!$."
                 ]
             ]
         },
