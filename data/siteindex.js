@@ -91,7 +91,7 @@ const siteIndex = [
             },
             {
                 "name": "ItemUICategories.txt",
-                "path": "/files/itemuicategories.html"
+                "path": "/files/ItemUICategories.html"
             },
             {
                 "name": "LevelGroups.txt",
@@ -127,7 +127,7 @@ const siteIndex = [
             },
             {
                 "name": "MagicSuffix.txt",
-                "path": "/files/magicsuffix.html"
+                "path": "/files/MagicSuffix.html"
             },
             {
                 "name": "misc.txt",
@@ -155,7 +155,7 @@ const siteIndex = [
             },
             {
                 "name": "MonProp.txt",
-                "path": "/files/monprop.html"
+                "path": "/files/MonProp.html"
             },
             {
                 "name": "monseq.txt",
@@ -231,7 +231,7 @@ const siteIndex = [
             },
             {
                 "name": "RunewordUICategories.txt",
-                "path": "/files/runeworduicategories.html"
+                "path": "/files/RunewordUICategories.html"
             },
             {
                 "name": "SetItems.txt",
@@ -326,7 +326,7 @@ const siteIndex = [
                     },
                     {
                         "name": "ElemTypes.txt",
-                        "path": "/files/elemtypes.html"
+                        "path": "/files/ElemTypes.html"
                     },
                     {
                         "name": "events.txt",
@@ -334,7 +334,7 @@ const siteIndex = [
                     },
                     {
                         "name": "HitClass.txt",
-                        "path": "/files/hitclass.html"
+                        "path": "/files/HitClass.html"
                     },
                     {
                         "name": "lowqualityitems.txt",
@@ -350,7 +350,7 @@ const siteIndex = [
                     },
                     {
                         "name": "MonMode.txt",
-                        "path": "/files/monmode.html"
+                        "path": "/files/MonMode.html"
                     },
                     {
                         "name": "MonPlace.txt",
@@ -358,15 +358,15 @@ const siteIndex = [
                     },
                     {
                         "name": "ObjMode.txt",
-                        "path": "/files/objmode.html"
+                        "path": "/files/ObjMode.html"
                     },
                     {
                         "name": "PlayerClass.txt",
-                        "path": "/files/playerclass.html"
+                        "path": "/files/PlayerClass.html"
                     },
                     {
                         "name": "PlrMode.txt",
-                        "path": "/files/plrmode.html"
+                        "path": "/files/PlrMode.html"
                     },
                     {
                         "name": "PlrType.txt",
@@ -378,7 +378,7 @@ const siteIndex = [
                     },
                     {
                         "name": "StorePage.txt",
-                        "path": "/files/storepage.html"
+                        "path": "/files/StorePage.html"
                     }
                 ]
             },
