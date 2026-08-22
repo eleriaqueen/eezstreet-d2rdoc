@@ -147,11 +147,11 @@ const siteIndex = [
             },
             {
                 "name": "MonPet.txt",
-                "path": "/files/monpet.html"
+                "path": "/files/MonPet.html"
             },
             {
                 "name": "MonPreset.txt",
-                "path": "/files/monpreset.html"
+                "path": "/files/MonPreset.html"
             },
             {
                 "name": "MonProp.txt",
@@ -211,7 +211,7 @@ const siteIndex = [
             },
             {
                 "name": "PropertyGroups.txt",
-                "path": "/files/propertygroups.html"
+                "path": "/files/PropertyGroups.html"
             },
             {
                 "name": "qualityitems.txt",
@@ -302,7 +302,7 @@ const siteIndex = [
                 "children": [
                     {
                         "name": "ArmType.txt",
-                        "path": "/files/armtype.html"
+                        "path": "/files/ArmType.html"
                     },
                     {
                         "name": "bodylocs.txt",
@@ -318,7 +318,7 @@ const siteIndex = [
                     },
                     {
                         "name": "Composit.txt",
-                        "path": "/files/composit.html"
+                        "path": "/files/Composit.html"
                     },
                     {
                         "name": "cubemod.txt",
@@ -354,7 +354,7 @@ const siteIndex = [
                     },
                     {
                         "name": "MonPlace.txt",
-                        "path": "/files/monplace.html"
+                        "path": "/files/MonPlace.html"
                     },
                     {
                         "name": "ObjMode.txt",
@@ -370,7 +370,7 @@ const siteIndex = [
                     },
                     {
                         "name": "PlrType.txt",
-                        "path": "/files/plrtype.html"
+                        "path": "/files/PlrType.html"
                     },
                     {
                         "name": "skillcalc.txt",
