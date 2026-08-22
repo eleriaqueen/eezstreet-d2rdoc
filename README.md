@@ -1,8 +1,12 @@
 # d2rdoc
 
-This is an augmented version of Blizzard's original documentation for Diablo II: Resurrected, as they introduced in 3.0's *Reign of the Warlock* expansion. 
+This is a fork by of d2rdoc by eezstreet which replaces Exocet font with Roboto for better readability.
 
-***You can see the live site [here](https://eezstreet.github.io/d2rdoc)!***
+D2rdoc is an augmented version of Blizzard's original documentation for Diablo II: Resurrected, as they introduced in 3.0's *Reign of the Warlock* expansion. 
+
+***Live site (this fork) [here](https://eleriaqueen.github.io/d2rdoc)!***
+
+***Live site (original) [here](https://eezstreet.github.io/d2rdoc))!***
 
 The primary purpose for this is to provide a platform for guides (as they pertain to Diablo II: Resurrected) as well as annotations to the original fileguide.
 
