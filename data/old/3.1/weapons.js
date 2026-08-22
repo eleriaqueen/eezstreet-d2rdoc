@@ -6,7 +6,7 @@ files["weapons"] = {
     "referenceFiles": [
         "shareditems",
         "enums",
-        "hitclass"
+        "HitClass"
     ],
     "appendFiles": [
         "shareditems"
@@ -69,11 +69,11 @@ files["weapons"] = {
                 "type": "reference",
                 "dataLength": 4,
                 "memSize": 8,
-                "file": "hitclass",
+                "file": "HitClass",
                 "field": "Code"
             },
             "appendField": {
-                "file": "hitclass",
+                "file": "HitClass",
                 "field": "Code"
             }
         },

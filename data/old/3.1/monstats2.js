@@ -5,8 +5,8 @@ files["monstats2"] = {
     "title": "monstats2.txt",
     "referenceFiles": [
         "enums",
-        "hitclass",
-        "monmode"
+        "HitClass",
+        "MonMode"
     ],
     "overview": "This file controls additional functionalities and statistics for every monster in the game.<br>Any column field name starting with \"*\" is considered a comment field and is not used by the game.",
     "fields": [
@@ -144,7 +144,7 @@ files["monstats2"] = {
             }
         },
         {
-            "name": "hitclass",
+            "name": "HitClass",
             "description": "Defines the specific class of an attack when the monster successfully hits with an attack. This can affect the sound and overlay display of the attack hit. Uses an integer index.",
             "type": {
                 "type": "int",
@@ -152,7 +152,7 @@ files["monstats2"] = {
                 "memSize": 8
             },
             "appendField": {
-                "file": "hitclass",
+                "file": "HitClass",
                 "field": "Code"
             }
         },
@@ -902,16 +902,16 @@ files["monstats2"] = {
         },
         {
             "name": "ResurrectMode",
-            "description": "Controls which monster mode to set on the monster when it is resurrected. Uses a $!monmode#code!$",
+            "description": "Controls which monster mode to set on the monster when it is resurrected. Uses a $!MonMode#code!$",
             "type": {
                 "type": "reference",
                 "dataLength": 4,
                 "memSize": 8,
-                "file": "monmode",
+                "file": "MonMode",
                 "field": "code"
             },
             "appendField": {
-                "file": "monmode",
+                "file": "MonMode",
                 "field": "name"
             }
         },

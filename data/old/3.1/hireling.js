@@ -4,8 +4,8 @@
 files["hireling"] = {
     "title": "hireling.txt",
     "referenceFiles": [
-        "playerclass",
-        "monmode"
+        "PlayerClass",
+        "MonMode"
     ],
     "overview": "This file controls the unit statistics for player mercenaries and their related functions.<br>Any column field name starting with \"*\" is considered a comment field and is not used by the game.",
     "fields": [
@@ -356,14 +356,14 @@ files["hireling"] = {
                 "Mode5",
                 "Mode6"
             ],
-            "description": "Uses a monster mode to determine the hireling's behavior when using the related Skill (Corresponds to $!monmode#name!$, use the numeric ID)",
+            "description": "Uses a monster mode to determine the hireling's behavior when using the related Skill (Corresponds to $!MonMode#name!$, use the numeric ID)",
             "type": {
                 "type": "int",
                 "dataLength": 0,
                 "memSize": 8
             },
             "appendField": {
-                "file": "monmode",
+                "file": "MonMode",
                 "field": "name"
             }
         },
@@ -478,11 +478,11 @@ files["hireling"] = {
                 "type": "reference",
                 "dataLength": 4,
                 "memSize": 8,
-                "file": "playerclass",
+                "file": "PlayerClass",
                 "field": "Code"
             },
             "appendField": {
-                "file": "playerclass",
+                "file": "PlayerClass",
                 "field": "Code"
             }
         }

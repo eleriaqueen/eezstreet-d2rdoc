@@ -5,8 +5,8 @@ files["monstats"] = {
     "title": "monstats.txt",
     "referenceFiles": [
         "enums",
-        "monmode",
-        "elemtypes"
+        "MonMode",
+        "ElemTypes"
     ],
     "overview": "This file controls the main functionalities and statistics for every monster in the game. This includes enemy monsters, pets, and NPC units.<br>The \"(N)\" text in field names signifies to use that specific value for games in Nightmare difficulty. The \"(H)\" text in field names signifies to use that specific value for games in Hell difficulty.<br>Any column field name starting with \"*\" is considered a comment field and is not used by the game.",
     "fields": [
@@ -76,12 +76,12 @@ files["monstats"] = {
         },
         {
             "name": "MonProp",
-            "description": "Points to a $!monprop#Id!$ field. Used to add special modifiers to the monster.",
+            "description": "Points to a $!MonProp#Id!$ field. Used to add special modifiers to the monster.",
             "type": {
                 "type": "reference",
                 "dataLength": 47,
                 "memSize": 16,
-                "file": "monprop",
+                "file": "MonProp",
                 "field": "Id"
             }
         },
@@ -177,16 +177,16 @@ files["monstats"] = {
         },
         {
             "name": "spawnmode",
-            "description": "Defines the animation mode that the spawned monsters will be initiated with. Uses $!monmode#code!$",
+            "description": "Defines the animation mode that the spawned monsters will be initiated with. Uses $!MonMode#code!$",
             "type": {
                 "type": "reference",
                 "dataLength": 4,
                 "memSize": 8,
-                "file": "monmode",
+                "file": "MonMode",
                 "field": "code"
             },
             "appendField": {
-                "file": "monmode",
+                "file": "MonMode",
                 "field": "name"
             }
         },
@@ -736,15 +736,15 @@ files["monstats"] = {
                 "Sk7mode",
                 "Sk8mode"
             ],
-            "description": "Determines the monster's animation mode when using the related skill. Outside of the standard animation mode inputs from $!monmode#code!$, the field can also point to a $!monseq#sequence!$, which handle a specific set of frames to place a sequence animation.",
+            "description": "Determines the monster's animation mode when using the related skill. Outside of the standard animation mode inputs from $!MonMode#code!$, the field can also point to a $!monseq#sequence!$, which handle a specific set of frames to place a sequence animation.",
             "type": {
                 "type": "parse",
                 "dataLength": 255,
                 "memSize": 0,
-                "description": "References a $!monmode#code!$ or a $!monseq#sequence!$"
+                "description": "References a $!MonMode#code!$ or a $!monseq#sequence!$"
             },
             "appendField": {
-                "file": "monmode",
+                "file": "MonMode",
                 "field": "name"
             }
         },
@@ -1112,11 +1112,11 @@ files["monstats"] = {
                 "type": "reference",
                 "dataLength": 4,
                 "memSize": 8,
-                "file": "monmode",
+                "file": "MonMode",
                 "field": "code"
             },
             "appendField": {
-                "file": "monmode",
+                "file": "MonMode",
                 "field": "name"
             }
         },
@@ -1132,11 +1132,11 @@ files["monstats"] = {
                 "type": "reference",
                 "dataLength": 4,
                 "memSize": 8,
-                "file": "elemtypes",
+                "file": "ElemTypes",
                 "field": "Code"
             },
             "appendField": {
-                "file": "elemtypes",
+                "file": "ElemTypes",
                 "field": "Code"
             }
         },

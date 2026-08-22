@@ -4,7 +4,7 @@
 files["cubemain"] = {
     "title": "cubemain.txt",
     "referenceFiles": [
-        "playerclass"
+        "PlayerClass"
     ],
     "overview": "This file controls the recipes for the Horadric Cubetems structure.<br>Any column field name starting with \"*\" is considered a comment field and is not used by the game.",
     "fields": [
@@ -248,11 +248,11 @@ files["cubemain"] = {
                 "type": "reference",
                 "dataLength": 4,
                 "memSize": 8,
-                "file": "playerclass",
+                "file": "PlayerClass",
                 "field": "Code"
             },
             "appendField": {
-                "file": "playerclass",
+                "file": "PlayerClass",
                 "field": "Code"
             }
         },
@@ -426,7 +426,7 @@ files["cubemain"] = {
                 ],
                 [
                     "suf=#",
-                    "Force the output item to have an item suffix, where # equals the ID of the suffix (see the row count on $!magicsuffix!$)"
+                    "Force the output item to have an item suffix, where # equals the ID of the suffix (see the row count on $!MagicSuffix!$)"
                 ],
                 [
                     "low",

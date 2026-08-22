@@ -4,7 +4,7 @@
 files["sets"] = {
     "title": "Sets.txt",
     "referenceFiles": [
-        "playerclass"
+        "PlayerClass"
     ],
     "overview": "This file controls the item modifiers for Set bonus statistics when the player has equipped enough Set Items.<br>Any column field name starting with \"*\" is considered a comment field and is not used by the game.",
     "fields": [
@@ -198,11 +198,11 @@ files["sets"] = {
                 "type": "reference",
                 "dataLength": 4,
                 "memSize": 8,
-                "file": "playerclass",
+                "file": "PlayerClass",
                 "field": "Code"
             },
             "appendField": {
-                "file": "playerclass",
+                "file": "PlayerClass",
                 "field": "Code"
             }
         }

@@ -1084,7 +1084,7 @@ files["shareditems"] = {
                 "type": "reference",
                 "dataLength": 47,
                 "memSize": 8,
-                "file": "itemuicategories",
+                "file": "ItemUICategories",
                 "field": "Name"
             }
         },

@@ -4,7 +4,7 @@
 files["montype"] = {
     "title": "MonType.txt",
     "referenceFiles": [
-        "elemtypes"
+        "ElemTypes"
     ],
     "overview": "This file handles the classification, naming conventions and element of monsters.<br>Any column field name starting with \"*\" is considered a comment field and is not used by the game.",
     "fields": [
@@ -49,11 +49,11 @@ files["montype"] = {
                 "type": "reference",
                 "dataLength": 4,
                 "memSize": 8,
-                "file": "elemtypes",
+                "file": "ElemTypes",
                 "field": "Code"
             },
             "appendField": {
-                "file": "elemtypes",
+                "file": "ElemTypes",
                 "field": "Code"
             }
         }

@@ -5,11 +5,11 @@ files["skills"] = {
     "title": "skills.txt",
     "referenceFiles": [
         "enums",
-        "playerclass",
+        "PlayerClass",
         "events",
-        "monmode",
-        "plrmode",
-        "elemtypes"
+        "MonMode",
+        "PlrMode",
+        "ElemTypes"
     ],
     "overview": "This file controls all skill functionalities. Skills are abilities used by all units in the game.<br>Any column field name starting with \"*\" is considered a comment field and is not used by the game.",
     "fields": [
@@ -29,11 +29,11 @@ files["skills"] = {
                 "type": "reference",
                 "dataLength": 4,
                 "memSize": 8,
-                "file": "playerclass",
+                "file": "PlayerClass",
                 "field": "Code"
             },
             "appendField": {
-                "file": "playerclass",
+                "file": "PlayerClass",
                 "field": "Code"
             }
         },
@@ -2713,16 +2713,16 @@ files["skills"] = {
         },
         {
             "name": "summode",
-            "description": "Defines the animation mode that the summoned monster will be initiated with. Uses a $!monmode#code!$.",
+            "description": "Defines the animation mode that the summoned monster will be initiated with. Uses a $!MonMode#code!$.",
             "type": {
                 "type": "reference",
                 "dataLength": 4,
                 "memSize": 8,
-                "file": "monmode",
+                "file": "MonMode",
                 "field": "code"
             },
             "appendField": {
-                "file": "monmode",
+                "file": "MonMode",
                 "field": "name"
             }
         },
@@ -4815,46 +4815,46 @@ files["skills"] = {
         },
         {
             "name": "anim",
-            "description": "Controls the animation mode that the player character will use when using this skill. Setting the mode to Sequence (SQ) will cause the player character to play a time controlled animation sequence, utilizing certain sequence fields. Uses a $!plrmode#Code!$",
+            "description": "Controls the animation mode that the player character will use when using this skill. Setting the mode to Sequence (SQ) will cause the player character to play a time controlled animation sequence, utilizing certain sequence fields. Uses a $!PlrMode#Code!$",
             "type": {
                 "type": "reference",
                 "dataLength": 4,
                 "memSize": 8,
-                "file": "plrmode",
+                "file": "PlrMode",
                 "field": "Code"
             },
             "appendField": {
-                "file": "plrmode",
+                "file": "PlrMode",
                 "field": "Name"
             }
         },
         {
             "name": "seqtrans",
-            "description": "If the $!#anim!$ field equals SQ (Sequence) and this field equals SC (Cast), then the sequence animation speed can be modified by the faster cast rate stat modifier. Uses a $!plrmode#Code!$",
+            "description": "If the $!#anim!$ field equals SQ (Sequence) and this field equals SC (Cast), then the sequence animation speed can be modified by the faster cast rate stat modifier. Uses a $!PlrMode#Code!$",
             "type": {
                 "type": "reference",
                 "dataLength": 4,
                 "memSize": 8,
-                "file": "plrmode",
+                "file": "PlrMode",
                 "field": "Code"
             },
             "appendField": {
-                "file": "plrmode",
+                "file": "PlrMode",
                 "field": "Name"
             }
         },
         {
             "name": "monanim",
-            "description": "Controls the animation mode that the monster will use when using this skill. This is similar to the $!#anim!$ field except with monster units using the skill instead of player units. Uses a $!monmode#code!$",
+            "description": "Controls the animation mode that the monster will use when using this skill. This is similar to the $!#anim!$ field except with monster units using the skill instead of player units. Uses a $!MonMode#code!$",
             "type": {
                 "type": "reference",
                 "dataLength": 4,
                 "memSize": 8,
-                "file": "monmode",
+                "file": "MonMode",
                 "field": "code"
             },
             "appendField": {
-                "file": "monmode",
+                "file": "MonMode",
                 "field": "name"
             }
         },
@@ -5965,11 +5965,11 @@ files["skills"] = {
                 "type": "reference",
                 "dataLength": 4,
                 "memSize": 8,
-                "file": "elemtypes",
+                "file": "ElemTypes",
                 "field": "Code"
             },
             "appendField": {
-                "file": "elemtypes",
+                "file": "ElemTypes",
                 "field": "Code"
             }
         },

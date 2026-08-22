@@ -5,8 +5,8 @@ files["itemtypes"] = {
     "title": "ItemTypes.txt",
     "referenceFiles": [
         "bodylocs",
-        "playerclass",
-        "storepage"
+        "PlayerClass",
+        "StorePage"
     ],
     "overview": "This file controls the general statistics for each type of item, which is then used for the item type fields in other files.<br>Any column field name starting with \"*\" is considered a comment field and is not used by the game.",
     "fields": [
@@ -226,11 +226,11 @@ files["itemtypes"] = {
                 "type": "reference",
                 "dataLength": 4,
                 "memSize": 8,
-                "file": "playerclass",
+                "file": "PlayerClass",
                 "field": "Code"
             },
             "appendField": {
-                "file": "playerclass",
+                "file": "PlayerClass",
                 "field": "Code"
             }
         },
@@ -241,11 +241,11 @@ files["itemtypes"] = {
                 "type": "reference",
                 "dataLength": 4,
                 "memSize": 8,
-                "file": "playerclass",
+                "file": "PlayerClass",
                 "field": "Code"
             },
             "appendField": {
-                "file": "playerclass",
+                "file": "PlayerClass",
                 "field": "Code"
             }
         },
@@ -282,11 +282,11 @@ files["itemtypes"] = {
                 "type": "reference",
                 "dataLength": 4,
                 "memSize": 8,
-                "file": "storepage",
+                "file": "StorePage",
                 "field": "Code"
             },
             "appendField": {
-                "file": "storepage",
+                "file": "StorePage",
                 "field": "Code"
             }
         },
@@ -297,7 +297,7 @@ files["itemtypes"] = {
                 "type": "reference",
                 "dataLength": 47,
                 "memSize": 8,
-                "file": "itemuicategories",
+                "file": "ItemUICategories",
                 "field": "Name"
             }
         },
@@ -312,7 +312,7 @@ files["itemtypes"] = {
                 "type": "reference",
                 "dataLength": 47,
                 "memSize": 8,
-                "file": "runeworduicategories",
+                "file": "RunewordUICategories",
                 "field": "Name"
             }
         },

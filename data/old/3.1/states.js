@@ -882,7 +882,7 @@ files["states"] = {
         },
         {
             "name": "gfxclass",
-            "description": "Controls the unit class used for handling the unit graphics transformation. This field relies on what unit type was used in the $!#gfxtype!$ field. If $!#gfxtype!$ equals 1 for monster type units, then this field will rely on the index of an entry from $!monstats!$. If $!#gfxtype!$ equals 2, then this field will use the index of an entry from $!playerclass!$.",
+            "description": "Controls the unit class used for handling the unit graphics transformation. This field relies on what unit type was used in the $!#gfxtype!$ field. If $!#gfxtype!$ equals 1 for monster type units, then this field will rely on the index of an entry from $!monstats!$. If $!#gfxtype!$ equals 2, then this field will use the index of an entry from $!PlayerClass!$.",
             "type": {
                 "type": "int",
                 "dataLength": 0,

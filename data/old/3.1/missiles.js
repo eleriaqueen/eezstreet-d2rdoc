@@ -5,7 +5,7 @@ files["missiles"] = {
     "title": "Missiles.txt",
     "referenceFiles": [
         "enums",
-        "elemtypes"
+        "ElemTypes"
     ],
     "overview": "This file controls the different functions for all missiles and their statistics. Missiles are projectiles used throughout the game for attacks, skills, and special effects.<br>Any column field name starting with \"*\" is considered a comment field and is not used by the game.",
     "fields": [
@@ -3257,11 +3257,11 @@ files["missiles"] = {
                 "type": "reference",
                 "dataLength": 4,
                 "memSize": 8,
-                "file": "elemtypes",
+                "file": "ElemTypes",
                 "field": "Code"
             },
             "appendField": {
-                "file": "elemtypes",
+                "file": "ElemTypes",
                 "field": "Code"
             }
         },
